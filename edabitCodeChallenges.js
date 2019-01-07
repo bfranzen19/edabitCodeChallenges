@@ -327,10 +327,41 @@ Test.assertSimilar(minMax([14, 35, 6, 1, 34, 54]), [1, 54])
 Test.assertSimilar(minMax([1.346, 1.6532, 1.8734, 1.8723]), [1.346, 1.8734])
 Test.assertSimilar(minMax([13, 72, 98, 43, 24, 65, 31]), [13, 98])
 
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Create a function that takes a number as an argument. Add up all the numbers from 1 to the number you passed to the function. For example, if the input is 4 then your function should return 10 because 1 + 2 + 3 + 4 = 10.
+function addUp(num) {
+	if(typeof num == 'number' && num > 0 && num < 1001) {
+      	let sum = 0
 
+      	for(var i=1 ; i<num+1 ; i++) {
+          	sum = sum + i
+        }
+      	return sum
+    } else {
+      	return "invalid input"
+    }
+}
 
+// tests
+Test.assertEquals(addUp(4), 10)
+Test.assertEquals(addUp(13), 91)
+Test.assertEquals(addUp(600), 180300)
 
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Create a function that accepts a string (of a persons first and last name) and returns a string with the first and last name swapped.
+function nameShuffle(str) {
+	if(typeof str == 'string') {
+		let flipsie = str.split(" ").reverse().join(" ")
+		return flipsie
+    } else {
+        return "invalid input"
+    }
+}
 
+// tests
+Test.assertEquals(nameShuffle("Rosie O'Donnel"),"O'Donnel Rosie");
+Test.assertEquals(nameShuffle("Seymour Butts"),"Butts Seymour");
+Test.assertEquals(nameShuffle("Ebony Greene"),"Greene Ebony");
 
 
 
