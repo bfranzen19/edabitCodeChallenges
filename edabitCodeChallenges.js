@@ -309,9 +309,23 @@ Test.assertEquals(reverse("Think different."), ".tnereffid knihT");
 Test.assertEquals(reverse("It doesn’t make sense to hire smart people and tell them what to do; we hire smart people so they can tell us what to do."), ".od ot tahw su llet nac yeht os elpoep trams erih ew ;od ot tahw meht llet dna elpoep trams erih ot esnes ekam t’nseod tI");
 Test.assertEquals(reverse("Innovation is the ability to see change as an opportunity - not a threat"), "taerht a ton - ytinutroppo na sa egnahc ees ot ytiliba eht si noitavonnI");
 
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Create a function that takes an array of numbers and return both the minimum and maximum numbers, in that order.
+function minMax(arr) {
+	if(typeof arr == 'object' && arr.length>0) {
+      	let min = Math.min(...arr)
+      	let max = Math.max(...arr)
+      	let newArr = [min, max]
+        return newArr
+    } else {
+      	return "invalid input"
+    }
+}
 
-
-
+// tests
+Test.assertSimilar(minMax([14, 35, 6, 1, 34, 54]), [1, 54])
+Test.assertSimilar(minMax([1.346, 1.6532, 1.8734, 1.8723]), [1.346, 1.8734])
+Test.assertSimilar(minMax([13, 72, 98, 43, 24, 65, 31]), [13, 98])
 
 
 
