@@ -363,6 +363,67 @@ Test.assertEquals(nameShuffle("Rosie O'Donnel"),"O'Donnel Rosie");
 Test.assertEquals(nameShuffle("Seymour Butts"),"Butts Seymour");
 Test.assertEquals(nameShuffle("Ebony Greene"),"Greene Ebony");
 
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Create a function that takes two strings as arguments and returns the number of times the first string is found in the second string.
+function charCount(myChar, str) {
+  	let returnArr = str.split('')
+    let numChars = 0
+
+	if(str.length > 0 && typeof myChar === 'string' && typeof str === 'string') {
+		for(var i=0 ; i<str.length ; i++) {
+        	if(str[i] == myChar) {
+              	numChars ++
+            }
+        }
+      	return numChars
+    } else {
+      	return false
+
+    }
+}
+
+// tests
+Test.assertEquals(charCount('a', 'edabit'), 1);
+Test.assertEquals(charCount('b', 'big fat bubble'), 4);
+Test.assertEquals(charCount('c', 'Chamber of secrets'), 1);
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Create a function that takes an array of strings. Return all words in the array that are exactly four letters.
+function isFourLetters(arr) {
+  	let retArr = []
+	if(arr.length > 0 && typeof arr == 'object') {
+		for(var i=0 ; i<arr.length ; i++) {
+        	if(arr[i].length == 4) {
+              	retArr.push(arr[i])
+            }
+        }
+      	return retArr
+    }
+  	return []
+}
+
+// tests
+Test.assertSimilar(isFourLetters(["Ryan", "Kieran", "Jason", "Matt"]), ["Ryan", "Matt"])
+Test.assertSimilar(isFourLetters(["Tomato", "Potato", "Pair"]), ["Pair"])
+Test.assertSimilar(isFourLetters(["Kangaroo", "Bear", "Fox"]), ["Bear"])
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+//
+
+
+// tests
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
