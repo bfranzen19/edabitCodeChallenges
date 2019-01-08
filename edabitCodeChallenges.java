@@ -367,10 +367,59 @@ public class DescendingOrderTest {
 }
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Create a method that takes a string and returns a string in which each character is repeated once.
+import java.lang.*;
+
+public class Program {
+    public static String doubleChar(String s) {
+      String bsRet = "bs return";
+	  StringBuilder sb = new StringBuilder();
+
+	  for (int i=0 ; i<s.length() ; i++) {
+		sb.append(s.charAt(i)).append(s.charAt(i));
+	  }
+	  return sb.toString();
+    }
+}
+
+// tests
+import static org.hamcrest.core.Is.is;
+import org.junit.Test;
+import static org.junit.Assert.assertThat;
+
+public class ProgramTest {
+
+    @Test
+    public void test(){
+      assertThat(Program.doubleChar("String"), is("SSttrriinngg"));
+      assertThat(Program.doubleChar("Hello World!"), is("HHeelllloo  WWoorrlldd!!"));
+      assertThat(Program.doubleChar("1234!_ "), is("11223344!!__  "));
+      assertThat(Program.doubleChar("##^&%%*&%%$#@@!"), is("####^^&&%%%%**&&%%%%$$##@@@@!!"));
+      assertThat(Program.doubleChar("scandal"), is("ssccaannddaall"));
+      assertThat(Program.doubleChar("economics"), is("eeccoonnoommiiccss"));
+      assertThat(Program.doubleChar(" "), is("  "));
+      assertThat(Program.doubleChar("_______"), is("______________"));
+      assertThat(Program.doubleChar("equip gallon read"), is("eeqquuiipp  ggaalllloonn  rreeaadd"));
+      assertThat(Program.doubleChar("baby increase"), is("bbaabbyy  iinnccrreeaassee"));
+    }
+}
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 //
 
 
 // tests
+
+
+
+
+
+
+
+
+
+
+
 
 
 
