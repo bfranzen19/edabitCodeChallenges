@@ -405,13 +405,104 @@ public class ProgramTest {
 }
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
-//
+// Christmas Eve is almost upon us, so naturally we need to prepare some milk and cookies for Santa! Create a method that accepts a GregorianCalendar object and returns true if it's Christmas Eve (December 24th) and false otherwise.
+import java.util.GregorianCalendar;
+
+public class Program {
+    public static boolean timeForMilkAndCookies(GregorianCalendar date) {
+	  	int month = date.get(GregorianCalendar.MONTH);
+	  	int day = date.get(GregorianCalendar.DAY_OF_MONTH);
+
+	  	if(month == 11 && day == 24) {
+		  System.out.println("true --> " + day);
+		  return true;
+		} else {
+		  System.out.println("false --> " + day);
+		  return false;
+		}
+    }
+}
 
 
 // tests
+import static org.hamcrest.core.Is.is;
+import org.junit.Test;
+import static org.junit.Assert.assertThat;
+import java.util.GregorianCalendar;
 
+public class ProgramTest {
 
+    @Test
+    public void test(){
+      assertThat(Program.timeForMilkAndCookies(new GregorianCalendar(2013, 11, 24)), is(true));
+      assertThat(Program.timeForMilkAndCookies(new GregorianCalendar(2013, 0, 23)), is(false));
+      assertThat(Program.timeForMilkAndCookies(new GregorianCalendar(3000, 11, 24)), is(true));
+    }
+}
 
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Create a function that takes a string and returns the middle character(s). If the word's length is odd, return the middle character. If the word's length is even, return the middle two characters.
+class Challenge {
+  public static String getMiddle(String word) {
+	String bsRet = "bs return";
+	int position = 0;
+	int length = 0;
+
+	if(word.length() % 2 == 0) {
+	  	position = word.length() / 2 - 1;
+	  	length = 2;
+	} else {
+		position = word.length() / 2;
+	  	length = 1;
+	}
+
+	String result = word.substring(position, position + length);
+	return result;
+
+  	}
+}
+
+// tests
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+import java.util.Random;
+
+public class MiddleTests {
+  @Test
+  public void basicTests() {
+    assertEquals("es", Challenge.getMiddle("test"));
+    assertEquals("t", Challenge.getMiddle("testing"));
+    assertEquals("dd", Challenge.getMiddle("middle"));
+    assertEquals("A", Challenge.getMiddle("A"));
+    assertEquals("bi", Challenge.getMiddle("inhabitant"));
+    assertEquals("o", Challenge.getMiddle("brown"));
+    assertEquals("aw", Challenge.getMiddle("pawn"));
+    assertEquals("i", Challenge.getMiddle("cabinet"));
+    assertEquals("e", Challenge.getMiddle("fresh"));
+  }
+
+  private String middle(String word) {
+    int mid = word.length() / 2;
+    return (word.length() % 2 == 1 ? word.substring(mid, mid+1) : word.substring(mid-1, mid+1));
+  }
+
+  @Test
+  public void randTests() {
+    Random randGen = new Random();
+    String alph = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    for (int i = 0; i < 50; i++) {
+      int randLength = randGen.nextInt(1000)+1;
+      String testWord = "";
+      for (int e = 0; e < randLength; e++) {
+        int alphI = randGen.nextInt(alph.length());
+        testWord += alph.substring(alphI, alphI+1);
+      }
+      String expected = middle(testWord);
+      String actual = Challenge.getMiddle(testWord);
+      assertEquals("Middle of " + testWord + " is " + expected + " not " + actual, expected, actual);
+    }
+  }
+}
 
 
 
