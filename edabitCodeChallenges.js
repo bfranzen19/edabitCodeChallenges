@@ -408,15 +408,66 @@ Test.assertSimilar(isFourLetters(["Tomato", "Potato", "Pair"]), ["Pair"])
 Test.assertSimilar(isFourLetters(["Kangaroo", "Bear", "Fox"]), ["Bear"])
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
-//
-
+// Create a function that takes a string and returns a string in which each character is repeated once.
+function doubleChar(str) {
+  	let arr = []
+    let retStr = ""
+	for(var i=0 ; i<str.length ; i++) {
+      arr.push(str.charAt(i).repeat(2))
+      retStr = arr.join("").toString()
+    }
+  	return retStr
+}
 
 // tests
+Test.assertEquals(doubleChar("String"), "SSttrriinngg")
+Test.assertEquals(doubleChar("Hello World!"), "HHeelllloo  WWoorrlldd!!")
+Test.assertEquals(doubleChar("1234!_ "), "11223344!!__  ")
 
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+//  Create a function that takes an array of non-negative numbers and strings and return a new array without the strings.
+function filterArray(arr) {
+  	let result = []
 
+	for(var i=0 ; i<arr.length ; i++) {
+       if(Number.isInteger(arr[i])) {
+         result.push(arr[i])
+       }
+    }
+  	return result
+}
 
+// tests
+Test.assertSimilar(filterArray([1, 2, "a", "b"]), [1, 2]);
+Test.assertSimilar(filterArray([1, "a", "b", 0, 15]), [1, 0, 15]);
+Test.assertSimilar(filterArray([1, 2, "aasf", "1", "123", 123]), [1, 2, 123]);
 
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Create a function that takes a string and returns a string with its letters in alphabetical order.
+function AlphabetSoup(str) {
+	return str.split("").sort().join("")
+}
 
+// tests
+Test.assertEquals(AlphabetSoup("hello"), "ehllo");
+Test.assertEquals(AlphabetSoup("edabit"), "abdeit");
+Test.assertEquals(AlphabetSoup("hacker"), "acehkr");
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Given a number n, write a function that returns PI to n decimal places.
+function myPi(n) {
+  	if(n <= 15) {
+      	let result = Number.parseFloat(Math.PI.toFixed(n))
+      	return result
+    } else {
+      	return false
+    }
+}
+
+// tests
+Test.assertEquals(myPi(0), 3);
+Test.assertEquals(myPi( 1), 3.1);
+Test.assertEquals(myPi( 2), 3.14);
 
 
 
