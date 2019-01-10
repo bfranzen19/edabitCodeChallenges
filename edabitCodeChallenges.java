@@ -505,11 +505,59 @@ public class MiddleTests {
 }
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
-//
+// ATM machines allow 4 or 6 digit PIN codes and PIN codes cannot contain anything but exactly 4 digits or exactly 6 digits. Your task is to create a method that takes a string and returns true if the PIN is valid and false if it's not.
+public class Program {
+    public static boolean validatePIN(String s) {
+	  	char[] cArr = s.toCharArray();
+	  	boolean result = false;
 
+	  	if (cArr.length == 4 || cArr.length == 6) {
+		  	for (int i=0 ; i<cArr.length ; i++) {
+			  	result = Character.isDigit(cArr[i]);
+
+			  	if(result == true) {
+					return true;
+				} else {
+				  	return false;
+				}
+			}
+		} else {
+		  return false;
+		}
+	  	return result;
+    }
+}
 
 // tests
+import org.junit.Test;
+import static org.junit.Assert.assertThat;
 
+public class ProgramTest {
+
+    @Test
+    public void test(){
+      assertThat(Program.validatePIN("1234"), is(true));
+      assertThat(Program.validatePIN("12345"), is(false));
+      assertThat(Program.validatePIN("a234"), is(false));
+      assertThat(Program.validatePIN(""), is(false));
+      assertThat(Program.validatePIN("%234"), is(false));
+      assertThat(Program.validatePIN("`234"), is(false));
+      assertThat(Program.validatePIN("@234"), is(false));
+      assertThat(Program.validatePIN("#234"), is(false));
+      assertThat(Program.validatePIN("$234"), is(false));
+      assertThat(Program.validatePIN("*234"), is(false));
+      assertThat(Program.validatePIN("5678"), is(true));
+      assertThat(Program.validatePIN("^234"), is(false));
+      assertThat(Program.validatePIN("(234"), is(false));
+      assertThat(Program.validatePIN(")234"), is(false));
+      assertThat(Program.validatePIN("123456"), is(true));
+      assertThat(Program.validatePIN("-234"), is(false));
+      assertThat(Program.validatePIN("_234"), is(false));
+      assertThat(Program.validatePIN("+234"), is(false));
+      assertThat(Program.validatePIN("=234"), is(false));
+      assertThat(Program.validatePIN("?234"), is(false));
+    }
+}
 
 
 
