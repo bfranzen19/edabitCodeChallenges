@@ -470,16 +470,60 @@ Test.assertEquals(myPi( 1), 3.1);
 Test.assertEquals(myPi( 2), 3.14);
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
-//
+// Christmas Eve is almost upon us, so naturally we need to prepare some milk and cookies for Santa! Create a function that accepts a Date object and returns true if it's Christmas Eve (December 24th) and false otherwise. Keep in mind JavaScript's Date month is 0 based, meaning December is the 11th month while January is 0.
+function timeForMilkAndCookies(date) {
+  	let day = date.getDate(date)
+    let month = date.getMonth(date)
+
+  	if(month == 11 && day == 24) {
+      	return true
+    }
+  	return false
+}
+
+// tests
+Test.assertEquals(timeForMilkAndCookies(new Date(2013, 11, 24)), true)
+Test.assertEquals(timeForMilkAndCookies(new Date(3000, 11, 24)), true)
+Test.assertEquals(timeForMilkAndCookies(new Date(2154, 11, 11)), false)
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Take an array of integers (positive or negative or both) and return the sum of the absolute value of each element.
+function getAbsSum(arr) {
+  	let newArr = []
+    let result = 0
+
+    let abs = arr.map((x, i, arr) => {
+      	return Math.abs(arr[i])
+    })
+
+    for(var i=0 ; i<abs.length; i++) {
+    	result += abs[i]
+    }
+    return result
+}
 
 
 // tests
+Test.assertEquals(getAbsSum([2, -1, -3, 4, 8]), 18);
+Test.assertEquals(getAbsSum([-1]), 1);
+Test.assertEquals(getAbsSum([-1, -3, -5, -4, -10, 0]), 23);
 
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Create a function that takes an array as an argument and returns true or false depending on whether the average of all elements in the array is a whole number or not.
+function isAvgWhole(arr) {
+	let sum = arr.reduce(function(a,b) {
+    	return a + b
+    }, 0)
 
+    let result = Number.isInteger(sum / arr.length)
 
+    return result
+}
 
-
-
+// tests
+Test.assertEquals(isAvgWhole([3, 5, 9]), false);
+Test.assertEquals(isAvgWhole([1, 1, 1, 1]), true);
+Test.assertEquals(isAvgWhole([1, 2, 3, 4, 5]), true);
 
 
 
