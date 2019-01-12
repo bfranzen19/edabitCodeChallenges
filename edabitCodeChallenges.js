@@ -525,6 +525,82 @@ Test.assertEquals(isAvgWhole([3, 5, 9]), false);
 Test.assertEquals(isAvgWhole([1, 1, 1, 1]), true);
 Test.assertEquals(isAvgWhole([1, 2, 3, 4, 5]), true);
 
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Create a method that takes a string and returns a string with its letters in alphabetical order.
+import java.util.Arrays;
+
+public class Program {
+    public static String AlphabetSoup(String s) {
+	  	char cArr[] = s.toCharArray();
+	  	Arrays.sort(cArr);
+	  	s = String.valueOf(cArr);
+
+	  	return s;
+    }
+}
+
+// tests
+import static org.hamcrest.core.Is.is;
+import org.junit.Test;
+import static org.junit.Assert.assertThat;
+
+public class ProgramTest {
+
+    @Test
+    public void test(){
+      assertThat(Program.AlphabetSoup("hello"), is("ehllo"));
+      assertThat(Program.AlphabetSoup("edabit"), is("abdeit"));
+      assertThat(Program.AlphabetSoup("hacker"), is("acehkr"));
+      assertThat(Program.AlphabetSoup("geek"), is("eegk"));
+      assertThat(Program.AlphabetSoup("javascript"), is("aacijprstv"));
+      assertThat(Program.AlphabetSoup("credibility"), is("bcdeiiilrty"));
+      assertThat(Program.AlphabetSoup("apostrophe"), is("aehoopprst"));
+      assertThat(Program.AlphabetSoup("determination"), is("adeeiimnnortt"));
+      assertThat(Program.AlphabetSoup("win"), is("inw"));
+      assertThat(Program.AlphabetSoup("synthesis"), is("ehinsssty"));
+    }
+}
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Create a function that takes a string and returns a new string with all vowels removed.
+function silenceTrump(str) {
+    var vowels = /[aeiou]/gi;
+    return str.replace(vowels, "")
+}
+
+// tests
+Test.assertEquals(silenceTrump("If Obama resigns from office NOW, thereby doing a great service to the country—I will give him free lifetime golf at any one of my courses!"), "f bm rsgns frm ffc NW, thrby dng  grt srvc t th cntry— wll gv hm fr lftm glf t ny n f my crss!")
+Test.assertEquals(silenceTrump("This election is a total sham and a travesty. We are not a democracy!"), "Ths lctn s  ttl shm nd  trvsty. W r nt  dmcrcy!")
+Test.assertEquals(silenceTrump("I have never seen a thin person drinking Diet Coke."), " hv nvr sn  thn prsn drnkng Dt Ck.")
+Test.assertEquals(silenceTrump("Everybody wants me to talk about Robert Pattinson and not Brian Williams—I guess people just don’t care about Brian!"), "vrybdy wnts m t tlk bt Rbrt Pttnsn nd nt Brn Wllms— gss ppl jst dn’t cr bt Brn!")
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+//  Create a function that takes a string and returns the number (count) of vowels contained within it.
+function countVowels(str) {
+	let vowels = /[aeiou]/ig
+    let count = 0
+
+    if(str.match(vowels)) {
+		return str.match(vowels).length
+    }
+}
+
+// tests
+Test.assertEquals(countVowels("Celebration"), 5)
+Test.assertEquals(countVowels("Palm"), 1)
+Test.assertEquals(countVowels("Prediction"), 4)
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
