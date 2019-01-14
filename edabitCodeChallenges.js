@@ -590,8 +590,26 @@ Test.assertEquals(countVowels("Celebration"), 5)
 Test.assertEquals(countVowels("Palm"), 1)
 Test.assertEquals(countVowels("Prediction"), 4)
 
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+//  Create a function that takes an integer and returns the factorial of that integer. That is, the integer multiplied by all positive lower integers.
+function factorial(int) {
+  	let result = int
 
+	if(int == 0) {
+    	return 1
+    } else {
+      	while (int > 1) {
+        	int--
+          	result = result * int
+        }
+      	return result
+    }
+}
 
+// tests
+Test.assertEquals(factorial(2), 2);
+Test.assertEquals(factorial(6), 720);
+Test.assertEquals(factorial(3), 6);
 
 
 
