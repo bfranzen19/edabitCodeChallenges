@@ -526,6 +526,7 @@ Test.assertEquals(isAvgWhole([1, 1, 1, 1]), true);
 Test.assertEquals(isAvgWhole([1, 2, 3, 4, 5]), true);
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+<<<<<<< HEAD
 // Create a function that takes an array of numbers and returns a new array, sorted in ascending order (smallest to biggest).
 // Sort numbers array in ascending order.
 // If functions argument is null, an empty array or undefined, return an empty array.
@@ -537,6 +538,101 @@ function sortNumsAscending(arr) {
     	return arr = arr.sort((a,b) => a-b)
     }
 }
+=======
+// Create a method that takes a string and returns a string with its letters in alphabetical order.
+import java.util.Arrays;
+
+public class Program {
+    public static String AlphabetSoup(String s) {
+	  	char cArr[] = s.toCharArray();
+	  	Arrays.sort(cArr);
+	  	s = String.valueOf(cArr);
+
+	  	return s;
+    }
+}
+
+// tests
+import static org.hamcrest.core.Is.is;
+import org.junit.Test;
+import static org.junit.Assert.assertThat;
+
+public class ProgramTest {
+
+    @Test
+    public void test(){
+      assertThat(Program.AlphabetSoup("hello"), is("ehllo"));
+      assertThat(Program.AlphabetSoup("edabit"), is("abdeit"));
+      assertThat(Program.AlphabetSoup("hacker"), is("acehkr"));
+      assertThat(Program.AlphabetSoup("geek"), is("eegk"));
+      assertThat(Program.AlphabetSoup("javascript"), is("aacijprstv"));
+      assertThat(Program.AlphabetSoup("credibility"), is("bcdeiiilrty"));
+      assertThat(Program.AlphabetSoup("apostrophe"), is("aehoopprst"));
+      assertThat(Program.AlphabetSoup("determination"), is("adeeiimnnortt"));
+      assertThat(Program.AlphabetSoup("win"), is("inw"));
+      assertThat(Program.AlphabetSoup("synthesis"), is("ehinsssty"));
+    }
+}
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Create a function that takes a string and returns a new string with all vowels removed.
+function silenceTrump(str) {
+    var vowels = /[aeiou]/gi;
+    return str.replace(vowels, "")
+}
+
+// tests
+Test.assertEquals(silenceTrump("If Obama resigns from office NOW, thereby doing a great service to the country—I will give him free lifetime golf at any one of my courses!"), "f bm rsgns frm ffc NW, thrby dng  grt srvc t th cntry— wll gv hm fr lftm glf t ny n f my crss!")
+Test.assertEquals(silenceTrump("This election is a total sham and a travesty. We are not a democracy!"), "Ths lctn s  ttl shm nd  trvsty. W r nt  dmcrcy!")
+Test.assertEquals(silenceTrump("I have never seen a thin person drinking Diet Coke."), " hv nvr sn  thn prsn drnkng Dt Ck.")
+Test.assertEquals(silenceTrump("Everybody wants me to talk about Robert Pattinson and not Brian Williams—I guess people just don’t care about Brian!"), "vrybdy wnts m t tlk bt Rbrt Pttnsn nd nt Brn Wllms— gss ppl jst dn’t cr bt Brn!")
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+//  Create a function that takes a string and returns the number (count) of vowels contained within it.
+function countVowels(str) {
+	let vowels = /[aeiou]/ig
+    let count = 0
+
+    if(str.match(vowels)) {
+		return str.match(vowels).length
+    }
+}
+
+// tests
+Test.assertEquals(countVowels("Celebration"), 5)
+Test.assertEquals(countVowels("Palm"), 1)
+Test.assertEquals(countVowels("Prediction"), 4)
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+//  Create a function that takes an integer and returns the factorial of that integer. That is, the integer multiplied by all positive lower integers.
+function factorial(int) {
+  	let result = int
+
+	if(int == 0) {
+    	return 1
+    } else {
+      	while (int > 1) {
+        	int--
+          	result = result * int
+        }
+      	return result
+    }
+}
+
+// tests
+Test.assertEquals(factorial(2), 2);
+Test.assertEquals(factorial(6), 720);
+Test.assertEquals(factorial(3), 6);
+
+
+
+
+
+
+
+
+
+>>>>>>> b76829971368bb802181aaffa56d4e9947ba3739
 
 // tests
 Test.assertSimilar(sortNumsAscending([1, 2, 10, 50, 5]), [1, 2, 5, 10, 50])
