@@ -525,9 +525,41 @@ Test.assertEquals(isAvgWhole([3, 5, 9]), false);
 Test.assertEquals(isAvgWhole([1, 1, 1, 1]), true);
 Test.assertEquals(isAvgWhole([1, 2, 3, 4, 5]), true);
 
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Create a function that takes an array of numbers and returns a new array, sorted in ascending order (smallest to biggest).
+// Sort numbers array in ascending order.
+// If functions argument is null, an empty array or undefined, return an empty array.
+// Return new array of sorted numbers.
+function sortNumsAscending(arr) {
+	if(arr == null || arr.length == 0) {
+      	return []
+    } else {
+    	return arr = arr.sort((a,b) => a-b)
+    }
+}
 
+// tests
+Test.assertSimilar(sortNumsAscending([1, 2, 10, 50, 5]), [1, 2, 5, 10, 50])
+Test.assertSimilar(sortNumsAscending([80, 29, 4, -95, -24, 85]), [-95, -24, 4, 29, 80, 85])
+Test.assertSimilar(sortNumsAscending(null), [])
 
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+//  Create a function that takes an array of numbers and returns only the even values.
+function noOdds(arr) {
+  	let resultArr = []
 
+    for(var i=0 ; i<arr.length ; i++) {
+      	if(arr[i] % 2 == false) {
+			resultArr.push(arr[i])
+        }
+    }
+    return resultArr
+}
+
+// tests
+Test.assertSimilar(noOdds([1, 2, 3, 4, 5, 6, 7, 8]), [2, 4, 6, 8]);
+Test.assertSimilar(noOdds([43, 65, 23, 89, 53, 9, 6]), [6]);
+Test.assertSimilar(noOdds([718, 991, 449, 644, 380, 440]), [718, 644, 380, 440]);
 
 
 
