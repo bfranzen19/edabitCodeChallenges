@@ -2,6 +2,7 @@
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 // Create a function that takes two strings as arguments and return either true or false depending on whether the number of their charcters is equal or not.
+
 function comp(str1, str2) {
 	if(str1.length == str2.length) {
     return true
@@ -18,6 +19,7 @@ Test.assertEquals(comp("hello", "edabit"), false);
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 // Create a function that takes a number as an argument and returns the amount of digits it has.
+
 function findDigitAmount(num) {
   let numStr = num.toString().length
   return numStr
@@ -30,6 +32,7 @@ Test.assertEquals(findDigitAmount(123), 3, 'Should work with a three-digit numbe
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 // Create a function that takes a base number and an exponent number and returns the calculation.
+
 function calculateExponent(num, exp) {
   if(num>0 && exp>0) {
     var exp = Math.pow(num, exp)
@@ -46,6 +49,7 @@ Test.assertEquals(calculateExponent(10,10), 10000000000);
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 // Create a function that takes a number (from 1 - 60) and returns a corresponding string of hyphens.
+
 function Go(num) {
   var hyph = '-'
 	if(num>0 && num<61) {
@@ -62,6 +66,7 @@ Test.assertEquals(Go(60),"------------------------------------------------------
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 // Create a function that takes a number (from 1 to 12) and return its corresponding month name as a string.
+
 function month_name(num) {
     if(num < 13 && num > 0) {
         switch(num) {
@@ -102,6 +107,7 @@ Test.assertEquals(month_name(3), 'March');
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 // Create a function to multiply all values in an array by the amount of values in that array.
+
 function MultiplyByLength(arr) {
   let len = arr.length
 
@@ -120,6 +126,7 @@ Test.assertSimilar(MultiplyByLength([1,0,3,3,7,2,1]), [7,0,21,21,49,14,7]);
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 // Create a function that takes an array and a string as arguments and return the index of the string.
+
 function find_index(arr, str) {
 	let arrIndex = arr.indexOf(str)
   return arrIndex
@@ -132,6 +139,7 @@ Test.assertEquals(find_index(['hi', 'edabit.com', 'testcase', 'validstring'], 'e
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 // Create a function that takes two arguments (item, times). The first argument (item) is the item that needs repeating while the second argument (times) is the number of times the item is to be repeated. Return the result in an array.
+
 function repeat(item, times) {
   	let arr = []
 	if(typeof item == 'string' || typeof item == 'number' && typeof times == 'number') {
@@ -149,6 +157,7 @@ Test.assertSimilar(repeat("7", 2),  ["7", "7"]);
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 // Create a function that takes a number as an argument, increments the number by +1 and returns the result.
+
 function addition(num) {
   return ++num
 }
@@ -160,6 +169,7 @@ Test.assertEquals(addition(0), 1);
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 // Create a function that reverses a boolean value and returns the string "boolean expected" if another variable type is given.
+
 function reverse(bool) {
   if(typeof bool == 'number') {
     return "boolean expected"
@@ -178,6 +188,7 @@ Test.assertEquals(reverse(0), "boolean expected");
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 // Create a function that takes two numbers as arguments and return their sum.
+
 function addition(a, b) {
 	if(typeof a == 'number' && typeof b == 'number') {
       	let sum = a + b
@@ -194,6 +205,7 @@ Test.assertEquals( addition(7,3), 10);
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 // Create a function that takes a string and returns the word count. The string will be a sentence.
+
 function countWords(str) {
 	let strArr = str.split(" ").length
 	return strArr
@@ -206,6 +218,7 @@ Test.assertEquals(countWords("Is this easy mode"), 4);
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 // Create a function that takes a number as its only argument and returns true if it's less than or equal to zero, otherwise return false.
+
 function lessThanOrEqualToZero(num) {
     if(num <= 0) {
         return true
@@ -221,6 +234,7 @@ Test.assertEquals(lessThanOrEqualToZero(-5), true);
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 // Create a function that takes an array of numbers and returns the smallest number in the set.
+
 function findSmallestNum(arr) {
 	let smallest = Math.min.apply(null, arr)
     return smallest
@@ -233,6 +247,7 @@ Test.assertEquals(findSmallestNum([-76, 1.345, 1, 0]), -76)
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 // Create a function that takes two strings and returns true if the first argument ends with the second argument; otherewise return false .
+
 function checkEnding(str1, str2) {
   if(str1.length>0 && str2.length>0 && typeof str1 == 'string' && typeof str2 == 'string') {
     if(str1.substr(-str2.length) === str2) {
@@ -252,6 +267,7 @@ Test.assertEquals(checkEnding("samurai", "zi"), false);
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 // Create a function that takes an array of numbers. Return the largest number in the array.
+
 function findLargestNum(arr) {
   var largest = Math.max.apply(null,arr)
   return largest
@@ -264,6 +280,7 @@ Test.assertEquals(findLargestNum([32, 35, 37, 39]), 39)
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 // Create a function that takes a number as an argument and returns "even" for even numbers and "odd" for odd numbers.
+
 function isEvenOrOdd(num) {
 	if(typeof num == 'number') {
     if(num % 2 == 0 || num == 0) {
@@ -283,6 +300,7 @@ Test.assertEquals(isEvenOrOdd(7), "odd");
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 // Create a function that accepts an array and returns the last item in the array.
+
 function getLastItem(arr) {
   let lastItem = arr.pop()
   return lastItem
@@ -295,6 +313,7 @@ Test.assertEquals(getLastItem([undefined]));
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 // Create a function that takes a string as its argument and returns the string in reversed order.
+
 function reverse(str) {
 	if(typeof str == 'string') {
         let arr = str.split("").reverse().join("")
@@ -311,6 +330,7 @@ Test.assertEquals(reverse("Innovation is the ability to see change as an opportu
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 // Create a function that takes an array of numbers and return both the minimum and maximum numbers, in that order.
+
 function minMax(arr) {
 	if(typeof arr == 'object' && arr.length>0) {
       	let min = Math.min(...arr)
@@ -329,6 +349,7 @@ Test.assertSimilar(minMax([13, 72, 98, 43, 24, 65, 31]), [13, 98])
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 // Create a function that takes a number as an argument. Add up all the numbers from 1 to the number you passed to the function. For example, if the input is 4 then your function should return 10 because 1 + 2 + 3 + 4 = 10.
+
 function addUp(num) {
 	if(typeof num == 'number' && num > 0 && num < 1001) {
       	let sum = 0
@@ -349,6 +370,7 @@ Test.assertEquals(addUp(600), 180300)
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 // Create a function that accepts a string (of a persons first and last name) and returns a string with the first and last name swapped.
+
 function nameShuffle(str) {
 	if(typeof str == 'string') {
 		let flipsie = str.split(" ").reverse().join(" ")
@@ -365,6 +387,7 @@ Test.assertEquals(nameShuffle("Ebony Greene"),"Greene Ebony");
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 // Create a function that takes two strings as arguments and returns the number of times the first string is found in the second string.
+
 function charCount(myChar, str) {
   	let returnArr = str.split('')
     let numChars = 0
@@ -389,6 +412,7 @@ Test.assertEquals(charCount('c', 'Chamber of secrets'), 1);
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 // Create a function that takes an array of strings. Return all words in the array that are exactly four letters.
+
 function isFourLetters(arr) {
   	let retArr = []
 	if(arr.length > 0 && typeof arr == 'object') {
@@ -409,6 +433,7 @@ Test.assertSimilar(isFourLetters(["Kangaroo", "Bear", "Fox"]), ["Bear"])
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 // Create a function that takes a string and returns a string in which each character is repeated once.
+
 function doubleChar(str) {
   	let arr = []
     let retStr = ""
@@ -426,6 +451,7 @@ Test.assertEquals(doubleChar("1234!_ "), "11223344!!__  ")
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 //  Create a function that takes an array of non-negative numbers and strings and return a new array without the strings.
+
 function filterArray(arr) {
   	let result = []
 
@@ -444,6 +470,7 @@ Test.assertSimilar(filterArray([1, 2, "aasf", "1", "123", 123]), [1, 2, 123]);
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 // Create a function that takes a string and returns a string with its letters in alphabetical order.
+
 function AlphabetSoup(str) {
 	return str.split("").sort().join("")
 }
@@ -455,6 +482,7 @@ Test.assertEquals(AlphabetSoup("hacker"), "acehkr");
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 // Given a number n, write a function that returns PI to n decimal places.
+
 function myPi(n) {
   	if(n <= 15) {
       	let result = Number.parseFloat(Math.PI.toFixed(n))
@@ -471,6 +499,7 @@ Test.assertEquals(myPi( 2), 3.14);
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 // Christmas Eve is almost upon us, so naturally we need to prepare some milk and cookies for Santa! Create a function that accepts a Date object and returns true if it's Christmas Eve (December 24th) and false otherwise. Keep in mind JavaScript's Date month is 0 based, meaning December is the 11th month while January is 0.
+
 function timeForMilkAndCookies(date) {
   	let day = date.getDate(date)
     let month = date.getMonth(date)
@@ -488,6 +517,7 @@ Test.assertEquals(timeForMilkAndCookies(new Date(2154, 11, 11)), false)
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 // Take an array of integers (positive or negative or both) and return the sum of the absolute value of each element.
+
 function getAbsSum(arr) {
   	let newArr = []
     let result = 0
@@ -510,6 +540,7 @@ Test.assertEquals(getAbsSum([-1, -3, -5, -4, -10, 0]), 23);
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 // Create a function that takes an array as an argument and returns true or false depending on whether the average of all elements in the array is a whole number or not.
+
 function isAvgWhole(arr) {
 	let sum = arr.reduce(function(a,b) {
     	return a + b
@@ -526,11 +557,11 @@ Test.assertEquals(isAvgWhole([1, 1, 1, 1]), true);
 Test.assertEquals(isAvgWhole([1, 2, 3, 4, 5]), true);
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
-<<<<<<< HEAD
 // Create a function that takes an array of numbers and returns a new array, sorted in ascending order (smallest to biggest).
 // Sort numbers array in ascending order.
 // If functions argument is null, an empty array or undefined, return an empty array.
 // Return new array of sorted numbers.
+
 function sortNumsAscending(arr) {
 	if(arr == null || arr.length == 0) {
       	return []
@@ -538,41 +569,8 @@ function sortNumsAscending(arr) {
     	return arr = arr.sort((a,b) => a-b)
     }
 }
-=======
-// Create a method that takes a string and returns a string with its letters in alphabetical order.
-import java.util.Arrays;
 
-public class Program {
-    public static String AlphabetSoup(String s) {
-	  	char cArr[] = s.toCharArray();
-	  	Arrays.sort(cArr);
-	  	s = String.valueOf(cArr);
 
-	  	return s;
-    }
-}
-
-// tests
-import static org.hamcrest.core.Is.is;
-import org.junit.Test;
-import static org.junit.Assert.assertThat;
-
-public class ProgramTest {
-
-    @Test
-    public void test(){
-      assertThat(Program.AlphabetSoup("hello"), is("ehllo"));
-      assertThat(Program.AlphabetSoup("edabit"), is("abdeit"));
-      assertThat(Program.AlphabetSoup("hacker"), is("acehkr"));
-      assertThat(Program.AlphabetSoup("geek"), is("eegk"));
-      assertThat(Program.AlphabetSoup("javascript"), is("aacijprstv"));
-      assertThat(Program.AlphabetSoup("credibility"), is("bcdeiiilrty"));
-      assertThat(Program.AlphabetSoup("apostrophe"), is("aehoopprst"));
-      assertThat(Program.AlphabetSoup("determination"), is("adeeiimnnortt"));
-      assertThat(Program.AlphabetSoup("win"), is("inw"));
-      assertThat(Program.AlphabetSoup("synthesis"), is("ehinsssty"));
-    }
-}
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 // Create a function that takes a string and returns a new string with all vowels removed.
@@ -589,6 +587,7 @@ Test.assertEquals(silenceTrump("Everybody wants me to talk about Robert Pattinso
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 //  Create a function that takes a string and returns the number (count) of vowels contained within it.
+
 function countVowels(str) {
 	let vowels = /[aeiou]/ig
     let count = 0
@@ -605,6 +604,7 @@ Test.assertEquals(countVowels("Prediction"), 4)
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 //  Create a function that takes an integer and returns the factorial of that integer. That is, the integer multiplied by all positive lower integers.
+
 function factorial(int) {
   	let result = int
 
@@ -641,6 +641,7 @@ Test.assertSimilar(sortNumsAscending(null), [])
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 //  Create a function that takes an array of numbers and returns only the even values.
+
 function noOdds(arr) {
   	let resultArr = []
 
@@ -659,6 +660,7 @@ Test.assertSimilar(noOdds([718, 991, 449, 644, 380, 440]), [718, 644, 380, 440])
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 //  Create a function that takes an array of arrays with numbers. Return a new (single) array with the largest numbers of each.
+
 function findLargestNums(arr) {
   	let retArr = []
 
@@ -672,6 +674,61 @@ function findLargestNums(arr) {
 Test.assertSimilar(findLargestNums([[4, 2, 7, 1], [20, 70, 40, 90], [1, 2, 0]]), [7, 90, 2])
 Test.assertSimilar(findLargestNums([[0.4321, 0.7634, 0.652], [1.324, 9.32, 2.5423, 6.4314], [9, 3, 6, 3]]), [0.7634, 9.32, 9])
 Test.assertSimilar(findLargestNums([[-34, -54, -74], [-32, -2, -65], [-54, 7, -43]]), [-34, -2, 7])
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+//  Create a function that takes an array of numbers and returns the following statistics:
+// Minimum Value
+// Maximum Value
+// Sequence Length
+// Average Value
+
+function minMaxLengthAverage(arr) {
+	let sortedArr = arr.sort((a,b) => a-b)
+    let resultArr = []
+    let len = arr.length
+    let min = arr[0]
+    let max = arr[len-1]
+    let av = arr.reduce((acc,cV) => acc+cV,0) / len
+
+    resultArr.push(min,max,len,av)
+    return resultArr
+}
+
+// tests
+Test.assertSimilar(minMaxLengthAverage([6, 9, 15, -2, 92, 11]), [-2, 92, 6, 21.833333333333332]);
+Test.assertSimilar(minMaxLengthAverage([30, 43, 20, 92, 3, 74]), [3, 92, 6, 43.666666666666664]);
+Test.assertSimilar(minMaxLengthAverage([4.54, 8.32, 5.20]), [4.54, 8.32, 3, 6.02]);
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Create a function that takes an array of numbers and returns the mean value.
+
+function mean(arr) {
+	const mean = arr.reduce((a,b) => a+b,0)/arr.length
+	return parseFloat(mean.toFixed(2))
+}
+
+// tests
+Test.assertEquals((mean([1, 0, 4, 5, 2, 4, 1, 2, 3, 3, 3])), 2.55);
+Test.assertEquals((mean([324, 543, 654, 9876])), 2849.25);
+Test.assertEquals((mean([0, 0, 0, 0])), 0.00);
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+//
+
+
+
+// tests
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -689,6 +746,7 @@ Test.assertSimilar(findLargestNums([[-34, -54, -74], [-32, -2, -65], [-54, 7, -4
 /*                 template              */
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 //
+
 
 
 // tests
