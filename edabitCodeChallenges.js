@@ -726,11 +726,32 @@ Test.assertSimilar(removeDups(['John', 'Taylor', 'John', 'john']), ['John', 'Tay
 Test.assertSimilar(removeDups(['javascript', 'python', 'python', 'ruby', 'javascript', 'c', 'ruby']), ['javascript', 'python', 'ruby', 'c'])
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+<<<<<<< HEAD
 // Create a function that takes a number as an argument and returns true or false depending on whether the number is symmetrical or not. A number is symmetrical when it is the same as its reverse.
 
 function isSymmetrical(num) {
   	let ret = [num].toString()
     let arr = ret.split('').reverse().join('')
+=======
+// Create a function that takes an array of numbers between 1 and 10 (excluding one number) and returns the missing number.
+
+function missingNums(arr) {
+	arr = arr.sort((a,b)=>a-b)
+
+  	for(var i=0 ; i<arr.length ; i++) {
+		if(arr[i+1] - arr[i] !== 1) {
+        	return arr[i] + 1
+        } else if(arr[0] !== 1) {
+		  	return 1
+		}
+    }
+}
+
+// tests
+Test.assertEquals(missingNums([1, 2, 3, 4, 6, 7, 8, 9, 10]), 5)
+Test.assertEquals(missingNums([7, 2, 3, 6, 5, 9, 1, 4, 8]), 10)
+Test.assertEquals(missingNums([7, 2, 3, 9, 4, 5, 6, 8, 10]), 1)
+>>>>>>> 3ec989b81f71792a30f24c6b58e21e5492ae2286
 
     if(ret.length == 1) {
       	return true

@@ -2,6 +2,7 @@
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 // All you have to do is type return true; between the curly braces and click the Check button. If everything went according to plan, the button will turn red and say SUBMIT FINAL. Click it and see what happens.
+
 public class Program {
     public static boolean returnTrue() {
       return true;
@@ -22,6 +23,7 @@ public class ProgramTest {
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 // Create a method that takes an integer as its only argument and returns true if it's less than or equal to zero, otherwise return false.
+
 public class Program {
     public static boolean lessThanOrEqualToZero(int num) {
     	if (num <= 0) {
@@ -71,6 +73,7 @@ public class ProgramTest {
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 // Create a method that takes two integers as arguments and return their sum.
+
 public class SumOfTwoNumbers {
     public static int sum(int a, int b) {
     	return a + b;
@@ -107,6 +110,7 @@ public class SumOfTwoNumbersTest {
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 // Create a method that takes an integer as an argument and returns"even" for even integers and "odd" for odd integers.
+
 public class Program {
     public static String isEvenOrOdd(int num) {
     	if(num % 2 == 0 || num == 0) {
@@ -175,6 +179,7 @@ public class ProgramTest {
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 // There is a single operator in Java capable of providing the remainder of a division operation. Two numbers are passed as parameters. The first provider divided by the second parameter will have a remainder, possiby zero. Return that value.
+
 public class Challenge {
   	public static int myMethod(int a, int b) {
 		return a%b;
@@ -237,6 +242,7 @@ public class FindIndexTest {
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 //Create a function that takes a two strings and returns true if the first argument ends with the second argument; otherwise return false.
+
 public class Challenge {
   public static boolean checkEnding(String str1, String str2) {
 
@@ -302,6 +308,7 @@ public class EndingTests {
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 // Create a method that takes a string as its argument and returns the string in reversed order.
+
 public class ReverseOrder {
   	public static String reverse(final String str) {
 
@@ -368,6 +375,7 @@ public class DescendingOrderTest {
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 // Create a method that takes a string and returns a string in which each character is repeated once.
+
 import java.lang.*;
 
 public class Program {
@@ -406,6 +414,7 @@ public class ProgramTest {
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 // Christmas Eve is almost upon us, so naturally we need to prepare some milk and cookies for Santa! Create a method that accepts a GregorianCalendar object and returns true if it's Christmas Eve (December 24th) and false otherwise.
+
 import java.util.GregorianCalendar;
 
 public class Program {
@@ -442,6 +451,7 @@ public class ProgramTest {
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 // Create a function that takes a string and returns the middle character(s). If the word's length is odd, return the middle character. If the word's length is even, return the middle two characters.
+
 class Challenge {
   public static String getMiddle(String word) {
 	String bsRet = "bs return";
@@ -506,6 +516,7 @@ public class MiddleTests {
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 // ATM machines allow 4 or 6 digit PIN codes and PIN codes cannot contain anything but exactly 4 digits or exactly 6 digits. Your task is to create a method that takes a string and returns true if the PIN is valid and false if it's not.
+
 public class Program {
     public static boolean validatePIN(String s) {
 	  	char[] cArr = s.toCharArray();
@@ -560,28 +571,47 @@ public class ProgramTest {
 }
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Create a method that takes a string and returns a string with its letters in alphabetical order.
+
+import java.util.Arrays;
+
+public class Program {
+    public static String AlphabetSoup(String s) {
+	  	char cArr[] = s.toCharArray();
+	  	Arrays.sort(cArr);
+	  	s = String.valueOf(cArr);
+
+	  	return s;
+    }
+}
+
+// tests
+import static org.hamcrest.core.Is.is;
+import org.junit.Test;
+import static org.junit.Assert.assertThat;
+
+public class ProgramTest {
+
+    @Test
+    public void test(){
+      assertThat(Program.AlphabetSoup("hello"), is("ehllo"));
+      assertThat(Program.AlphabetSoup("edabit"), is("abdeit"));
+      assertThat(Program.AlphabetSoup("hacker"), is("acehkr"));
+      assertThat(Program.AlphabetSoup("geek"), is("eegk"));
+      assertThat(Program.AlphabetSoup("javascript"), is("aacijprstv"));
+      assertThat(Program.AlphabetSoup("credibility"), is("bcdeiiilrty"));
+      assertThat(Program.AlphabetSoup("apostrophe"), is("aehoopprst"));
+      assertThat(Program.AlphabetSoup("determination"), is("adeeiimnnortt"));
+      assertThat(Program.AlphabetSoup("win"), is("inw"));
+      assertThat(Program.AlphabetSoup("synthesis"), is("ehinsssty"));
+    }
+}
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 //
 
 
 // tests
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
