@@ -725,8 +725,28 @@ Test.assertSimilar(removeDups(['John', 'Taylor', 'John']), ['John', 'Taylor'])
 Test.assertSimilar(removeDups(['John', 'Taylor', 'John', 'john']), ['John', 'Taylor', 'john'])
 Test.assertSimilar(removeDups(['javascript', 'python', 'python', 'ruby', 'javascript', 'c', 'ruby']), ['javascript', 'python', 'ruby', 'c'])
 
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Create a function that takes a number as an argument and returns true or false depending on whether the number is symmetrical or not. A number is symmetrical when it is the same as its reverse.
 
+function isSymmetrical(num) {
+  	let ret = [num].toString()
+    let arr = ret.split('').reverse().join('')
 
+    if(ret.length == 1) {
+      	return true
+    } else {
+      	if(ret == arr) {
+          	return true
+        } else {
+		 	return false
+		}
+    }
+}
+
+// tests
+Test.assertEquals(isSymmetrical(23), false);
+Test.assertEquals(isSymmetrical(9562), false);
+Test.assertEquals(isSymmetrical(10019), false);
 
 
 
