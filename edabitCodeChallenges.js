@@ -624,15 +624,20 @@ Test.assertEquals(factorial(2), 2);
 Test.assertEquals(factorial(6), 720);
 Test.assertEquals(factorial(3), 6);
 
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 
+// Create a function that takes an array of numbers and returns a new array, sorted in ascending order (smallest to biggest).
+// Sort numbers array in ascending order.
+// If functions argument is null, an empty array or undefined, return an empty array.
+// Return new array of sorted numbers.
 
-
-
-
-
-
-
->>>>>>> b76829971368bb802181aaffa56d4e9947ba3739
+function sortNumsAscending(arr) {
+	if(arr == null || arr.length == 0) {
+      	return []
+    } else {
+    	return arr = arr.sort((a,b) => a-b)
+    }
+}
 
 // tests
 Test.assertSimilar(sortNumsAscending([1, 2, 10, 50, 5]), [1, 2, 5, 10, 50])
@@ -726,13 +731,7 @@ Test.assertSimilar(removeDups(['John', 'Taylor', 'John', 'john']), ['John', 'Tay
 Test.assertSimilar(removeDups(['javascript', 'python', 'python', 'ruby', 'javascript', 'c', 'ruby']), ['javascript', 'python', 'ruby', 'c'])
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
-<<<<<<< HEAD
-// Create a function that takes a number as an argument and returns true or false depending on whether the number is symmetrical or not. A number is symmetrical when it is the same as its reverse.
 
-function isSymmetrical(num) {
-  	let ret = [num].toString()
-    let arr = ret.split('').reverse().join('')
-=======
 // Create a function that takes an array of numbers between 1 and 10 (excluding one number) and returns the missing number.
 
 function missingNums(arr) {
@@ -751,12 +750,20 @@ function missingNums(arr) {
 Test.assertEquals(missingNums([1, 2, 3, 4, 6, 7, 8, 9, 10]), 5)
 Test.assertEquals(missingNums([7, 2, 3, 6, 5, 9, 1, 4, 8]), 10)
 Test.assertEquals(missingNums([7, 2, 3, 9, 4, 5, 6, 8, 10]), 1)
->>>>>>> 3ec989b81f71792a30f24c6b58e21e5492ae2286
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+
+// Create a function that takes a number as an argument and returns true or false depending on whether the number is symmetrical or not. A number is symmetrical when it is the same as its reverse.
+
+function isSymmetrical(num) {
+  	let ret = [num].toString()
+    let arr = ret.split('').reverse().join('')
 
     if(ret.length == 1) {
       	return true
     } else {
       	if(ret == arr) {
+          	console.log('ret - ' + ret + ' ;  arr - ' + arr)
           	return true
         } else {
 		 	return false
@@ -769,7 +776,17 @@ Test.assertEquals(isSymmetrical(23), false);
 Test.assertEquals(isSymmetrical(9562), false);
 Test.assertEquals(isSymmetrical(10019), false);
 
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Create a function that takes a number as an argument and returns a string formatted to separate thousands.
 
+function formatNum(num) {
+	return num.toLocaleString().toString()
+}
+
+// tests
+Test.assertEquals(formatNum(1000), "1,000");
+Test.assertEquals(formatNum(1000000), "1,000,000");
+Test.assertEquals(formatNum(20), "20");
 
 
 
