@@ -752,7 +752,7 @@ Test.assertEquals(missingNums([7, 2, 3, 6, 5, 9, 1, 4, 8]), 10)
 Test.assertEquals(missingNums([7, 2, 3, 9, 4, 5, 6, 8, 10]), 1)
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
-<<<<<<< HEAD
+
 //  Create a function that accepts a string of space separated numbers and returns the highest and lowest number (as a string).
 
 function highLow(str) {
@@ -816,25 +816,6 @@ Test.assertEquals(XO("xooxx"), false);
 Test.assertEquals(XO("ooxXm"), true);
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
-//
-
-
-
-// tests
-
-
-
-
-
-
-
-
-
-
-
-
-=======
->>>>>>> d3248cf37513e0536bcb5358e7510a35f193cb38
 
 // Create a function that takes a number as an argument and returns true or false depending on whether the number is symmetrical or not. A number is symmetrical when it is the same as its reverse.
 
@@ -901,6 +882,91 @@ function equal(a, b, c) {
 Test.assertEquals(equal(2,3,4), 0, "All values are differents");
 Test.assertEquals(equal(7,3,7), 2, "Two values are equal");
 Test.assertEquals(equal(4,4,4), 3, "All 3 values are equal");
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Create a function that alternates the case of the characters in a string. The first character should always be UPPERCASE.
+
+function alternatingCaps(str) {
+	let arr = []
+
+	for(var i=0 ; i<str.length ; i++) {
+    	if(i % 2 !== 0) {
+        	arr.push(str[i].toLowerCase())
+        } else {
+        	arr.push(str[i].toUpperCase())
+        }
+    }
+  	str = arr.join('')
+	return str
+}
+
+// tests
+Test.assertEquals(
+  alternatingCaps('alternating caps'),
+  'AlTeRnAtInG CaPs'
+);
+Test.assertEquals(
+  alternatingCaps("Hello, what's your name?"),
+  "HeLlO, wHaT'S YoUr nAmE?"
+);
+Test.assertEquals(
+  alternatingCaps('Lorem ipsum dolor sit amet, consectetur adipisicing elit.'),
+  'LoReM IpSuM DoLoR SiT AmEt, CoNsEcTeTuR AdIpIsIcInG ElIt.'
+);
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Create a function that takes an array of names and returns an array with the first letter capitalized. Don't change the order of the original array. Notice in the second example above, "MABELLE" is returned as "Mabelle".
+
+function capMe(arr) {
+  	let retArr = []
+
+  	let str = arr.join(', ')
+  	str = str.toLowerCase()
+  	arr = str.split(', ')
+
+    for(var i=0 ; i<arr.length ; i++) {
+    	let firstLetter = arr[i].slice(0,1)
+  		firstLetter = firstLetter.toUpperCase()
+
+      	let restOfWord = arr[i].slice(1)
+    	let fullWord = []
+
+    	fullWord.push(firstLetter)
+        fullWord.push(restOfWord)
+
+	  	res = fullWord.join('')
+      	retArr.push(res)
+    }
+  	return retArr
+}
+
+// tests
+Test.assertSimilar(capMe(['mavis', 'senaida', 'letty']), ['Mavis', 'Senaida', 'Letty'])
+Test.assertSimilar(capMe(['samuel', 'MABELLE', 'letitia', 'meridith']), ['Samuel', 'Mabelle', 'Letitia', 'Meridith'])
+Test.assertSimilar(capMe(['Slyvia', 'Kristal', 'Sharilyn', 'Calista']), ['Slyvia', 'Kristal', 'Sharilyn', 'Calista'])
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+//
+
+
+
+// tests
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

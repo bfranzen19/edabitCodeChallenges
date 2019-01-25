@@ -571,24 +571,8 @@ public class ProgramTest {
 }
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
-<<<<<<< HEAD
-//
 
-
-
-// tests
-
-
-
-
-
-
-
-
-
-=======
 // Create a method that takes a string and returns a string with its letters in alphabetical order.
->>>>>>> d3248cf37513e0536bcb5358e7510a35f193cb38
 
 import java.util.Arrays;
 
