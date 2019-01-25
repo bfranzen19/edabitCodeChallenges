@@ -745,6 +745,87 @@ Test.assertEquals(missingNums([1, 2, 3, 4, 6, 7, 8, 9, 10]), 5)
 Test.assertEquals(missingNums([7, 2, 3, 6, 5, 9, 1, 4, 8]), 10)
 Test.assertEquals(missingNums([7, 2, 3, 9, 4, 5, 6, 8, 10]), 1)
 
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+//  Create a function that accepts a string of space separated numbers and returns the highest and lowest number (as a string).
+
+function highLow(str) {
+	let arr = str.split(" ")
+    let max = Math.max.apply(null, arr)
+    let min = Math.min.apply(null, arr)
+    let ret = []
+    ret.push(max)
+    ret.push(min)
+    return ret.join(' ')
+}
+
+// tests
+Test.assertEquals(highLow("4 5 29 54 4 0 -214 542 -64 1 -3 6 -6"), "542 -214")
+Test.assertEquals(highLow("1 -1"), "1 -1")
+Test.assertEquals(highLow("1 1"), "1 1")
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Create a function that takes any nonnegative number as an argument and return it with it's digits in descending order. Descending order is when you sort from highest to lowest.
+
+function sortDecending(num) {
+  	let res = Number(num.toString().split('').sort((a,b)=>b-a).join(''))
+  	return res
+}
+
+// tests
+Test.assertEquals(sortDecending(123), 321)
+Test.assertEquals(sortDecending(670276097), 977766200)
+Test.assertEquals(sortDecending(2619805), 9865210)
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+//  Create a function that takes a string, checks if it has the same number of 'x's and 'o's and returns either true or false.
+// Return a boolean value (true or false).
+// The string can contain any character.
+// When neither an x nor an o is in the string, return true.
+
+function XO(str) {
+	let result = str.toLowerCase()
+    let x = /[x]/
+    let o = /[o]/
+    let xArr = []
+    let oArr = []
+
+    for(var i=0 ; i<result.length ; i++) {
+    	if(result[i].match(x)) {
+        	xArr.push(result[i])
+        } else if(result[i].match(o)) {
+        	oArr.push(result[i])
+        }
+    }
+  	if(xArr.length == oArr.length) {
+      	return true
+    } else {
+      	return false
+    }
+}
+
+// tests
+Test.assertEquals(XO("ooxx"), true);
+Test.assertEquals(XO("xooxx"), false);
+Test.assertEquals(XO("ooxXm"), true);
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+//
+
+
+
+// tests
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
