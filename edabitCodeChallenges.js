@@ -788,9 +788,36 @@ Test.assertEquals(formatNum(1000), "1,000");
 Test.assertEquals(formatNum(1000000), "1,000,000");
 Test.assertEquals(formatNum(20), "20");
 
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+//  Create a function that takes a string as an argument and returns a coded (h4ck3r 5p34k) version of the string. In order to work properly, the function should replace all 'a's with 4, 'e's with 3, 'i's with 1, 'o's with 0, and 's's with 5.
 
+function hackerSpeak(str) {
+  	let result = str.replace(/a/gi, 4).replace(/e/gi, 3).replace(/i/gi, 1).replace(/o/gi, 0).replace(/s/gi, 5)
+    return result
+}
 
+// tests
+Test.assertEquals(hackerSpeak("javascript is cool"), "j4v45cr1pt 15 c00l");
+Test.assertEquals(hackerSpeak("become a coder"), "b3c0m3 4 c0d3r");
+Test.assertEquals(hackerSpeak("hi there"), "h1 th3r3");
 
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Write a function that takes three input values (a, b, c) and returns the number of equal values. Your function must return 0, 2 or 3.
+
+function equal(a, b, c) {
+	if(a == b && a == c && b == c) {
+      	return 3
+    } else if(a == b || a == c || b == c) {
+      	return 2
+    } else {
+      	return 0
+    }
+}
+
+// tests
+Test.assertEquals(equal(2,3,4), 0, "All values are differents");
+Test.assertEquals(equal(7,3,7), 2, "Two values are equal");
+Test.assertEquals(equal(4,4,4), 3, "All 3 values are equal");
 
 
 
