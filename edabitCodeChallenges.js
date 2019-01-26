@@ -928,7 +928,7 @@ function capMe(arr) {
     	let firstLetter = arr[i].slice(0,1)
   		firstLetter = firstLetter.toUpperCase()
 
-      	let restOfWord = arr[i].slice(1)
+      let restOfWord = arr[i].slice(1)
     	let fullWord = []
 
     	fullWord.push(firstLetter)

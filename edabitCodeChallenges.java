@@ -609,12 +609,45 @@ public class ProgramTest {
 }
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Create a method that takes an array of integers and returns an array where each integer is the sum of itself + all previous numbers in the array. Return an empty array if the input is an empty array.
+
+public class Program {
+    public static int[] cumulativeSum(int[] nums) {
+	  	int[] ret = new int[nums.length];
+	  	int total = 0;
+
+	  	for(int i=0 ; i<nums.length ; i++) {
+			total += nums[i];
+		  	ret[i] = total;
+		}
+	  	return ret;
+    }
+}
+
+// tests
+import static org.hamcrest.core.Is.is;
+import org.junit.Test;
+import static org.junit.Assert.assertThat;
+
+public class ProgramTest {
+
+    @Test
+    public void test(){
+      assertThat(Program.cumulativeSum(new int[]{}), is (new int[]{}));
+      assertThat(Program.cumulativeSum(new int[]{1}), is (new int[]{1}));
+      assertThat(Program.cumulativeSum(new int[]{1,2,3}), is (new int[]{1,3,6}));
+      assertThat(Program.cumulativeSum(new int[]{-1,-2,-3}), is (new int[]{-1,-3,-6}));
+      assertThat(Program.cumulativeSum(new int[]{1,-2,3}), is (new int[]{1,-1,2}));
+      assertThat(Program.cumulativeSum(new int[]{3, 3, -2, 408, 3, 3, 0, 66, 2, -2, 2, 3, 4, 2, -47, 3, 3, 2}), is (new int[]{3, 6, 4, 412, 415, 418, 418, 484, 486, 484, 486, 489, 493, 495, 448, 451, 454, 456}));
+    }
+}
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 //
 
 
+
 // tests
-
-
 
 
 
