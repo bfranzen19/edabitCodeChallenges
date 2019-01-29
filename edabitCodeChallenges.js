@@ -946,15 +946,41 @@ Test.assertSimilar(capMe(['samuel', 'MABELLE', 'letitia', 'meridith']), ['Samuel
 Test.assertSimilar(capMe(['Slyvia', 'Kristal', 'Sharilyn', 'Calista']), ['Slyvia', 'Kristal', 'Sharilyn', 'Calista'])
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Create a function that takes a string, removes all "special" characters (e.g. ! @ # $ % ^ & \ *) and returns the new string. The only non-alphanumeric characters allowed are dashes -, underscores _ and spaces.
+
+function removeSpecialCharacters(str) {
+  let reg = /[^A-Za-z0-9_ -]/gi
+  let ret = str.replace(reg, '')
+	return ret
+}
+
+// tests
+Test.assertEquals(removeSpecialCharacters("The quick brown fox!"), "The quick brown fox")
+Test.assertEquals(removeSpecialCharacters("%fd76$fd(-)6GvKlO."), "fd76fd-6GvKlO")
+Test.assertEquals(removeSpecialCharacters("D0n$c sed 0di0 du1"), "D0nc sed 0di0 du1")
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Write a function that takes four string arguments. You will be comparing the first string to the three next strings. Verify if the first string starts with the second string, includes the third string, and ends with the fourth string. If the first string passes all checks, return the string "My head, body, and tail.", otherwise, return "Incomplete.". You'll always get exactly four strings as arguments. Tests are case sensitive.
+
+function verifySubstrs(mainStr, head, body, tail) {
+  	if(mainStr.startsWith(head) && mainStr.includes(body) && mainStr.endsWith(tail)) {
+      	return "My head, body, and tail."
+    } else {
+      	return "Incomplete."
+    }
+}
+
+// tests
+Test.assertEquals(verifySubstrs("Onomatopeia", "on", "mato", "ia"), "Incomplete.");
+Test.assertEquals(verifySubstrs("Baby", "B", "ab", "y"), "My head, body, and tail.");
+Test.assertEquals(verifySubstrs("Centipede", "Cent", "tip", "pede"), "My head, body, and tail.");
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 //
 
 
 
 // tests
-
-
-
-
 
 
 
