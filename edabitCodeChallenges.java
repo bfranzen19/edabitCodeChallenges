@@ -643,13 +643,53 @@ public class ProgramTest {
 }
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Create a method that takes a string as an argument and converts the first character of each word to uppercase. Return the newly formatted string.
+
+public class Program {
+    public static String makeTitle(String s) {
+  		StringBuilder sb = new StringBuilder(s);
+	  	String cap = Character.toString(s.charAt(0)).toUpperCase();
+	  	sb.replace(0,1,cap);
+
+	  	for(int i=0 ; i<s.length() ; i++) {
+		 	if(s.charAt(i) == ' ') {
+				int temp = i+1;
+			  	String cap2 = Character.toString(s.charAt(temp)).toUpperCase();
+			  	sb.replace(temp, temp+1, cap2);
+			}
+		}
+	  	return sb.toString();
+    }
+}
+
+// tests
+import static org.hamcrest.core.Is.is;
+import org.junit.Test;
+import static org.junit.Assert.assertThat;
+
+public class ProgramTest {
+
+    @Test
+    public void test(){
+      assertThat(Program.makeTitle("I am a title"), is("I Am A Title"));
+      assertThat(Program.makeTitle("I AM A TITLE"), is("I AM A TITLE"));
+      assertThat(Program.makeTitle("i aM a tITLE"), is("I AM A TITLE"));
+      assertThat(Program.makeTitle("the first letter of every word is capitalized"), is("The First Letter Of Every Word Is Capitalized"));
+      assertThat(Program.makeTitle("I Like Pizza"), is("I Like Pizza"));
+      assertThat(Program.makeTitle("Don't count your ChiCKens BeFore They HatCh"), is("Don't Count Your ChiCKens BeFore They HatCh"));
+      assertThat(Program.makeTitle("All generalizations are false, including this one"), is("All Generalizations Are False, Including This One"));
+      assertThat(Program.makeTitle("Me and my wife lived happily for twenty years and then we met."), is("Me And My Wife Lived Happily For Twenty Years And Then We Met."));
+      assertThat(Program.makeTitle("There are no stupid questions, just stupid people."), is("There Are No Stupid Questions, Just Stupid People."));
+      assertThat(Program.makeTitle("1f you c4n r34d 7h15, you r34lly n33d 2 g37 l41d"), is("1f You C4n R34d 7h15, You R34lly N33d 2 G37 L41d"));
+    }
+}
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 //
 
 
 
 // tests
-
-
 
 
 
