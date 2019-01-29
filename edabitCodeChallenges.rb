@@ -27,6 +27,29 @@ Test.assert_equals(find_largest_num([4, 5, 1, 3]), 5)
 Test.assert_equals(find_largest_num([13, 27, 18, 26]), 27)
 Test.assert_equals(find_largest_num([32, 35, 37, 39]), 39)
 
+### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
+### Create a function that takes two numbers as arguments and return their sum.
+
+def addition(a, b)
+  	return a+b
+end
+
+
+### tests
+Test.assert_equals(addition(2,3), 5)
+Test.assert_equals(addition(-3,-6), -9)
+Test.assert_equals(addition(7,3), 10)
+
+
+
+
+
+
+
+
+
+
+
 
 
 
