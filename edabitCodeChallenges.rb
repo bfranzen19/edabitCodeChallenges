@@ -40,9 +40,29 @@ Test.assert_equals(addition(2,3), 5)
 Test.assert_equals(addition(-3,-6), -9)
 Test.assert_equals(addition(7,3), 10)
 
+### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
+### Create a function that accepts an array and returns the last item in the array. The array can be either homogeneous or heterogeneous.
 
+def get_last_item(arr)
+	return arr.last
+end
 
+### tests
+Test.assert_equals(get_last_item(['Cat', 'Dog', 'Duck']), 'Duck')
+Test.assert_equals(get_last_item([1, 2, 3]), 3)
+Test.assert_equals(get_last_item([true, false, false, true]), true)
 
+### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
+### Create a function that takes an array of numbers and returns the smallest number in the array.
+
+def find_smallest_num(arr)
+	return arr.min
+end
+
+### tests
+Test.assert_equals(find_smallest_num([34, 15, 88, 2]), 2)
+Test.assert_equals(find_smallest_num([34, -345, -1, 100]), -345)
+Test.assert_equals(find_smallest_num([-76, 1.345, 1, 0]), -76)
 
 
 
