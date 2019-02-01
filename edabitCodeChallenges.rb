@@ -92,11 +92,59 @@ Test.assert_equals(calculate_exponent(3,3), 27)
 Test.assert_equals(calculate_exponent(10,10), 10000000000)
 
 ### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
-###
+### Create a function that takes a number as an argument and returns the amount of digits it has.
 
-
+def find_digit_amount(num)
+	s = num.to_s
+  	return s.length
+end
 
 ### tests
+Test.assert_equals(find_digit_amount(1), 1, 'Should work with one digit')
+Test.assert_equals(find_digit_amount(67), 2, 'Should work with a two-digit number')
+Test.assert_equals(find_digit_amount(123), 3, 'Should work with a three-digit number')
+
+### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
+### Create a function that accepts an array of numbers and return both the minimum and maximum numbers, in that order (as an array).
+
+def min_max(nums)
+	ret = [nums.min, nums.max]
+  	return ret
+end
+
+### tests
+Test.assert_equals(min_max([14, 35, 6, 1, 34, 54]), [1, 54])
+Test.assert_equals(min_max([1.346, 1.6532, 1.8734, 1.8723]), [1.346, 1.8734])
+Test.assert_equals(min_max([0.432, 0.874, 0.523, 0.984, 0.327, 0.2345]), [0.2345, 0.984])
+
+### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
+### Given an array of numbers, write a function that returns an array that...
+### Has all duplicate elements removed.
+### Is sorted from least value to greatest value.
+
+def unique_sort(arr)
+	arr = arr.uniq.sort
+  	return arr
+end
+
+### tests
+Test.assert_equals(unique_sort([1, 5, 8, 2, 3, 4, 4, 4, 10]), [1, 2, 3, 4, 5, 8, 10])
+Test.assert_equals(unique_sort([1, 2, 5, 4, 7, 7, 7]), [1, 2, 4, 5, 7])
+Test.assert_equals(unique_sort([7, 6, 5, 4, 3, 2, 1, 0, 1]), [0, 1, 2, 3, 4, 5, 6, 7])
+
+### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
+### Create a function that takes a number as an argument, increments the number by +1 and returns the result.
+
+def addition(num)
+	return num + 1
+end
+
+### tests
+Test.assert_equals(addition(2), 3)
+Test.assert_equals(addition(-9), -8)
+Test.assert_equals(addition(0), 1)
+
+
 
 
 
