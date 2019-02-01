@@ -64,12 +64,39 @@ Test.assert_equals(find_smallest_num([34, 15, 88, 2]), 2)
 Test.assert_equals(find_smallest_num([34, -345, -1, 100]), -345)
 Test.assert_equals(find_smallest_num([-76, 1.345, 1, 0]), -76)
 
+### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
+=begin Create a function that takes an array of numbers and returns a new array, sorted in ascending order (smallest to biggest).
+Sort numbers array in ascending order.
+If function's argument is an empty array, return an empty array.
+Return a new array of sorted numbers. =end
+
+def sort_nums_ascending(arr)
+	return arr.sort
+end
+
+### tests
+Test.assert_equals(sort_nums_ascending([1, 2, 10, 50, 5]), [1, 2, 5, 10, 50])
+Test.assert_equals(sort_nums_ascending([80, 29, 4, -95, -24, 85]), [-95, -24, 4, 29, 80, 85])
+Test.assert_equals(sort_nums_ascending([]), [])
+
+### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
+# Create a function that takes a base number and an exponent number and returns the calculation.
+
+def calculate_exponent(num, exp)
+	return num**exp
+end
+
+# tests
+Test.assert_equals(calculate_exponent(5,5), 3125)
+Test.assert_equals(calculate_exponent(3,3), 27)
+Test.assert_equals(calculate_exponent(10,10), 10000000000)
+
+### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
+###
 
 
 
-
-
-
+### tests
 
 
 
