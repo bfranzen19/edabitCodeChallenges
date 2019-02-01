@@ -976,11 +976,33 @@ Test.assertEquals(verifySubstrs("Baby", "B", "ab", "y"), "My head, body, and tai
 Test.assertEquals(verifySubstrs("Centipede", "Cent", "tip", "pede"), "My head, body, and tail.");
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+/* Create a function that accepts a string, checks if it's a valid email address and returns either true or false, depending on the evaluation.
+The string must contain an @ character.
+The string must contain a . character.
+The @ must have at least one character in front of it.
+e.g. "e@edabit.com" is valid while "@edabit.com" is invalid.
+The . and the @ must be in the appropriate places.
+e.g. "hello.email@com" is invalid while "john.smith@email.com" is valid.
+If the string passes these tests, it's considered a valid email address. */
+
+function validateEmail(str) {
+	let basics = /\S+@\S+\.\S+/.test(str)
+	return basics
+}
+
+// tests
+Test.assertEquals(validateEmail('@edabit.com'), false)
+Test.assertEquals(validateEmail('@edabit'), false)
+Test.assertEquals(validateEmail('matt@edabit.com'), true)
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 //
 
 
 
 // tests
+
+
 
 
 
