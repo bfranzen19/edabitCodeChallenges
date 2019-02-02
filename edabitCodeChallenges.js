@@ -996,12 +996,16 @@ Test.assertEquals(validateEmail('@edabit'), false)
 Test.assertEquals(validateEmail('matt@edabit.com'), true)
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
-//
+// Create a function that returns the number of argument it was called with.
 
-
+function numArgs() {
+	 return arguments.length
+}
 
 // tests
-
+Test.assertEquals(numArgs(), 0);
+Test.assertEquals(numArgs('foo'), 1);
+Test.assertEquals(numArgs('foo', 'bar'), 2);
 
 
 
