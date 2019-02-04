@@ -1007,7 +1007,20 @@ Test.assertEquals(numArgs(), 0);
 Test.assertEquals(numArgs('foo'), 1);
 Test.assertEquals(numArgs('foo', 'bar'), 2);
 
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Count the amount of ones in the binary representation of an integer. So for example, since 12 is '1100' in binary, the return value should be 2.
 
+function countOnes(i) {
+	let arr = (i >>> 0).toString(2).split('')
+    let final = arr.filter(x => x == 1).length
+
+    return final
+}
+
+// tests
+Test.assertEquals(countOnes(12), 2)
+Test.assertEquals(countOnes(0), 0)
+Test.assertEquals(countOnes(100), 3)
 
 
 
