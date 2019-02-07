@@ -1022,7 +1022,49 @@ Test.assertEquals(countOnes(12), 2)
 Test.assertEquals(countOnes(0), 0)
 Test.assertEquals(countOnes(100), 3)
 
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Create a function that takes an array of students and returns an array of student names
 
+function getStudentNames(students) {
+
+}
+
+// tests
+const areEqual = (actual, expected) => expected.every(
+  (item, index) => item === actual[index]
+)
+const sets = [
+  ['Jacek', 'Ewa', 'Zygmunt'],
+  ['Tomek'],
+  []
+].map(
+  set => ({
+    actual: getStudentNames(
+      set.map(name => ({ name }))
+    ),
+    expected: set
+  })
+).forEach(
+  ({ actual, expected }) => {
+    Test.expectNoError('Result should be an array', () => {
+      Test.assertEquals(areEqual(actual, expected), true, '' + actual)
+    })
+  }
+)
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Create a function that takes an array of students and returns an array of student names
+
+function getStudentNames(students) {
+  let ret = []
+  for(var i=0 ; i<students.length ; i++) {
+    ret.push(students[i].name)
+  }
+  return ret
+}
+
+// tests
+getStudentNames([{ name: 'Steve',}, { name: 'Mike'}, { name: 'John'}])
 
 
 
