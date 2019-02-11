@@ -65,16 +65,6 @@ class SmallestNumber extends TestCase
 
 
 
-
-
-
-
-
-
-
-
-
-
 <!-- template -->
 <!--  -->
 
