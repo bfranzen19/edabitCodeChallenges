@@ -145,20 +145,32 @@ Test.assert_equals(addition(-9), -8)
 Test.assert_equals(addition(0), 1)
 
 ### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
-### Create a function that takes a number as an argument and returns "even" for even numbers and "odd" for odd numbers.
+###
 
-def is_even_or_odd(num)
-	if num % 2 == 0
-      return "even"
-    else
-      return "odd"
-    end
-end
+
 
 ### tests
-Test.assert_equals(is_even_or_odd(3), "odd")
-Test.assert_equals(is_even_or_odd(0), "even")
-Test.assert_equals(is_even_or_odd(7), "odd")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

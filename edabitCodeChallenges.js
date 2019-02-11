@@ -1022,6 +1022,27 @@ Test.assertEquals(countOnes(12), 2)
 Test.assertEquals(countOnes(0), 0)
 Test.assertEquals(countOnes(100), 3)
 
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+//
+
+
+
+// tests
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
