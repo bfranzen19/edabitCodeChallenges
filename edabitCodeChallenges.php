@@ -33,13 +33,26 @@ class SmallestNumber extends TestCase
     }
 }
 
+<!-- Create a function that takes two numbers as arguments and return their sum. -->
+
+function addition($a, $b) {
+	return $a + $b;
+}
+
+<!-- tests -->
+class SumOf2NumbersTest extends TestCase {
+  public function testAddition() {
+    $this->assertEquals(5, addition(2,3), "Expected 2 + 3 = 5, got " . addition(2,3));
+    $this->assertEquals(-9, addition(-3,-6), "Expected -3 + (-6) = -9, got " . addition(-3,-6));
+    $this->assertEquals(10, addition(7,3), "Expected  7 + 3 = 10, got " . addition(7,3));
+  }
+}
+
 <!--  -->
 
 
 
 <!-- tests -->
-
-
 
 
 
