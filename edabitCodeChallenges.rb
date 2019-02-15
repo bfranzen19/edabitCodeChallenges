@@ -145,32 +145,18 @@ Test.assert_equals(addition(-9), -8)
 Test.assert_equals(addition(0), 1)
 
 ### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
-###
+### Create a function that takes an array of elements and return the first and last elements as a new array.
 
-
+def first_last(arr)
+	newArr = Array.new
+  	newArr.push(arr.first, arr.last)
+  	return newArr
+end
 
 ### tests
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Test.assert_equals(first_last([5, 10, 15, 20, 25]), [5, 25])
+Test.assert_equals(first_last(["edabit", 13, nil, false, true]), ["edabit", true])
+Test.assert_equals(first_last([nil, 4, "6", "hello", nil]), [nil, nil])
 
 ### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
 ###
@@ -178,6 +164,13 @@ Test.assert_equals(addition(0), 1)
 
 
 ### tests
+
+
+
+
+
+
+
 
 
 
