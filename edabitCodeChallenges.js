@@ -1066,7 +1066,20 @@ function getStudentNames(students) {
 // tests
 getStudentNames([{ name: 'Steve',}, { name: 'Mike'}, { name: 'John'}])
 
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Create a function that takes an array of numbers and return the first and last elements as a new array.
 
+function firstLast(arr) {
+	let newArr = []
+	newArr.push(arr.shift())
+	newArr.push(arr.pop())
+	return newArr
+}
+
+// tests
+Test.assertSimilar(firstLast([5, 10, 15, 20, 25]), [5, 25]);
+Test.assertSimilar(firstLast(["edabit", 13, null, false, true]), ["edabit", true]);
+Test.assertSimilar(firstLast([undefined, 4, "6", "hello", null]), [undefined, null]);
 
 
 
