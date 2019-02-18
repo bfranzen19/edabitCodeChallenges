@@ -1133,11 +1133,41 @@ const sets = [
 )
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Usually when you sign up for an account to buy something, your credit card number, phone number or answer to a secret question is partially obscured in some way. Since someone could look over your shoulder, you don't want that shown on your screen. Hence, the website masks these strings.
+
+// Your task is to create a function that takes a string, transforms all but the last four characters into "#" and returns the new masked string.
+
+function maskify(str) {
+	arr = str.split('');
+  	let result = [];
+
+  	for(let i=0 ; i<arr.length-4 ; i++) {
+	  result.push('#');
+	}
+
+  	for(let i=arr.length-4 ; i<arr.length ; i++) {
+	  result.push(arr[i]);
+	}
+  	return result.join('');
+}
+
+// tests
+Test.assertEquals(percentDiff(60, 100), 50.0);
+Test.assertEquals(percentDiff(100, 60), 50.0);
+Test.assertEquals(percentDiff(5439, 4538), 18.1);
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 //
 
 
 
 // tests
+
+
+
+
+
+
 
 
 
