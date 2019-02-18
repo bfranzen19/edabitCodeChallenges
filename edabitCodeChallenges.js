@@ -1,4 +1,4 @@
-// profile link: https://edabit.com/user/zP84vhK6yKs3q7xtk
+atom// profile link: https://edabit.com/user/zP84vhK6yKs3q7xtk
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 // Create a function that takes two strings as arguments and return either true or false depending on whether the number of their charcters is equal or not.
@@ -1080,6 +1080,74 @@ function firstLast(arr) {
 Test.assertSimilar(firstLast([5, 10, 15, 20, 25]), [5, 25]);
 Test.assertSimilar(firstLast(["edabit", 13, null, false, true]), ["edabit", true]);
 Test.assertSimilar(firstLast([undefined, 4, "6", "hello", null]), [undefined, null]);
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Create a function that takes an array of numbers and return the first and last elements as a new array.
+
+Examples
+
+function firstLast(arr) {
+	let retArr = []
+	retArr.push(arr[0])
+  	retArr.push(arr.pop())
+  	return retArr
+}
+
+// tests
+Test.assertSimilar(firstLast([5, 10, 15, 20, 25]), [5, 25]);
+Test.assertSimilar(firstLast(["edabit", 13, null, false, true]), ["edabit", true]);
+Test.assertSimilar(firstLast([undefined, 4, "6", "hello", null]), [undefined, null]);
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Create a function that takes an array of students and returns an array of student names.
+
+function getStudentNames(students) {
+  	let arr = [];
+	const ret = students.map(x => {
+    	arr.push(x.name);
+    });
+	return arr;
+}
+
+// tests
+const areEqual = (actual, expected) => expected.every(
+  (item, index) => item === actual[index]
+)
+const sets = [
+  ['Jacek', 'Ewa', 'Zygmunt'],
+  ['Tomek'],
+  []
+].map(
+  set => ({
+    actual: getStudentNames(
+      set.map(name => ({ name }))
+    ),
+    expected: set
+  })
+).forEach(
+  ({ actual, expected }) => {
+    Test.expectNoError('Result should be an array', () => {
+      Test.assertEquals(areEqual(actual, expected), true, '' + actual)
+    })
+  }
+)
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+//
+
+
+
+// tests
+
+
+
+
+
+
+
+
+
+
 
 
 
