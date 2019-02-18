@@ -159,11 +159,34 @@ Test.assert_equals(first_last(["edabit", 13, nil, false, true]), ["edabit", true
 Test.assert_equals(first_last([nil, 4, "6", "hello", nil]), [nil, nil])
 
 ### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
-###
+### Create a function that takes two strings as arguments and return either true or false depending on whether the total number of characters in the first string is equal to the total number of characters in the second string.
 
-
+def comp(str1, str2)
+	if str1.length === str2.length
+		return true
+	else
+	  	return false
+	end
+end
 
 ### tests
+Test.assert_equals(comp("AB", "CD"), true)
+Test.assert_equals(comp("ABC", "DE"), false)
+Test.assert_equals(comp("hello", "edabit"), false)
+
+### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
+### Create a function that takes a string and returns the word count. The string will be a sentence.
+
+def count_words(str)
+	arr = str.split
+  	return arr.count
+end
+
+### tests
+Test.assert_equals(count_words("It's high noon"), 3)
+Test.assert_equals(count_words("Is this easy mode"), 4)
+Test.assert_equals(count_words("Is this easy mode"), 4)
+
 
 
 
