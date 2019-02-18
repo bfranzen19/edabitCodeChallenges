@@ -187,12 +187,54 @@ Test.assert_equals(count_words("It's high noon"), 3)
 Test.assert_equals(count_words("Is this easy mode"), 4)
 Test.assert_equals(count_words("Is this easy mode"), 4)
 
+### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
+### Create a function that takes a number as an argument and returns "even" for even numbers and "odd" for odd numbers.
+
+def is_even_or_odd(num)
+	if num % 2 != 0
+	  return 'odd'
+	else
+	  return 'even'
+	end
+end
+
+### tests
+Test.assert_equals(is_even_or_odd(3), "odd")
+Test.assert_equals(is_even_or_odd(0), "even")
+Test.assert_equals(is_even_or_odd(7), "odd")
+
+### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
+### Create a function that takes a string and returns the word count. The string will be a sentence.
+
+def count_words(str)
+	arr = str.split
+  	return arr.count
+end
+
+### tests
+Test.assert_equals(count_words("It's high noon"), 3)
+Test.assert_equals(count_words("Is this easy mode"), 4)
+Test.assert_equals(count_words("Is this easy mode"), 4)
+
+### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
+### Create a function to multiply all values in an array by the amount of values in that array.
+
+def multiply_by_length(arr)
+	y = arr.count
+  	return arr.map{|x| x * y}
+end
+
+### tests
+Test.assert_equals(multiply_by_length([2,6,4,9]), [8,24,16,36])
+Test.assert_equals(multiply_by_length([4,1,1]), [12,3,3])
+Test.assert_equals(multiply_by_length([1,0,3,3,7,2,1]), [7,0,21,21,49,14,7])
+
+### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
+###
 
 
 
-
-
-
+### tests
 
 
 
