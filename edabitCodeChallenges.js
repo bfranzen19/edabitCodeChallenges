@@ -1157,13 +1157,34 @@ Test.assertEquals(percentDiff(100, 60), 50.0);
 Test.assertEquals(percentDiff(5439, 4538), 18.1);
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Given an array of numbers, write a function that returns an array that:
+// 1. Has all duplicate elements removed.
+// 2. Is sorted from least to greatest value.
+
+function uniqueSort(arr) {
+	arr.sort((a,b)=>a-b);
+  	let ret = new Set();
+
+  	arr.forEach(x => {
+		ret.add(x);
+	});
+
+  	let result = Array.from(ret);
+
+  	return result;
+}
+
+// tests
+Test.assertSimilar(uniqueSort([1, 5, 8, 2, 3, 4, 4, 4, 10]),[1, 2, 3, 4, 5, 8, 10]);
+Test.assertSimilar(uniqueSort([1, 2, 5, 4, 7, 7, 7]),[1, 2, 4, 5, 7]);
+Test.assertSimilar(uniqueSort([7, 6, 5, 4, 3, 2, 1, 0, 1]),[0, 1, 2, 3, 4, 5, 6, 7]);
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 //
 
 
 
 // tests
-
-
 
 
 
