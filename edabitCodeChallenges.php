@@ -71,11 +71,76 @@ class IsNumberZeroOrNegativeTest extends TestCase {
   }
 }
 
-<!--  -->
+<!-- Create a function that accepts an array and returns the last item in the array. -->
 
-
+function getLastItem($arr) {
+	return end($arr);
+}
 
 <!-- tests -->
+class MyTestCases extends TestCase
+{
+    /**
+     * @dataProvider exampleProvider
+     */
+    public function testExample($haystack, $expected)
+    {
+        $this->assertSame($expected, getLastItem($haystack));
+    }
+
+    public function exampleProvider()
+    {
+        return [
+          [
+            ['Cat', 'Dog', 'Duck'],
+            'Duck',
+          ],
+          [
+            [1, 2, 3], 3
+          ],
+          [[null], null],
+          [
+            [true, false, false, true],
+            true,
+          ],
+          [
+            [7, 'String', false, 12.33, null],
+            null
+          ],
+          [
+            [false], false
+          ],
+          [
+            [null, null, null],
+            null
+          ],
+          [
+            [1, 2, 3, 56, 87, 23, 65, 45],
+            45
+          ],
+          [
+            ['Apple', 'Orange', null], null
+          ],
+          [
+            [true, false, 'Apple'],
+            'Apple'
+          ],
+          [
+            [1],
+            1
+          ],
+        ];
+    }
+
+    <!--  -->
+
+
+
+    <!-- tests -->
+
+
+
+
 
 
 
