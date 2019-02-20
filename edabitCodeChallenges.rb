@@ -230,11 +230,45 @@ Test.assert_equals(multiply_by_length([4,1,1]), [12,3,3])
 Test.assert_equals(multiply_by_length([1,0,3,3,7,2,1]), [7,0,21,21,49,14,7])
 
 ### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
+### Create a function that takes an array and a string as arguments and return the index of the string.
+
+def find_index(arr, str)
+	return arr.index(str)
+end
+
+### tests
+Test.assert_equals(find_index(['abc', 'ghj', 'banana', 'grape'], 'grape'), 3)
+Test.assert_equals(find_index(['a', 'b', 'c', 'd', 'e', 'f'], 'f'), 5)
+Test.assert_equals(find_index(['hi', 'edabit.com', 'testcase', 'validstring'], 'edabit.com'), 1)
+
+### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
+### Create a function that takes a string (will be a persons first and last name) and returns a string with the first and last name swapped.
+
+def name_shuffle(str)
+	arr = str.split.reverse.join(' ')
+  	return arr
+end
+
+### tests
+Test.assert_equals(name_shuffle("Donald Trump"),"Trump Donald")
+Test.assert_equals(name_shuffle("Rosie O'Donnel"),"O'Donnel Rosie")
+Test.assert_equals(name_shuffle("Seymour Butts"),"Butts Seymour")
+
+### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
 ###
 
 
 
 ### tests
+
+
+
+
+
+
+
+
+
 
 
 
