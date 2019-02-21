@@ -255,13 +255,25 @@ Test.assert_equals(name_shuffle("Rosie O'Donnel"),"O'Donnel Rosie")
 Test.assert_equals(name_shuffle("Seymour Butts"),"Butts Seymour")
 
 ### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
+### Create a function that takes a string and returns a string with its letters in alphabetical order.
+
+def alphabet_soup(str)
+	arr = str.split(//)
+  	arr.sort!
+	return arr.join
+end
+
+### tests
+Test.assert_equals(alphabet_soup("hello"), "ehllo")
+Test.assert_equals(alphabet_soup("edabit"), "abdeit")
+Test.assert_equals(alphabet_soup("hacker"), "acehkr")
+
+### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
 ###
 
 
 
 ### tests
-
-
 
 
 
