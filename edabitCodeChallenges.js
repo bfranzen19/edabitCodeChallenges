@@ -1192,12 +1192,29 @@ Test.assertEquals(remainder(3, 4), 3);
 Test.assertEquals(remainder(-9, 45), -9);
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
-//
+// Create a function that takes three arguments (txt, txt_length, txt_suffix) and returns a truncated string.
+	// txt: Original string.
+	// txt_length: Truncated length limit.
+	// txt_suffix: Optional suffix string parameter.
+// Truncated returned string length should adjust to passed length in parameters regardless of length of the suffix.
 
-
+function truncate(txt, txt_length, txt_suffix = null){
+	let ret = txt.substring(-1, txt_length);
+  	
+  	if(txt_suffix != null) {
+	  let spl = ret.split('');
+	  for(let i=txt_length-txt_suffix.length ; i>txt_suffix.length ; i--) {
+		spl.pop(spl[i]);
+	  }
+	  	spl.push(txt_suffix)
+		ret = spl.join('');
+	}
+  	return ret;
+}
 
 // tests
-
+Test.assertEquals(truncate("CatDogDuck", 9, "Rat"), "CatDogRat")
+Test.assertEquals(truncate("DogCat", 3), "Dog")
 
 
 
