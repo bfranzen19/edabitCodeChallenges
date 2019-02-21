@@ -269,13 +269,23 @@ Test.assert_equals(alphabet_soup("edabit"), "abdeit")
 Test.assert_equals(alphabet_soup("hacker"), "acehkr")
 
 ### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
+### Create a function that takes an array of numbers and returns only the even values.
+
+def no_odds(arr)
+	return arr.select {|x| x % 2 === 0}
+end
+
+### tests
+Test.assert_equals(no_odds([1, 2, 3, 4, 5, 6, 7, 8]), [2, 4, 6, 8])
+Test.assert_equals(no_odds([43, 65, 23, 89, 53, 9, 6]), [6])
+Test.assert_equals(no_odds([718, 991, 449, 644, 380, 440]), [718, 644, 380, 440])
+
+### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
 ###
 
 
 
 ### tests
-
-
 
 
 
