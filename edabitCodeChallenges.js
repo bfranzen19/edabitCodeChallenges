@@ -1180,13 +1180,23 @@ Test.assertSimilar(uniqueSort([1, 2, 5, 4, 7, 7, 7]),[1, 2, 4, 5, 7]);
 Test.assertSimilar(uniqueSort([7, 6, 5, 4, 3, 2, 1, 0, 1]),[0, 1, 2, 3, 4, 5, 6, 7]);
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// There is a single operator in Javascript capable of providing the remainder of a division operation. Two numbers are passed as parameters. The first provider divided by the second parameter will have a remainder, possiby zero. Return that value.
+
+function remainder(x, y){
+	return x % y;
+}
+
+// tests
+Test.assertEquals(remainder(7,2), 1);
+Test.assertEquals(remainder(3, 4), 3);
+Test.assertEquals(remainder(-9, 45), -9);
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 //
 
 
 
 // tests
-
-
 
 
 
