@@ -1200,7 +1200,7 @@ Test.assertEquals(remainder(-9, 45), -9);
 
 function truncate(txt, txt_length, txt_suffix = null){
 	let ret = txt.substring(-1, txt_length);
-  	
+
   	if(txt_suffix != null) {
 	  let spl = ret.split('');
 	  for(let i=txt_length-txt_suffix.length ; i>txt_suffix.length ; i--) {
@@ -1215,6 +1215,32 @@ function truncate(txt, txt_length, txt_suffix = null){
 // tests
 Test.assertEquals(truncate("CatDogDuck", 9, "Rat"), "CatDogRat")
 Test.assertEquals(truncate("DogCat", 3), "Dog")
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// x = 1 and y = 2. without the use of a temporary variable, make x = 2 and y =1.
+
+function run() {
+  let x = 1;
+  let y = 2;
+
+  console.log('x1: ', x);
+  console.log('y1: ', y);
+
+  x = x - x + y;
+  y = y/x;
+
+  console.log('x2: ', x);
+  console.log('y2: ', y);
+}
+
+run();
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+//
+
+
+
+// tests
 
 
 
