@@ -281,15 +281,49 @@ Test.assert_equals(no_odds([43, 65, 23, 89, 53, 9, 6]), [6])
 Test.assert_equals(no_odds([718, 991, 449, 644, 380, 440]), [718, 644, 380, 440])
 
 ### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
+### Create a function to multiply all values in an array by the amount of values in that array.
+
+def multiply_by_length(arr)
+	len = arr.length
+  	arr.collect { |x| x * len}
+end
+
+### tests
+Test.assert_equals(multiply_by_length([2,6,4,9]), [8,24,16,36])
+Test.assert_equals(multiply_by_length([4,1,1]), [12,3,3])
+Test.assert_equals(multiply_by_length([1,0,3,3,7,2,1]), [7,0,21,21,49,14,7])
+
+### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
+### Create a function that takes a number (from 1 to 12) and return its corresponding month name as a string.
+
+def month_name(num)
+	case num
+	  when 1 then "January"
+	  when 2 then "February"
+	  when 3 then "March"
+	  when 4 then "April"
+	  when 5 then "May"
+	  when 6 then "June"
+	  when 7 then "July"
+	  when 8 then "August"
+	  when 9 then "September"
+	  when 10 then "October"
+	  when 11 then"November"
+	  when 12 then "December"
+	end
+end
+
+### tests
+Test.assert_equals(month_name(1),	'January')
+Test.assert_equals(month_name(2), 'February')
+Test.assert_equals(month_name(3), 'March')
+
+### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
 ###
 
 
 
 ### tests
-
-
-
-
 
 
 
