@@ -1236,15 +1236,28 @@ function run() {
 run();
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
-//
+// Create a function which is given a number and returns the value squared.
 
-
+function square(value) {
+	return value * value;
+}
 
 // tests
+Test.assertEquals(square(0), 0);
+Test.assertEquals(square(1), 1);
+Test.assertEquals(square(-1), 1);
 
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Create a function that takes a number argument and returns true if the number is negative, false otherwise.
 
+function isNegative(value) {
+  	return (value >= 0) ? false : true;
+}
 
-
+// tests
+Test.assertEquals(isNegative(0), false);
+Test.assertEquals(isNegative(-1), true);
+Test.assertEquals(isNegative(1), false);
 
 
 
