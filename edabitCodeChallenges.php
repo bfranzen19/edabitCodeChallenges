@@ -222,13 +222,42 @@ class MyTestCases extends TestCase
 }
 
 <!-- =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= -->
+<!-- Given a number n, write a function that returns PI to n decimal places. -->
+
+function myPi($n) {
+  return round(pi(), $n, PHP_ROUND_HALF_UP);
+}
+
+<!-- tests -->
+class PiToN extends TestCase
+{
+  public function test()
+  {
+    $this->assertEquals(3, myPi(0));
+    $this->assertEquals(3.1, myPi( 1));
+    $this->assertEquals(3.14, myPi( 2));
+    $this->assertEquals(3.142, myPi( 3));
+    $this->assertNotEquals(3.1415, myPi(4), "Don't forget to round up!");
+    $this->assertEquals(3.14159, myPi( 5));
+    $this->assertEquals(3.141593, myPi( 6));
+    $this->assertEquals(3.1415927, myPi( 7));
+    $this->assertEquals(3.14159265, myPi( 8));
+    $this->assertEquals(3.141592654, myPi( 9));
+    $this->assertEquals(3.1415926536, myPi(10));
+    $this->assertEquals(3.14159265359, myPi(11));
+    $this->assertEquals(3.141592653590, myPi(12));
+    $this->assertEquals(3.1415926535898, myPi(13));
+    $this->assertEquals(3.14159265358979, myPi(14));
+    $this->assertEquals(3.141592653589793, myPi(15));
+  }
+}
+
+<!-- =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= -->
 <!--  -->
 
 
 
 <!-- tests -->
-
-
 
 
 
