@@ -331,12 +331,16 @@ Test.assert_equals(concat_name("First", "Last"), "Last, First")
 Test.assert_equals(concat_name("A", "B"), "B, A")
 
 ### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
-###
+### Create a function that takes an array of strings and return an array, sorted from shortest to longest.
 
-
+def sort_by_length(arr)
+	return arr.sort_by {|word| word.length}
+end
 
 ### tests
-
+Test.assert_equals(sort_by_length(["Google", "Apple", "Microsoft"]), ["Apple", "Google", "Microsoft"])
+Test.assert_equals(sort_by_length(["Leonardo", "Michelangelo", "Raphael", "Donatello"]), ["Raphael", "Leonardo", "Donatello", "Michelangelo"])
+Test.assert_equals(sort_by_length(["Turing", "Einstein", "Jung"]), ["Jung", "Turing", "Einstein"])
 
 
 
