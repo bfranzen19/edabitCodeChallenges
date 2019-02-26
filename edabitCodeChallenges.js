@@ -1259,7 +1259,17 @@ Test.assertEquals(isNegative(0), false);
 Test.assertEquals(isNegative(-1), true);
 Test.assertEquals(isNegative(1), false);
 
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Given two strings, firstName and lastName, return a single string in the format "last, first".
 
+function concatName(firstName, lastName) {
+	return lastName.concat(', ' + firstName);
+}
+
+// tests
+Test.assertEquals(concatName("John", "Doe"), "Doe, John");
+Test.assertEquals(concatName("First", "Last"), "Last, First");
+Test.assertEquals(concatName("A", "B"), "B, A");
 
 
 
