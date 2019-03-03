@@ -1271,10 +1271,42 @@ Test.assertEquals(concatName("John", "Doe"), "Doe, John");
 Test.assertEquals(concatName("First", "Last"), "Last, First");
 Test.assertEquals(concatName("A", "B"), "B, A");
 
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+//  Create a function that accepts a string and returns true if it's in the format of a proper phone number and false if it's not. Assume any number between 0-9 (in the appropriate spots) will produce a valid phone number. This is what a valid phone number looks like: (123) 456-7890
+
+function isValidPhoneNumber(str) {
+  	let reg = /^\(?([0-9]{3})\)[ ]([0-9]{3})[-]([0-9]{4})$/;
+	return reg.test(str);
+}
+
+// tests
+Test.assertEquals(isValidPhoneNumber("(123) 456-7890"), true);
+Test.assertEquals(isValidPhoneNumber("(1111)555 2345"), false);
+Test.assertEquals(isValidPhoneNumber("(098) 123 4567"), false);
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Create a function that takes two numbers as arguments and return the percent difference between them.
+
+function percentDiff(num1, num2) {
+	let diffOfVal = Math.abs(num1 - num2);
+  	let aveOfVal = (num1 + num2) / 2;
+  	let ret = (diffOfVal / aveOfVal) * 100;
+
+  	if(ret.toFixed(1) % 1 !== 0) return Number(ret.toFixed(1));
+  	else return Math.round(ret);
+}
+
+// tests
+Test.assertEquals(percentDiff(60, 100), 50.0);
+Test.assertEquals(percentDiff(100, 60), 50.0);
+Test.assertEquals(percentDiff(5439, 4538), 18.1);
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+//
 
 
 
-
+// tests
 
 
 
