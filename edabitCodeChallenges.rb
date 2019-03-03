@@ -342,6 +342,48 @@ Test.assert_equals(sort_by_length(["Google", "Apple", "Microsoft"]), ["Apple", "
 Test.assert_equals(sort_by_length(["Leonardo", "Michelangelo", "Raphael", "Donatello"]), ["Raphael", "Leonardo", "Donatello", "Michelangelo"])
 Test.assert_equals(sort_by_length(["Turing", "Einstein", "Jung"]), ["Jung", "Turing", "Einstein"])
 
+### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
+### Create a function that takes an integer and returns true if it's divisible by 100, otherwise return false.
+
+def divisible(num)
+	if num.abs % 100 == 1
+      return false
+    else
+      return true
+    end
+end
+
+### tests
+Test.assert_equals(divisible(1), false)
+Test.assert_equals(divisible(100), true)
+Test.assert_equals(divisible(1000), true)
+
+### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
+### Create a function that takes two strings and returns true if the first argument ends with the second argument; otherwise return false.
+
+def check_ending(str1, str2)
+	if str1.end_with?(str2)
+	  return true
+	else
+	  return false
+	end
+end
+
+### tests
+Test.assert_equals(check_ending("abc", "bc"), true)
+Test.assert_equals(check_ending("abc", "d"), false)
+Test.assert_equals(check_ending("samurai", "zi"), false)
+
+### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
+###
+
+
+
+### tests
+
+
+
+
 
 
 
