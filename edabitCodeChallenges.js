@@ -1302,13 +1302,26 @@ Test.assertEquals(percentDiff(100, 60), 50.0);
 Test.assertEquals(percentDiff(5439, 4538), 18.1);
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+//  Write a function that takes two strings and returns (true or false) whether they're anagrams or not.
+
+function isAnagram(s1, s2) {
+	let lc1 = s1.toLowerCase().split('').sort().join('');
+  	let lc2 = s2.toLowerCase().split('').sort().join('');
+
+  	return (lc1 === lc2);
+}
+
+// tests
+Test.assertEquals(isAnagram('cristian', 'Cristina'), true);
+Test.assertEquals(isAnagram('Dave Barry', 'Ray Adverb'), true);
+Test.assertEquals(isAnagram('Nope', 'Note'), false);
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 //
 
 
 
 // tests
-
-
 
 
 
