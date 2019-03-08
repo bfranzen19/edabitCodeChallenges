@@ -375,15 +375,35 @@ Test.assert_equals(check_ending("abc", "d"), false)
 Test.assert_equals(check_ending("samurai", "zi"), false)
 
 ### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
+### Create a function that takes two strings and returns true if the first argument ends with the second argument; otherwise return false.
+
+def check_ending(str1, str2)
+	return str1.end_with?(str2)
+end
+
+### tests
+Test.assert_equals(check_ending("abc", "bc"), true)
+Test.assert_equals(check_ending("abc", "d"), false)
+Test.assert_equals(check_ending("samurai", "zi"), false)
+
+### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
+### Create a function that takes an array of arrays with integers or floats. Return a new (single) array with the largest numbers from each.
+
+def find_largest_nums(arr)
+	return arr.map {|x| x.max}
+end
+
+### tests
+Test.assert_equals(find_largest_nums([[4, 2, 7, 1], [20, 70, 40, 90], [1, 2, 0]]), [7, 90, 2])
+Test.assert_equals(find_largest_nums([[0.4321, 0.7634, 0.652], [1.324, 9.32, 2.5423, 6.4314], [9, 3, 6, 3]]), [0.7634, 9.32, 9])
+Test.assert_equals(find_largest_nums([[-34, -54, -74], [-32, -2, -65], [-54, 7, -43]]), [-34, -2, 7])
+
+### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
 ###
 
 
 
 ### tests
-
-
-
-
 
 
 
