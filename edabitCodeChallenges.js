@@ -1329,11 +1329,81 @@ Test.assertEquals(isPlural("flowers"), true);
 Test.assertEquals(isPlural("checks"), true);
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// You are given 2 out of 3 of the angles in a triangle, in degrees.
+//
+// Write a function that determines the classifies the missing angle as either "acute", "right", or "obtuse" based on its degrees.
+//
+// An acute angle is one smaller than 90 degrees.
+// A right angle is one that is exactly 90 degrees.
+// An obtuse angle is one greater than 90 degrees (but smaller than 180 degrees).
+
+function missingAngle(angle1, angle2) {
+  	let missing = Math.abs(180-(angle1 + angle2));
+
+	if(missing === 90) return 'right';
+  	else if(missing < 90) return 'acute';
+  	else return 'obtuse';
+}
+
+// tests
+Test.assertEquals(missingAngle(27, 59), "obtuse");
+Test.assertEquals(missingAngle(135, 11), "acute");
+Test.assertEquals(missingAngle(45, 45), "right");
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Agatha and Bertha are sisters eating chocolate given to them by their parents. Bertha has always suspected her parents of considering Agatha as the favorite child. To settle this dispute once and for all, she decides to analyze all pieces of chocolate split between them, and determine that if they both have an equal amount of chocolate, then no favoritism exists.
+
+// Create a function that returns true if the total amount of chocolate is identical for each sister. All chocolate are given in rectangular pieces that are represented by a pair of coordinates for length and width. Sum up the total area of chocolate for each sister, and return true if the total area of chocolate is the same.
+
+function testFairness(agatha, bertha) {
+  	let ag = [];
+  	let b = [];
+
+  	for(let i=0 ; i<agatha.length ; i++) {
+		ag.push(agatha[i][0] * agatha[i][1]);
+	}
+
+  	for(let i=0 ; i<bertha.length ; i++) {
+	  	b.push(bertha[i][0] * bertha[i][1]);
+	}
+
+  	let agSum = ag.reduce((a,b) => a+b, 0);
+  	let bSum = b.reduce((a,b) => a+b, 0);
+
+  	if(agSum == bSum) return true;
+  	else return false;
+}
+
+// tests
+Test.assertEquals(testFairness([[1,5], [6,3], [1,1]], [[7,1], [2,2], [1,1]]), false);
+Test.assertEquals(testFairness([[2,2], [2,2], [2,2], [2,2]], [[4,4]]), true);
+Test.assertEquals(testFairness([[1,2], [2,1]], [[2,2]]), true);
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 //
 
 
 
 // tests
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
