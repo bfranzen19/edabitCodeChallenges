@@ -1317,13 +1317,23 @@ Test.assertEquals(isAnagram('Dave Barry', 'Ray Adverb'), true);
 Test.assertEquals(isAnagram('Nope', 'Note'), false);
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Write a function that takes in a word and determines whether or not it is plural. A plural word is one that ends in s.
+
+function isPlural(word) {
+	return word.endsWith('s');
+}
+
+// tests
+Test.assertEquals(isPlural("dudes"), true);
+Test.assertEquals(isPlural("flowers"), true);
+Test.assertEquals(isPlural("checks"), true);
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 //
 
 
 
 // tests
-
-
 
 
 
