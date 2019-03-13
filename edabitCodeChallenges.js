@@ -1380,17 +1380,108 @@ Test.assertEquals(testFairness([[2,2], [2,2], [2,2], [2,2]], [[4,4]]), true);
 Test.assertEquals(testFairness([[1,2], [2,1]], [[2,2]]), true);
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+//  Create a function that takes an integer and returns true if it's divisible by 100, otherwise return false.
+
+function divisible(num) {
+	if(num % 100 === 0) return true;
+  	else return false;
+}
+
+// tests
+Test.assertEquals(divisible(1), false);
+Test.assertEquals(divisible(100), true);
+Test.assertEquals(divisible(1000), true);
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// A chessboard has rows numbered 1-8 and columns numbered A-H. In chess, rooks are pieces that can any number of squares horizontally or vertically.
+
+// Given the location of your rook and your opponent's rook, determine whether or not you can capture your opponent's rook with your own. For this exercise, assume there are no other pieces that are blocking. Your position and your opponent's position are represented as the first and second element of the input array, respectively.
+//
+// For instance, in this example: canCapture(["A8", "E8"]) ➞ true your rook (at A8) can take your opponents rook (at E8) by moving horizontally.
+
+function canCapture([yourRook, opponentsRook]) {
+	if(yourRook[0] === opponentsRook[0] || yourRook[1] === opponentsRook[1]) return true;
+	else return false;
+}
+
+// tests
+Test.assertEquals(canCapture(['A8', 'E8']), true);
+Test.assertEquals(canCapture(['A1', 'B2']), false);
+Test.assertEquals(canCapture(['H4', 'H3']), true);
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Create a function that takes in array of hurdle heights and a jumper's jump height, and determine whether or not the hurdler can clear all the hurdles. A hurdler can clear a hurdle if their jump height is greater than or equal to the hurdle height.
+
+// So for example, hurdleJump([1, 2, 4, 3, 2, 3], 4) should return true, since 4 is greater than or equal to each element in the array. On the other hand, hurdleJump([1,2,2,1], 1) should return false, since the hurdler cannot clear the second hurdle.
+//
+// Return true for the edge case of an empty array of hurdles. (Zero hurdles means that any jump height can clear them).
+
+function hurdleJump(hurdles, jumpHeight) {
+	let sorted = hurdles.sort((a,b) => a-b);
+  	if(sorted.length === 0 || sorted[sorted.length - 1] <= jumpHeight) return true;
+  	else return false;
+}
+
+// tests
+Test.assertEquals(hurdleJump([1, 2, 3, 4, 5], 5), true);
+Test.assertEquals(hurdleJump([5, 5, 3, 4, 5], 3), false);
+Test.assertEquals(hurdleJump([], 4), true);
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+
+// coding challenge for iFit through hackerrank
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Need to deliver a package of cookie bags. you will be given an inventory of small bags (1 kilo each) and big bags (5 kilos each), along with the goal amount of kilos that need to be shipped to the customer. return the amount of small bags the package will contain, assuming we always use big bags first. return -1 if this cannot be done.
+
+function createPackage(small, big, goal) {
+  let newGoal = goal;
+  let newBig = big;
+
+  while (newGoal >= 5 && newBig > 0) {
+    newGoal = newGoal - 5;
+    newBig--;
+  }
+  if (newGoal > small) {
+    return -1;
+  }
+  return newGoal;
+}
+
+// tests
+createPackage(10, 5, 12);  // 12 - 10 (2big) = 2 small
+createPackage(10, 5, 15);  // 15 - 15 (3big) = 0 small
+createPackage(1, 5, 12); // 12 - 10 (2big) = 2 small. return -1.
+createPackage(100, 5, 120); // 120 - 25 (5big) = 95 small
+createPackage(100, 5, 0); // return 0
+createPackage(3, 5, 10); // 10 - 10 (2big) = 0 small
+createPackage(4, 1, 9);  // 9 - 5 (1big) = 4 small
+createPackage(0, 1, 24);  // 24 - 5 (1big) = 19. return -1.
+
+
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// return 1 if the array contains 3 increasing consecutive numbers ([...,4,5,6,...] or [...,23,24,25,...]). otherwise, return 0.
+
+function consecThree(a) {
+    for(let i=0 ; i<a.length ; i++) {
+    	if(a[i]+1 === a[i+1] && a[i+1] + 1 === a[i+2]) return true;
+      	else return false;
+    }
+}
+
+// tests
+consecThree([3,1,2,3]);
+consecThree([13,4,1,2,3]);
+consecThree([1,2,4,5]);
+consecThree([3,2,1,3]);
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 //
 
 
 
 // tests
-
-
-
-
-
-
 
 
 
