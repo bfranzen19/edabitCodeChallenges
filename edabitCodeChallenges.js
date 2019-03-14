@@ -1477,19 +1477,80 @@ consecThree([1,2,4,5]);
 consecThree([3,2,1,3]);
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+/* Create a function that takes in 3 parameters (probability of winning, prize value, and cost of playing) and returns whether or not the gamble is profitable.
+
+A profitable gamble is a game that yields a positive net profit, where net profit is calculated in the following manner: net_outcome = probability_of_winning * prize - cost_of_playing.
+
+For instance, profitableGamble(0.2, 50, 9) should yield true, since the net profit is 0.2 * 50 - 9 = 1 and 1 > 0. */
+
+function profitableGamble(prob, prize, pay) {
+	let net = prob * prize - pay;
+  	if(net > 0) return true;
+  	else return false;
+}
+
+// tests
+Test.assertEquals(profitableGamble(0.2, 50, 9), true);
+Test.assertEquals(profitableGamble(0.9, 1, 2), false);
+Test.assertEquals(profitableGamble(0.9, 3, 2), true);
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+/* Create a function that determines whether or not it's possible to split a pie fairly given these three parameters:
+    Total number of slices.
+    Number of recipients.
+    How many slices each person gets. */
+
+function equalSlices(total, people, each) {
+	return people * each <= total;
+}
+
+// tests
+Test.assertEquals(equalSlices(8, 3, 2), true);
+Test.assertEquals(equalSlices(8, 3, 3), false);
+Test.assertEquals(equalSlices(24, 12, 2), true);
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Create a function that finds all even numbers from 1 to the given number.
+
+function findEvenNums(num) {
+	let arr = []
+
+  	for(var i=1 ; i<=num ; i++) {
+		arr.push(i);
+	}
+
+  	let retArr = arr.filter(x => x % 2 === 0);
+  	return retArr;
+}
+
+// tests
+Test.assertSimilar(findEvenNums(4), [2, 4]);
+Test.assertSimilar(findEvenNums(8), [2, 4 ,6, 8]);
+Test.assertSimilar(findEvenNums(2), [2]);
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Zip codes consist of 5 consecutive digits. Given a string, write a function to determine whether the input is a valid zip code.
+
+function isValid(zip) {
+	let zipArr = zip.split('')
+
+	if(zipArr.length !== 5) return false;
+	const ret = zipArr.filter(x => x / 1 >= 0 && x !== ' ');
+
+  	return ret.length === 5;
+}
+
+// tests
+Test.assertEquals(isValid("59001"), true);
+Test.assertEquals(isValid("853a7"), false);
+Test.assertEquals(isValid("732 32"), false);
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 //
 
 
 
 // tests
-
-
-
-
-
-
-
-
 
 
 
