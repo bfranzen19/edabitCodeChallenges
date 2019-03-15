@@ -1546,15 +1546,70 @@ Test.assertEquals(isValid("853a7"), false);
 Test.assertEquals(isValid("732 32"), false);
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Create a function that takes an integer and returns an array from 1 to the given number, where:
+    // If the number can be divided evenly by 4, amplify it by 10 (i.e. return 10 times the number).
+    // If the number cannot be divided evenly by 4, simply return the number.
+
+function amplify(num) {
+  	let arr = [];
+	for(let i=1 ; i<=num ; i++) {
+		arr.push(i);
+	}
+
+  	for(let j=0 ; j<arr.length ; j++) {
+		if(arr[j] % 4 === 0) {
+			arr.splice(j, 1, arr[j]*10);
+		}
+	}
+  	return arr;
+}
+
+// tests
+Test.assertSimilar(amplify(1), [1]);
+Test.assertSimilar(amplify(4), [1, 2, 3, 40]);
+Test.assertSimilar(amplify(25), [1, 2, 3, 40, 5, 6, 7, 80, 9, 10, 11, 120, 13, 14, 15, 160, 17, 18, 19, 200, 21, 22, 23, 240, 25]);
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+/* In JavaScript, a truthy value is a value that translates
+to true when evaluated in a Boolean context. All values
+are truthy unless they're defined as falsy.
+
+All falsy values are as follows:
+  false
+  null
+  undefined
+  0
+  NaN
+  ""
+
+Create a function that takes an argument of any data
+type and returns 1 if it's truthy and 0 if it's falsy. */
+
+function isTruthy(input) {
+	if(input === false || input === null
+	   || input === undefined || input === 0
+	   || input === ""|| Number.isNaN(input) ) return 0;
+  	else return 1;
+}
+
+// or
+
+function isTruthy(input) {
+	return input ? 1 : 0;
+}
+
+
+// tests
+Test.assertEquals(isTruthy(1), 1);
+Test.assertEquals(isTruthy(-1), 1);
+Test.assertEquals(isTruthy("false"), 1);
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 //
 
 
 
 // tests
-
-
-
-
 
 
 
