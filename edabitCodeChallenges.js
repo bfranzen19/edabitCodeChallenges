@@ -1644,10 +1644,6 @@ function multiply(num, times) {
   	return answer;
 }
 
-// // or
-
-
-
 // tests
 multiply(3,2);	// 6
 multiply(2,2);	// 4
