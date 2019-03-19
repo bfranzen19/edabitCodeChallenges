@@ -1627,11 +1627,36 @@ Test.assertEquals(maximumScore([{tile: 'B', score: 2}, {tile: 'V', score: 4},  {
 Test.assertEquals(maximumScore([{tile: 'M', score: 3}, {tile: 'Q', score: 10},  {tile: 'O', score: 1}, {tile: 'E', score: 1}, {tile: 'E', score: 1}, {tile: 'I', score: 1}, {tile: 'A', score: 1}]), 18);
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
-//
+// without using multiplication, how would you multiply two inputs?
+
+function multiply(num, times) {
+	return ("i").repeat(num).repeat(times).length;
+}
+
+// // or
+
+function multiply(num, times) {
+	let answer = num;
+
+  	for(let i=0 ; i<times-1 ; i++) {
+    	answer += num;
+    }
+  	return answer;
+}
+
+// // or
 
 
 
 // tests
+multiply(3,2);	// 6
+multiply(2,2);	// 4
+multiply(3,8);	// 24
+
+
+
+
+
 
 
 
