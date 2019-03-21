@@ -1675,13 +1675,26 @@ Test.assertEquals(largestSwap(43), true, '43 > 34, so largest swap.')
 Test.assertEquals(largestSwap(99), true, 'Cannot do better, so largest swap.')
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Create a function that transforms an array into a set and then back into an array of unique values.
+
+function set(arr) {
+	const newSet = new Set([...arr]);
+  	const newArr = [];
+  	newArr.push(...newSet);
+  	return newArr;
+}
+
+// tests
+Test.assertSimilar(set([1, 3, 3, 5, 5]), [1, 3, 5])
+Test.assertSimilar(set([4, 4, 4, 4]), [4])
+Test.assertSimilar(set([5, 7, 8, 9, 10, 15]), [5, 7, 8, 9, 10, 15])
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 //
 
 
 
 // tests
-
-
 
 
 
