@@ -1649,11 +1649,37 @@ multiply(3,2);	// 6
 multiply(2,2);	// 4
 multiply(3,8);	// 24
 
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Given a word, create a function that checks whether it is a palindrome.
+
+function checkPalindrome(str) {
+  	return str === str.split('').reverse().join('') ? true : false;
+}
+
+// tests
+Test.assertEquals(checkPalindrome('mom'), true)
+Test.assertEquals(checkPalindrome('scary'), false)
+Test.assertEquals(checkPalindrome('reviver'), true)
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Write a function that takes a two-digit number and determines if it's the largest of two possible digit swaps.
+
+function largestSwap(num) {
+	let newNum = num.toString().split('').reverse().join('');
+  	return num >= newNum  ? true : false;
+}
+
+// tests
+Test.assertEquals(largestSwap(27), false, '27 < 72, so not largest swap.')
+Test.assertEquals(largestSwap(43), true, '43 > 34, so largest swap.')
+Test.assertEquals(largestSwap(99), true, 'Cannot do better, so largest swap.')
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+//
 
 
 
-
-
+// tests
 
 
 
