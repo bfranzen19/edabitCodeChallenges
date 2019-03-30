@@ -1715,11 +1715,42 @@ Test.assertEquals(numberSyllables("beau-ti-ful"), 3)
 Test.assertEquals(numberSyllables("mon-u-men-tal"), 4)
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// In semantic versioning a piece of software can be represented in a format like this example: 6.1.9.
+	// The first number is the major version.
+	// The second number is the minor version.
+	// The third number is the patch (bug fixes).
+// Write three separate functions, one to retrieve each element in the semantic versioning specification.
+
+function retrieveMajor(semver) {
+	let maj = semver.split('.');
+  	return maj[0]
+}
+
+function retrieveMinor(semver) {
+	let minor = semver.split('.');
+  	return minor[1]
+}
+
+function retrievePatch(semver) {
+	let patch = semver.split('.');
+  	return patch[2]
+}
+
+// tests
+Test.assertEquals(retrieveMajor("6.1.9"), "6")
+Test.assertEquals(retrieveMinor("6.1.9"), "1")
+Test.assertEquals(retrievePatch("6.1.9"), "9")
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 //
 
 
 
 // tests
+
+
+
+
 
 
 
