@@ -1,4 +1,4 @@
-atom// profile link: https://edabit.com/user/zP84vhK6yKs3q7xtk
+// profile link: https://edabit.com/user/zP84vhK6yKs3q7xtk
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 // Create a function that takes two strings as arguments and return either true or false depending on whether the number of their charcters is equal or not.
@@ -1690,14 +1690,23 @@ Test.assertSimilar(set([4, 4, 4, 4]), [4])
 Test.assertSimilar(set([5, 7, 8, 9, 10, 15]), [5, 7, 8, 9, 10, 15])
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Create a function that adds a string ending to each member in an array.
+
+function addEnding(arr, ending) {
+	return arr.map(x => x.concat(ending))
+}
+
+// tests
+Test.assertSimilar(addEnding(['clever', 'meek', 'hurried', 'nice'], 'ly'), ['cleverly', 'meekly', 'hurriedly', 'nicely'])
+Test.assertSimilar(addEnding(['new', 'pander', 'scoop'], 'er'), ['newer', 'panderer', 'scooper'])
+Test.assertSimilar(addEnding(['bend', 'sharpen', 'mean'], 'ing'), ['bending', 'sharpening', 'meaning'])
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 //
 
 
 
 // tests
-
-
-
 
 
 
