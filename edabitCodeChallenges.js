@@ -1702,13 +1702,24 @@ Test.assertSimilar(addEnding(['new', 'pander', 'scoop'], 'er'), ['newer', 'pande
 Test.assertSimilar(addEnding(['bend', 'sharpen', 'mean'], 'ing'), ['bending', 'sharpening', 'meaning'])
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Create a function that counts the number of syllables a word has. Each syllable is separated with a dash -.
+
+function numberSyllables(word) {
+	let arr = word.split('-');
+  	return arr.length;
+}
+
+// tests
+Test.assertEquals(numberSyllables("buf-fet"), 2)
+Test.assertEquals(numberSyllables("beau-ti-ful"), 3)
+Test.assertEquals(numberSyllables("mon-u-men-tal"), 4)
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 //
 
 
 
 // tests
-
-
 
 
 
