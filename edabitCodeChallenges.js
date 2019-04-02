@@ -1690,11 +1690,26 @@ Test.assertSimilar(set([4, 4, 4, 4]), [4])
 Test.assertSimilar(set([5, 7, 8, 9, 10, 15]), [5, 7, 8, 9, 10, 15])
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Create a function to remove all null values from an array.
+
+function removeNull(arr) {
+	let result = arr.filter(x => x != null);
+  	return result;
+}
+
+// tests
+Test.assertSimilar(removeNull(['a', null, 'b', null]), ['a', 'b'])
+Test.assertSimilar(removeNull([null, null, null, null, null]), [])
+Test.assertSimilar(removeNull([7, 8, null, 9]), [7, 8, 9])
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 //
 
 
 
 // tests
+
+
 
 
 
