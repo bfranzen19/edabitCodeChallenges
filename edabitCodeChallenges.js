@@ -1751,11 +1751,26 @@ Test.assertEquals(retrieveMinor("6.1.9"), "1")
 Test.assertEquals(retrievePatch("6.1.9"), "9")
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Create a function that returns true if a string contains any spaces.
+
+function hasSpaces(str) {
+	return str.includes(' ');
+}
+
+// tests
+Test.assertEquals(hasSpaces("Foo"), false)
+Test.assertEquals(hasSpaces("Foo bar"), true)
+Test.assertEquals(hasSpaces("Foo "), true)
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 //
 
 
 
 // tests
+
+
+
 
 
 
