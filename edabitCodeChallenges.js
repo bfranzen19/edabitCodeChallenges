@@ -1763,13 +1763,58 @@ Test.assertEquals(hasSpaces("Foo bar"), true)
 Test.assertEquals(hasSpaces("Foo "), true)
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Given a number and an object with min and max properties, return true if the number lies within the given range (inclusive).
+
+function isInRange(num, range) {
+	return (num >= range.min && num <= range.max);
+}
+
+// tests
+Test.assertEquals(isInRange(4, { min: 0, max: 5 }), true)
+Test.assertEquals(isInRange(4, { min: 4, max: 5 }), true)
+Test.assertEquals(isInRange(4, { min: 0, max: 4 }), true)
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Create a function that takes in an array and returns true if all its values are even, and false otherwise.
+
+// Not a big deal, your friend says. He writes the following code:
+// function checkAllEven(arr) {
+//   return arr.every(x % 2 === 0)
+// }
+
+// The code above leads to a Reference Error, with x being undefined. Fix the code above so that all tests pass:
+
+function checkAllEven(arr) {
+  return arr.every(x => x % 2 === 0)
+}
+
+// tests
+Test.assertEquals(checkAllEven([1, 2, 3, 4]), false)
+Test.assertEquals(checkAllEven([2, 4, 6]), true)
+Test.assertEquals(checkAllEven([5, 6, 8, 10]), false)
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Create a function that takes a number as an argument and returns an array of numbers counting down from this number to zero.
+
+function countdown(start) {
+	let arr = [];
+  	for(let i=start ; i>=0 ; i--) {
+		arr.push(i);
+	}
+  	return arr;
+}
+
+// tests
+Test.assertSimilar(countdown(3), [3, 2, 1, 0])
+Test.assertSimilar(countdown(20), [20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0])
+Test.assertSimilar(countdown(1), [1, 0])
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 //
 
 
 
 // tests
-
-
 
 
 
