@@ -1810,14 +1810,33 @@ Test.assertSimilar(countdown(20), [20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9
 Test.assertSimilar(countdown(1), [1, 0])
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+/***
+* Write two functions:
+* firstArg() should return the first parameter passed in.
+* lastArg() should return the last parameter passed in.
+* Return undefined if the function takes no parameters.
+***/
+
+function firstArg() {
+  	if(arguments.length === 0) return undefined;
+	return arguments[0];
+}
+
+function lastArg() {
+	return arguments[arguments.length-1]
+}
+
+// tests
+Test.assertEquals(firstArg(1, 2, 3), 1)
+Test.assertEquals(firstArg('a', 'b', 'c'), 'a')
+Test.assertEquals(firstArg(8), 8)
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 //
 
 
 
 // tests
-
-
-
 
 
 
