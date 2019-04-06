@@ -1832,14 +1832,25 @@ Test.assertEquals(firstArg('a', 'b', 'c'), 'a')
 Test.assertEquals(firstArg(8), 8)
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Create a function that repeats each character in a string n times.
+
+function repeat(str, n) {
+  	let arr = str.split('');
+	const res = arr.map(x => x.repeat(n));
+	return res.join('');
+}
+
+// tests
+Test.assertEquals(repeat("mice", 5), "mmmmmiiiiiccccceeeee")
+Test.assertEquals(repeat("hello", 3), "hhheeellllllooo")
+Test.assertEquals(repeat("stop", 1), "stop")
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 //
 
 
 
 // tests
-
-
-
 
 
 
