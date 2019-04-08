@@ -1690,11 +1690,20 @@ Test.assertSimilar(set([4, 4, 4, 4]), [4])
 Test.assertSimilar(set([5, 7, 8, 9, 10, 15]), [5, 7, 8, 9, 10, 15])
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
-// Create a function that adds a string ending to each member in an array.
+// Create a function to remove all null values from an array.
 
-function addEnding(arr, ending) {
-	return arr.map(x => x.concat(ending))
+function removeNull(arr) {
+	let result = arr.filter(x => x != null);
+  	return result;
 }
+
+// tests
+Test.assertSimilar(removeNull(['a', null, 'b', null]), ['a', 'b'])
+Test.assertSimilar(removeNull([null, null, null, null, null]), [])
+Test.assertSimilar(removeNull([7, 8, null, 9]), [7, 8, 9])
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+//
 
 // tests
 Test.assertSimilar(addEnding(['clever', 'meek', 'hurried', 'nice'], 'ly'), ['cleverly', 'meekly', 'hurriedly', 'nicely'])
@@ -1742,6 +1751,101 @@ Test.assertEquals(retrieveMinor("6.1.9"), "1")
 Test.assertEquals(retrievePatch("6.1.9"), "9")
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Create a function that returns true if a string contains any spaces.
+
+function hasSpaces(str) {
+	return str.includes(' ');
+}
+
+// tests
+Test.assertEquals(hasSpaces("Foo"), false)
+Test.assertEquals(hasSpaces("Foo bar"), true)
+Test.assertEquals(hasSpaces("Foo "), true)
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Given a number and an object with min and max properties, return true if the number lies within the given range (inclusive).
+
+function isInRange(num, range) {
+	return (num >= range.min && num <= range.max);
+}
+
+// tests
+Test.assertEquals(isInRange(4, { min: 0, max: 5 }), true)
+Test.assertEquals(isInRange(4, { min: 4, max: 5 }), true)
+Test.assertEquals(isInRange(4, { min: 0, max: 4 }), true)
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Create a function that takes in an array and returns true if all its values are even, and false otherwise.
+
+// Not a big deal, your friend says. He writes the following code:
+// function checkAllEven(arr) {
+//   return arr.every(x % 2 === 0)
+// }
+
+// The code above leads to a Reference Error, with x being undefined. Fix the code above so that all tests pass:
+
+function checkAllEven(arr) {
+  return arr.every(x => x % 2 === 0)
+}
+
+// tests
+Test.assertEquals(checkAllEven([1, 2, 3, 4]), false)
+Test.assertEquals(checkAllEven([2, 4, 6]), true)
+Test.assertEquals(checkAllEven([5, 6, 8, 10]), false)
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Create a function that takes a number as an argument and returns an array of numbers counting down from this number to zero.
+
+function countdown(start) {
+	let arr = [];
+  	for(let i=start ; i>=0 ; i--) {
+		arr.push(i);
+	}
+  	return arr;
+}
+
+// tests
+Test.assertSimilar(countdown(3), [3, 2, 1, 0])
+Test.assertSimilar(countdown(20), [20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0])
+Test.assertSimilar(countdown(1), [1, 0])
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+/***
+* Write two functions:
+* firstArg() should return the first parameter passed in.
+* lastArg() should return the last parameter passed in.
+* Return undefined if the function takes no parameters.
+***/
+
+function firstArg() {
+  	if(arguments.length === 0) return undefined;
+	return arguments[0];
+}
+
+function lastArg() {
+	return arguments[arguments.length-1]
+}
+
+// tests
+Test.assertEquals(firstArg(1, 2, 3), 1)
+Test.assertEquals(firstArg('a', 'b', 'c'), 'a')
+Test.assertEquals(firstArg(8), 8)
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Create a function that repeats each character in a string n times.
+
+function repeat(str, n) {
+  	let arr = str.split('');
+	const res = arr.map(x => x.repeat(n));
+	return res.join('');
+}
+
+// tests
+Test.assertEquals(repeat("mice", 5), "mmmmmiiiiiccccceeeee")
+Test.assertEquals(repeat("hello", 3), "hhheeellllllooo")
+Test.assertEquals(repeat("stop", 1), "stop")
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 // Create a function that returns the ASCII value of the passed in character.
 
 function ctoa(c) {
@@ -1759,9 +1863,6 @@ Test.assertEquals(ctoa(']'), 93)
 
 
 // tests
-
-
-
 
 
 
