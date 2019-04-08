@@ -1870,11 +1870,30 @@ Test.assertEquals(numberArgs(10, 20, 30, 40, 50), 5)
 Test.assertEquals(numberArgs('x', 'y'), 2)
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Create a function to calculate the determinant of a 2 x 2 matrix. The determinant of the following matrix is: ad - bc
+
+function calcDeterminant(matrix) {
+  	return matrix[0][0] * matrix[1][1] - matrix[0][1] * matrix[1][0];
+}
+
+// tests
+Test.assertEquals(calcDeterminant([[1, 2],[3, 4]]), -2)
+Test.assertEquals(calcDeterminant([[5, 3],[3, 1]]), -4)
+Test.assertEquals(calcDeterminant([[1, 1],[1, 1]]), 0)
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 //
 
 
 
 // tests
+
+
+
+
+
+
+
 
 
 
