@@ -1858,11 +1858,26 @@ Test.assertEquals(ctoa('A'), 65)
 Test.assertEquals(ctoa(']'), 93)
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Create a function that returns the total number of parameters passed in.
+
+function numberArgs(/* fill-in */) {
+	return arguments.length;
+}
+
+// tests
+Test.assertEquals(numberArgs('a', 'b', 'c'), 3)
+Test.assertEquals(numberArgs(10, 20, 30, 40, 50), 5)
+Test.assertEquals(numberArgs('x', 'y'), 2)
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 //
 
 
 
 // tests
+
+
+
 
 
 
