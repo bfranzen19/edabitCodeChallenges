@@ -1742,11 +1742,29 @@ Test.assertEquals(retrieveMinor("6.1.9"), "1")
 Test.assertEquals(retrievePatch("6.1.9"), "9")
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Create a function that returns the ASCII value of the passed in character.
+
+function ctoa(c) {
+	return c.charCodeAt();
+}
+
+// tests
+Test.assertEquals(ctoa(' '), 32)
+Test.assertEquals(ctoa('A'), 65)
+Test.assertEquals(ctoa(']'), 93)
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 //
 
 
 
 // tests
+
+
+
+
+
+
 
 
 
