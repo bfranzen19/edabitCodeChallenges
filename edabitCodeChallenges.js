@@ -1882,15 +1882,41 @@ Test.assertEquals(calcDeterminant([[5, 3],[3, 1]]), -4)
 Test.assertEquals(calcDeterminant([[1, 1],[1, 1]]), 0)
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+/***
+* Your friend is trying to write a function that removes all vowels from a string. They write:
+* 	function removeVowels(str) {
+*		return str.replace(/[aeiou]/, "");
+*	}
+* However, it seems that it doesn't work? Fix your friend's code so that it actually does remove all vowels.
+***/
+
+function removeVowels(str) {
+  return str.replace(/['aeiou']/g, '');
+}
+
+// tests
+Test.assertEquals(removeVowels('ben'), 'bn')
+Test.assertEquals(removeVowels('many'), 'mny')
+Test.assertEquals(removeVowels('candy'), 'cndy')
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Create a function replaces all the vowels in a string with a specified character.
+
+function replaceVowels(str, ch) {
+	return str.replace(/[aeiou]/g, ch);
+}
+
+// tests
+Test.assertEquals(replaceVowels("the aardvark", "#"), "th# ##rdv#rk")
+Test.assertEquals(replaceVowels("minnie mouse", "?"), "m?nn?? m??s?")
+Test.assertEquals(replaceVowels("shakespeare", "*"), "sh*k*sp**r*")
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 //
 
 
 
 // tests
-
-
-
-
 
 
 
