@@ -399,11 +399,28 @@ Test.assert_equals(find_largest_nums([[0.4321, 0.7634, 0.652], [1.324, 9.32, 2.5
 Test.assert_equals(find_largest_nums([[-34, -54, -74], [-32, -2, -65], [-54, 7, -43]]), [-34, -2, 7])
 
 ### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
+### Create a function to remove all nil values from an array.
+
+def remove_nil(arr)
+	return arr.compact
+end
+
+### tests
+Test.assert_equals(remove_nil(['a', nil, 'b', nil]), ['a', 'b'])
+Test.assert_equals(remove_nil([nil, nil, nil, nil, nil]), [])
+Test.assert_equals(remove_nil([7, 8, nil, 9]), [7, 8, 9])
+
+### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
 ###
 
 
 
 ### tests
+
+
+
+
+
 
 
 

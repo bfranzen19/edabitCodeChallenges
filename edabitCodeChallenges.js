@@ -1912,6 +1912,55 @@ Test.assertEquals(replaceVowels("minnie mouse", "?"), "m?nn?? m??s?")
 Test.assertEquals(replaceVowels("shakespeare", "*"), "sh*k*sp**r*")
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Create a function that returns true if an input string contains only uppercase or only lowercase letters.
+
+function sameCase(str) {
+	let up = str.toUpperCase();
+  	let lc = str.toLowerCase();
+  	return str === up || str === lc;
+}
+
+// tests
+Test.assertEquals(sameCase("HELLO"), true)
+Test.assertEquals(sameCase("HEllo"), false)
+Test.assertEquals(sameCase("mArmALadE"), false)
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+/*
+This is a reverse coding challenge. Normally you're given explicit directions with how to create a function. Here, you must generate your own function to satisfy the relationship between the inputs and outputs.
+
+Your task is to create a function that, when fed the inputs below, produce the sample outputs shown.
+*/
+
+function mysteryFunc(arr, num) {
+	return arr.map(x => x % num);
+}
+
+// tests
+Test.assertSimilar(mysteryFunc([5, 7, 8, 2, 1], 2), [1, 1, 0, 0, 1])
+Test.assertSimilar(mysteryFunc([9, 8, 16, 47], 4), [1, 0, 0, 3])
+Test.assertSimilar(mysteryFunc([17, 11, 99, 55, 23, 1], 5), [2, 1, 4, 0, 3, 1])
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+/*
+Create a function that filters out an array of state names into two categories based on the second parameter.
+    Abbreviations abb
+    Full names full
+*/
+
+function filterStateNames(arr, type) {
+	if(type == 'abb') {
+		return arr.filter(x => x.length <= 2)
+	} else {
+		return arr.filter(x => x.length > 2)
+	}
+}
+
+// tests
+Test.assertSimilar(filterStateNames(['Arizona', 'CA', 'NY', 'Nevada'], 'abb'), ['CA', 'NY'])
+Test.assertSimilar(filterStateNames(['Arizona', 'CA', 'NY', 'Nevada'], 'full'), ['Arizona', 'Nevada'])
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 /***
 * Write two functions:
 *	toInt() : A function to convert the integer value of a string.
