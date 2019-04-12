@@ -1942,14 +1942,30 @@ Test.assertSimilar(mysteryFunc([9, 8, 16, 47], 4), [1, 0, 0, 3])
 Test.assertSimilar(mysteryFunc([17, 11, 99, 55, 23, 1], 5), [2, 1, 4, 0, 3, 1])
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+/*
+Create a function that filters out an array of state names into two categories based on the second parameter.
+    Abbreviations abb
+    Full names full
+*/
+
+function filterStateNames(arr, type) {
+	if(type == 'abb') {
+		return arr.filter(x => x.length <= 2)
+	} else {
+		return arr.filter(x => x.length > 2)
+	}
+}
+
+// tests
+Test.assertSimilar(filterStateNames(['Arizona', 'CA', 'NY', 'Nevada'], 'abb'), ['CA', 'NY'])
+Test.assertSimilar(filterStateNames(['Arizona', 'CA', 'NY', 'Nevada'], 'full'), ['Arizona', 'Nevada'])
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 //
 
 
 
 // tests
-
-
-
 
 
 
