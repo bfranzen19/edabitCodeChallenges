@@ -1912,16 +1912,43 @@ Test.assertEquals(replaceVowels("minnie mouse", "?"), "m?nn?? m??s?")
 Test.assertEquals(replaceVowels("shakespeare", "*"), "sh*k*sp**r*")
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+/***
+* Write two functions:
+*	toInt() : A function to convert the integer value of a string.
+*	toStr() : A function to transform a string into an integer.
+***/
+
+function toInt(str) {
+	return Number(str);
+}
+
+function toStr(int) {
+	return int.toString();
+}
+
+// tests
+Test.assertEquals(toInt("37"), 37)
+Test.assertEquals(toInt("113"), 113)
+Test.assertEquals(toInt("5"), 5)
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Write a function that removes the first and last characters from a string.
+
+function removeFirstLast(str) {
+	return str.slice(1, str.length-1);
+}
+
+// tests
+Test.assertEquals(removeFirstLast("hello"), "ell")
+Test.assertEquals(removeFirstLast("benefit"), "enefi")
+Test.assertEquals(removeFirstLast("wordy"), "ord")
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 //
 
 
 
 // tests
-
-
-
-
-
 
 
 
