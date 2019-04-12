@@ -1993,14 +1993,33 @@ Test.assertEquals(removeFirstLast("benefit"), "enefi")
 Test.assertEquals(removeFirstLast("wordy"), "ord")
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Fix this broken code!
+/*
+function checkEquals(arr1, arr2) {
+if (arr1 === arr2) {
+  return true
+ } else {
+  return false
+ }
+}
+*/
+
+function checkEquals(arr1, arr2) {
+	if (arr1.join('') === arr2.join('')) return true;
+  	else return false;
+}
+
+// tests
+Test.assertEquals(checkEquals([1, 2], [1, 3]), false)
+Test.assertEquals(checkEquals([1, 2], [1, 2]), true)
+Test.assertEquals(checkEquals([4, 5, 6], [4, 5, 6]), true)
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 //
 
 
 
 // tests
-
-
-
 
 
 
