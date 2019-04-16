@@ -411,17 +411,35 @@ Test.assert_equals(remove_nil([nil, nil, nil, nil, nil]), [])
 Test.assert_equals(remove_nil([7, 8, nil, 9]), [7, 8, 9])
 
 ### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
+### Create a function that takes in a word and determines whether or not it is plural. A plural word is one that ends in s.
+
+def is_plural(word)
+	return word.end_with?('s')
+end
+
+### tests
+Test.assert_equals(is_plural("varies"), true)
+Test.assert_equals(is_plural("efforts"), true)
+Test.assert_equals(is_plural("mood"), false)
+
+### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
+###
+
+def calc_determinant(matrix)
+	return matrix[0][0] * matrix[1][1] - matrix[0][1] * matrix[1][0]
+end
+
+### tests
+Test.assert_equals(calc_determinant([[1, 2], [3, 4]]), -2)
+Test.assert_equals(calc_determinant([[5, 3], [3, 1]]), -4)
+Test.assert_equals(calc_determinant([[1, 1], [1, 1]]), 0)
+
+### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
 ###
 
 
 
 ### tests
-
-
-
-
-
-
 
 
 
