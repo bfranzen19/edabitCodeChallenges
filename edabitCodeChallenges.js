@@ -2015,14 +2015,23 @@ Test.assertEquals(checkEquals([1, 2], [1, 2]), true)
 Test.assertEquals(checkEquals([4, 5, 6], [4, 5, 6]), true)
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// create a function that returns an array of additive inverses
+
+function additiveInverse(arr) {
+    return arr.map(x => x * -1);
+}
+
+// tests
+Test.assertSimilar(additiveInverse([5, -7, 8, 3]), [-5, 7, -8, -3])
+Test.assertSimilar(additiveInverse([1, 1, 1, 1, 1]), [-1, -1, -1, -1, -1])
+Test.assertSimilar(additiveInverse([-5, -25, 35]), [5, 25, -35])
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 //
 
 
 
 // tests
-
-
-
 
 
 
