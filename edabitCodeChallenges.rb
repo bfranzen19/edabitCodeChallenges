@@ -446,11 +446,28 @@ Test.assert_equals(difference_max_min([10,4,1,2,8,91]), 90)
 Test.assert_equals(difference_max_min([-70,43,34,54,22]), 124)
 
 ### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
+### Write a function that takes the base and height of a triangle and return its area. The area of a triangle is (base * height) / 2.
+
+def tri_area(base, height)
+	return (base * height) / 2
+end
+
+### tests
+Test.assert_equals(tri_area(3, 2), 3)
+Test.assert_equals(tri_area(5, 4), 10)
+Test.assert_equals(tri_area(10, 10), 50)
+
+### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
 ###
 
 
 
 ### tests
+
+
+
+
+
 
 
 
