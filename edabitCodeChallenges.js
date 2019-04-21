@@ -2027,11 +2027,25 @@ Test.assertSimilar(additiveInverse([1, 1, 1, 1, 1]), [-1, -1, -1, -1, -1])
 Test.assertSimilar(additiveInverse([-5, -25, 35]), [5, 25, -35])
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Create a function that returns true if an integer is divisible by 5, and false otherwise.
+
+function divisibleByFive(n) {
+	return n % 5 == 0;
+}
+
+// tests
+Test.assertEquals(divisibleByFive(7), false)
+Test.assertEquals(divisibleByFive(5), true)
+Test.assertEquals(divisibleByFive(15), true)
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 //
 
 
 
 // tests
+
+
 
 
 
