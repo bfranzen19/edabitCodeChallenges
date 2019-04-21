@@ -435,11 +435,34 @@ Test.assert_equals(calc_determinant([[5, 3], [3, 1]]), -4)
 Test.assert_equals(calc_determinant([[1, 1], [1, 1]]), 0)
 
 ### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
+###  Create a function that takes an array and returns the difference between the smallest and biggest numbers.
+
+def difference_max_min(arr)
+  	return arr.max - arr.min
+end
+
+### tests
+Test.assert_equals(difference_max_min([10,4,1,2,8,91]), 90)
+Test.assert_equals(difference_max_min([-70,43,34,54,22]), 124)
+
+### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
 ###
 
 
 
 ### tests
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
