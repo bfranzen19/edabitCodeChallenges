@@ -2039,11 +2039,41 @@ Test.assertEquals(divisibleByFive(5), true)
 Test.assertEquals(divisibleByFive(15), true)
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Create a function that returns true if a string is empty and false otherwise.
+
+function isEmpty(s) {
+	return s.length == 0;
+}
+
+// tests
+Test.assertEquals(isEmpty(""), true)
+Test.assertEquals(isEmpty(" "), false)
+Test.assertEquals(isEmpty("            "), false)
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Create a function that returns the next element in an arithmetic sequence. In an arithmetic sequence, each element is formed by adding the same constant to the previous element.
+
+function nextElement(arr) {
+	return arr[arr.length-1] + (arr[1] - arr[0]);
+}
+
+// tests
+Test.assertEquals(nextElement([3, 5, 7, 9]), 11)
+Test.assertEquals(nextElement([-5, -6, -7]), -8)
+Test.assertEquals(nextElement([2, 2, 2, 2, 2]), 2)
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 //
 
 
 
 // tests
+
+
+
+
+
+
 
 
 
