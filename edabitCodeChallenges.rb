@@ -458,14 +458,23 @@ Test.assert_equals(tri_area(5, 4), 10)
 Test.assert_equals(tri_area(10, 10), 50)
 
 ### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
+### You've got chickens (2 legs), cows (4 legs) and pigs (4 legs) on your farm. Return the total number of legs on your farm.
+
+def animals(chickens, cows, pigs)
+	return (chickens * 2) + (cows * 4) + (pigs * 4)
+end
+
+### tests
+Test.assert_equals(animals(5, 2, 8), 50)
+Test.assert_equals(animals(3, 4, 7), 50)
+Test.assert_equals(animals(1, 2, 3), 22)
+
+### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
 ###
 
 
 
 ### tests
-
-
-
 
 
 
