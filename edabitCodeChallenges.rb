@@ -435,11 +435,60 @@ Test.assert_equals(calc_determinant([[5, 3], [3, 1]]), -4)
 Test.assert_equals(calc_determinant([[1, 1], [1, 1]]), 0)
 
 ### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
+###  Create a function that takes an array and returns the difference between the smallest and biggest numbers.
+
+def difference_max_min(arr)
+  	return arr.max - arr.min
+end
+
+### tests
+Test.assert_equals(difference_max_min([10,4,1,2,8,91]), 90)
+Test.assert_equals(difference_max_min([-70,43,34,54,22]), 124)
+
+### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
+### Write a function that takes the base and height of a triangle and return its area. The area of a triangle is (base * height) / 2.
+
+def tri_area(base, height)
+	return (base * height) / 2
+end
+
+### tests
+Test.assert_equals(tri_area(3, 2), 3)
+Test.assert_equals(tri_area(5, 4), 10)
+Test.assert_equals(tri_area(10, 10), 50)
+
+### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
+### You've got chickens (2 legs), cows (4 legs) and pigs (4 legs) on your farm. Return the total number of legs on your farm.
+
+def animals(chickens, cows, pigs)
+	return (chickens * 2) + (cows * 4) + (pigs * 4)
+end
+
+### tests
+Test.assert_equals(animals(5, 2, 8), 50)
+Test.assert_equals(animals(3, 4, 7), 50)
+Test.assert_equals(animals(1, 2, 3), 22)
+
+### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
 ###
 
 
 
 ### tests
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

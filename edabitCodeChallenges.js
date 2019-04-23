@@ -2015,6 +2015,81 @@ Test.assertEquals(checkEquals([1, 2], [1, 2]), true)
 Test.assertEquals(checkEquals([4, 5, 6], [4, 5, 6]), true)
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// create a function that returns an array of additive inverses
+
+function additiveInverse(arr) {
+    return arr.map(x => x * -1);
+}
+
+// tests
+Test.assertSimilar(additiveInverse([5, -7, 8, 3]), [-5, 7, -8, -3])
+Test.assertSimilar(additiveInverse([1, 1, 1, 1, 1]), [-1, -1, -1, -1, -1])
+Test.assertSimilar(additiveInverse([-5, -25, 35]), [5, 25, -35])
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Create a function that returns true if an integer is divisible by 5, and false otherwise.
+
+function divisibleByFive(n) {
+	return n % 5 == 0;
+}
+
+// tests
+Test.assertEquals(divisibleByFive(7), false)
+Test.assertEquals(divisibleByFive(5), true)
+Test.assertEquals(divisibleByFive(15), true)
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Create a function that returns true if a string is empty and false otherwise.
+
+function isEmpty(s) {
+	return s.length == 0;
+}
+
+// tests
+Test.assertEquals(isEmpty(""), true)
+Test.assertEquals(isEmpty(" "), false)
+Test.assertEquals(isEmpty("            "), false)
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Create a function that returns the next element in an arithmetic sequence. In an arithmetic sequence, each element is formed by adding the same constant to the previous element.
+
+function nextElement(arr) {
+	return arr[arr.length-1] + (arr[1] - arr[0]);
+}
+
+// tests
+Test.assertEquals(nextElement([3, 5, 7, 9]), 11)
+Test.assertEquals(nextElement([-5, -6, -7]), -8)
+Test.assertEquals(nextElement([2, 2, 2, 2, 2]), 2)
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Write a function that takes the base and height of a triangle and return its area. The area of a triangle is (base * height) / 2.
+
+function triArea(base, height) {
+	return (base * height) / 2;
+}
+
+// tests
+Test.assertEquals(triArea(3, 2), 3)
+Test.assertEquals(triArea(5, 4), 10)
+Test.assertEquals(triArea(10, 10), 50)
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Write a function that returns true if two arrays have the same number of unique elements, and false otherwise.
+
+function same(a1, a2) {
+	let one = new Set(a1);
+  	let two = new Set(a2);
+
+  	return one.size === two.size;
+}
+
+// tests
+Test.assertEquals(same([1, 3, 4, 4, 4], [2, 5, 7]), true)
+Test.assertEquals(same([9, 8, 7, 6], [4, 4, 3, 1]), false)
+Test.assertEquals(same([2], [3, 3, 3, 3, 3]), true)
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 // A number added with its additive inverse equals zero. Create a function that returns an array of additive inverses.
 
 function additiveInverse(arr) {
@@ -2030,8 +2105,34 @@ Test.assertSimilar(additiveInverse([-5, -25, 35]), [5, 25, -35])
 //
 
 
+// tests
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+//
+
+
 
 // tests
+
+
+
 
 
 
