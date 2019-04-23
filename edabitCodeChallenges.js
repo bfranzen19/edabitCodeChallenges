@@ -2063,14 +2063,23 @@ Test.assertEquals(nextElement([-5, -6, -7]), -8)
 Test.assertEquals(nextElement([2, 2, 2, 2, 2]), 2)
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Write a function that takes the base and height of a triangle and return its area. The area of a triangle is (base * height) / 2.
+
+function triArea(base, height) {
+	return (base * height) / 2;
+}
+
+// tests
+Test.assertEquals(triArea(3, 2), 3)
+Test.assertEquals(triArea(5, 4), 10)
+Test.assertEquals(triArea(10, 10), 50)
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 //
 
 
 
 // tests
-
-
-
 
 
 
