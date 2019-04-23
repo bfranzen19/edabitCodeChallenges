@@ -2075,14 +2075,26 @@ Test.assertEquals(triArea(5, 4), 10)
 Test.assertEquals(triArea(10, 10), 50)
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Write a function that returns true if two arrays have the same number of unique elements, and false otherwise.
+
+function same(a1, a2) {
+	let one = new Set(a1);
+  	let two = new Set(a2);
+
+  	return one.size === two.size;
+}
+
+// tests
+Test.assertEquals(same([1, 3, 4, 4, 4], [2, 5, 7]), true)
+Test.assertEquals(same([9, 8, 7, 6], [4, 4, 3, 1]), false)
+Test.assertEquals(same([2], [3, 3, 3, 3, 3]), true)
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 //
 
 
 
 // tests
-
-
-
 
 
 
