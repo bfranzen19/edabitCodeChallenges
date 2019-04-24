@@ -2102,27 +2102,16 @@ Test.assertSimilar(additiveInverse([1, 1, 1, 1, 1]), [-1, -1, -1, -1, -1])
 Test.assertSimilar(additiveInverse([-5, -25, 35]), [5, 25, -35])
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
-//
+// You've got chickens (2 legs), cows (4 legs) and pigs (4 legs) on your farm. Return the total number of legs on your farm.
 
+function animals(chickens, cows, pigs) {
+	return chickens * 2 + (cows + pigs) * 4;
+}
 
 // tests
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Test.assertEquals(animals(5, 2, 8), 50)
+Test.assertEquals(animals(3, 4, 7), 50)
+Test.assertEquals(animals(1, 2, 3), 22)
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 //
