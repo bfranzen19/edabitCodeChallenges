@@ -2114,11 +2114,53 @@ Test.assertEquals(animals(3, 4, 7), 50)
 Test.assertEquals(animals(1, 2, 3), 22)
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Write a function that partitions the array into two subarrays: one with all even integers, and the other with all odd integers. Return your result in the following format: [[evens], [odds]]
+
+function evenOddPartition(arr) {
+	let result = [[],[]];
+
+  	arr.filter(x => {
+		if(x % 2 === 0) result[0].push(x);
+	  	else result[1].push(x);
+	})
+
+	return result;
+}
+
+// tests
+Test.assertSimilar(evenOddPartition([5, 8, 9, 2, 0]), [[8, 2, 0], [5, 9]])
+Test.assertSimilar(evenOddPartition([1, 0, 1, 0, 1, 0]), [[0, 0, 0], [1, 1, 1]])
+Test.assertSimilar(evenOddPartition([8, 8, 4, 2]), [[8, 8, 4, 2], []])
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Create a function that returns the smaller number.
+
+function smallerNum(n1, n2) {
+	return n1.length > n2.length ? n2 : n1;
+}
+
+// tests
+Test.assertEquals(smallerNum("21", "44"), "21")
+Test.assertEquals(smallerNum("153", "367"), "153")
+Test.assertEquals(smallerNum("1500", "16"), "16")
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 //
 
 
 
 // tests
+
+
+
+
+
+
+
+
+
+
+
 
 
 
