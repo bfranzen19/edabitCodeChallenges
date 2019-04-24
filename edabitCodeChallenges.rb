@@ -470,11 +470,28 @@ Test.assert_equals(animals(3, 4, 7), 50)
 Test.assert_equals(animals(1, 2, 3), 22)
 
 ### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
-###
+### There is a single operator in JavaScript capable of providing the remainder of a division operation. Two numbers are passed as parameters. The first provider divided by the second parameter will have a remainder, possiby zero. Return that value.
 
-
+def remainder(x, y)
+  	x.remainder(y)
+end
 
 ### tests
+Test.assert_equals(remainder(7, 2), 1)
+Test.assert_equals(remainder(3, 4), 3)
+Test.assert_equals(remainder(-9, 45), -9)
+
+### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
+### Create a function that returns true if an integer is divisible by 5, and false otherwise.
+
+def divisible_by_five(n)
+	return n % 5 == 0
+end
+
+### tests
+Test.assert_equals(divisible_by_five(7), false)
+Test.assert_equals(divisible_by_five(5), true)
+Test.assert_equals(divisible_by_five(15), true)
 
 
 
