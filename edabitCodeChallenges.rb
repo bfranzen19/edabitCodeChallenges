@@ -494,14 +494,23 @@ Test.assert_equals(divisible_by_five(5), true)
 Test.assert_equals(divisible_by_five(15), true)
 
 ### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
+### Create a function that returns true if a string contains any spaces.
+
+def has_spaces(str)
+	return str.include?(' ')
+end
+
+### tests
+Test.assert_equals(has_spaces("Foo"), false)
+Test.assert_equals(has_spaces("Foo bar"), true)
+Test.assert_equals(has_spaces("Foo "), true)
+
+### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
 ###
 
 
 
 ### tests
-
-
-
 
 
 
