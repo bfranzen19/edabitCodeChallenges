@@ -2145,17 +2145,36 @@ Test.assertEquals(smallerNum("153", "367"), "153")
 Test.assertEquals(smallerNum("1500", "16"), "16")
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Create a function to concatenate two integer arrays.
+
+function concat(arr1, arr2) {
+	return arr1.concat(arr2);
+}
+
+// tests
+Test.assertSimilar(concat([1, 3, 5], [2, 6, 8]), [1, 3, 5, 2, 6, 8])
+Test.assertSimilar(concat([7, 8], [10, 9, 1, 1, 2]), [7, 8, 10, 9, 1, 1, 2])
+Test.assertSimilar(concat([4, 5, 1], [3, 3, 3, 3, 3]), [4, 5, 1, 3, 3, 3, 3, 3])
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Create a function that returns the product of all odd integers in an array.
+
+function oddProduct(arr) {
+	let odds = arr.filter(x => x % 2 !== 0);
+	return odds.reduce((a,b) => a * b);
+}
+
+// tests
+Test.assertEquals(oddProduct([3, 4, 1, 1, 5]), 15)
+Test.assertEquals(oddProduct([5, 5, 8, 2, 4, 32]), 25)
+Test.assertEquals(oddProduct([1, 2, 1, 2, 1, 2, 1, 2]), 1)
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 //
 
 
 
 // tests
-
-
-
-
-
-
 
 
 
