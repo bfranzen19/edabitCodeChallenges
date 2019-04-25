@@ -43,11 +43,72 @@ Test.assert_equals(addition(-9), -8)
 Test.assert_equals(addition(0), 1)
 
 ### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
+### Create a function that takes two numbers as arguments and return their sum.
+
+def addition(a, b):
+	return a + b
+
+### tests
+Test.assert_equals(addition(2,3), 5)
+Test.assert_equals(addition(-3,-6), -9)
+Test.assert_equals(addition(7,3), 10)
+
+### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
+### Write two functions:
+	# to_int() : A function to convert a string to an integer.
+	# to_str() : A function to convert an integer to a string.
+
+def to_int(txt):
+	return int(txt)
+
+def to_str(num):
+	return str(num)
+
+### tests
+Test.assert_equals(to_int("37"), 37)
+Test.assert_equals(to_int("113"), 113)
+Test.assert_equals(to_int("5"), 5)
+
+### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
+### Create a function to concatenate two integer lists.
+
+def concat(lst1, lst2):
+	return lst1 + lst2
+
+### tests
+Test.assert_equals(concat([1, 3, 5], [2, 6, 8]), [1, 3, 5, 2, 6, 8])
+Test.assert_equals(concat([7, 8], [10, 9, 1, 1, 2]), [7, 8, 10, 9, 1, 1, 2])
+Test.assert_equals(concat([4, 5, 1], [3, 3, 3, 3, 3]), [4, 5, 1, 3, 3, 3, 3, 3])
+
+### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
+### Create a function that returns True if an integer is divisible by 5, and false otherwise.
+
+def divisible_by_five(n):
+	return n % 5 == 0
+
+### tests
+Test.assert_equals(divisible_by_five(7), False)
+Test.assert_equals(divisible_by_five(5), True)
+Test.assert_equals(divisible_by_five(15), True)
+
+### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
 ###
 
 
 
 ### tests
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
