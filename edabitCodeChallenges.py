@@ -117,21 +117,55 @@ Test.assert_equals(profitable_gamble(0.9, 1, 2), False)
 Test.assert_equals(profitable_gamble(0.9, 3, 2), True)
 
 ### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
+### Create a function that returns True if an integer is divisible by 5, and false otherwise.
+
+def divisible_by_five(n):
+	return n % 5 == 0
+
+### tests
+Test.assert_equals(divisible_by_five(7), False)
+Test.assert_equals(divisible_by_five(5), True)
+Test.assert_equals(divisible_by_five(15), True)
+
+### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
+### Create a function that takes a list of numbers. Return the largest number in the list.
+
+def findLargestNum(nums):
+	return max(nums)
+
+### tests
+Test.assert_equals(findLargestNum([4, 5, 1, 3]), 5)
+Test.assert_equals(findLargestNum([13, 27, 18, 26]), 27)
+Test.assert_equals(findLargestNum([32, 35, 37, 39]), 39)
+
+### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
+### Given two strings, first_name and last_name, return a single string in the format "last, first".
+
+def concat_name(first_name, last_name):
+	return last_name + ", " + first_name
+
+### tests
+Test.assert_equals(concat_name("John", "Doe"), "Doe, John")
+Test.assert_equals(concat_name("First", "Last"), "Last, First")
+Test.assert_equals(concat_name("A", "B"), "B, A")
+
+### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
+### Create a function that takes a list of numbers and returns the smallest number in the list.
+
+def findSmallestNum(lst):
+	return min(lst)
+
+### tests
+Test.assert_equals(findSmallestNum([34, 15, 88, 2]), 2)
+Test.assert_equals(findSmallestNum([34, -345, -1, 100]), -345)
+Test.assert_equals(findSmallestNum([-76, 1.345, 1, 0]), -76)
+
+### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
 ###
 
 
 
 ### tests
-
-
-
-
-
-
-
-
-
-
 
 
 
