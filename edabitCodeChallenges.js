@@ -2194,12 +2194,17 @@ Test.assertEquals(differenceMaxMin([10,4,1,2,8,91]), 90)
 Test.assertEquals(differenceMaxMin([-70,43,34,54,22]), 124)
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
-//
+//  Write a function that turns a comma-delimited list into an array of strings.
 
-
+function toArray(str) {
+  	if(str.length === 0) return [];
+	else return str.split(', ')
+}
 
 // tests
-
+Test.assertSimilar(toArray("watermelon, raspberry, orange"), ["watermelon", "raspberry", "orange"])
+Test.assertSimilar(toArray("x1, x2, x3, x4, x5"), ["x1", "x2", "x3", "x4", "x5"])
+Test.assertSimilar(toArray("a, b, c, d"), ["a", "b", "c", "d"])
 
 
 
