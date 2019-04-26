@@ -2170,6 +2170,30 @@ Test.assertEquals(oddProduct([5, 5, 8, 2, 4, 32]), 25)
 Test.assertEquals(oddProduct([1, 2, 1, 2, 1, 2, 1, 2]), 1)
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Create a function that returns the smaller number.
+
+function smallerNum(n1, n2) {
+	if(Number.parseInt(n1) < Number.parseInt(n2)) return n1
+	else return n2;
+}
+
+// tests
+Test.assertEquals(smallerNum("21", "44"), "21")
+Test.assertEquals(smallerNum("153", "367"), "153")
+Test.assertEquals(smallerNum("1500", "16"), "16")
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Create a function that takes an array and returns the difference between the smallest and biggest numbers.
+
+function differenceMaxMin(arr) {
+	return Math.max(...arr) - Math.min(...arr);
+}
+
+// tests
+Test.assertEquals(differenceMaxMin([10,4,1,2,8,91]), 90)
+Test.assertEquals(differenceMaxMin([-70,43,34,54,22]), 124)
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 //
 
 
