@@ -92,11 +92,46 @@ Test.assert_equals(divisible_by_five(5), True)
 Test.assert_equals(divisible_by_five(15), True)
 
 ### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
+### You've got chickens (2 legs), cows (4 legs) and pigs (4 legs) on your farm. Return the total number of legs on your farm.
+
+def animals(chickens, cows, pigs):
+	return chickens * 2 + (cows + pigs) * 4
+
+### tests
+Test.assert_equals(animals(5, 2, 8), 50)
+Test.assert_equals(animals(3, 4, 7), 50)
+Test.assert_equals(animals(1, 2, 3), 22)
+
+### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
+''' Create a function that takes in three arguments (prob, prize, pay) and returns true if prob * prize > pay; otherwise return false.
+
+To illustrate, profitable_gamble(0.2, 50, 9) should yield true, since the net profit is 1 (0.2 * 50 - 9), and 1 > 0.
+'''
+
+def profitable_gamble(prob, prize, pay):
+	return prob * prize > pay
+
+### tests
+Test.assert_equals(profitable_gamble(0.2, 50, 9), True)
+Test.assert_equals(profitable_gamble(0.9, 1, 2), False)
+Test.assert_equals(profitable_gamble(0.9, 3, 2), True)
+
+### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
 ###
 
 
 
 ### tests
+
+
+
+
+
+
+
+
+
+
 
 
 
