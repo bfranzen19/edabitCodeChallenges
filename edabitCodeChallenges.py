@@ -183,11 +183,84 @@ Test.assert_equals(divisible(100), True)
 Test.assert_equals(divisible(1000), True)
 
 ### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
+###  Create a function that takes a number as its only argument and returns True if it's less than or equal to zero, otherwise return False.
+
+def lessThanOrEqualToZero(num):
+	return num <= 0
+
+### tests
+Test.assert_equals(lessThanOrEqualToZero(5), False)
+Test.assert_equals(lessThanOrEqualToZero(0), True)
+Test.assert_equals(lessThanOrEqualToZero(-5), True)
+
+### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
+###  Create a function that takes two strings as arguments and return either True or False depending on whether the total number of characters in the first string is equal to the total number of characters in the second string.
+
+def comp(txt1, txt2):
+	return len(txt1) == len(txt2)
+
+### tests
+Test.assert_equals(comp("AB", "CD"), True)
+Test.assert_equals(comp("ABC", "DE"), False)
+Test.assert_equals(comp("hello", "edabit"), False)
+
+### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
+### Create a function that returns the ASCII value of the passed in character.
+
+def ctoa(char):
+	return ord(char)
+
+### tests
+Test.assert_equals(ctoa(' '), 32)
+Test.assert_equals(ctoa('A'), 65)
+Test.assert_equals(ctoa(']'), 93)
+
+### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
+### Write a function to check whether a list contains a particular element.
+
+def check(lst, el):
+	if el in lst:
+		return True
+	else:
+		return False
+
+'''
+better solution:
+
+def check(lst, el):
+	return el in lst
+
+'''
+
+### tests
+Test.assert_equals(check([1, 2, 3, 4, 5], 3), True)
+Test.assert_equals(check([1, 1, 2, 1, 1], 3), False)
+Test.assert_equals(check([1, 1, 2, 1, 5, 4, 7], 7), True)
+
+### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
+### Create a function that takes in a word and determines whether or not it is plural. A plural word is one that ends in "s".
+
+def is_plural(word):
+	return word.endswith('s')
+
+### tests
+Test.assert_equals(is_plural("dudes"), True)
+Test.assert_equals(is_plural("flowers"), True)
+Test.assert_equals(is_plural("checks"), True)
+
+### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
 ###
 
 
 
 ### tests
+
+
+
+
+
+
+
 
 
 

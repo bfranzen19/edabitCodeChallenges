@@ -2206,6 +2206,26 @@ Test.assertSimilar(toArray("watermelon, raspberry, orange"), ["watermelon", "ras
 Test.assertSimilar(toArray("x1, x2, x3, x4, x5"), ["x1", "x2", "x3", "x4", "x5"])
 Test.assertSimilar(toArray("a, b, c, d"), ["a", "b", "c", "d"])
 
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Write a function to reverse an array.
+
+function reverse(arr) {
+	return arr.reverse()
+}
+
+// tests
+Test.assertSimilar(reverse([1, 2, 3, 4]), [4, 3, 2, 1])
+Test.assertSimilar(reverse([5, 6, 7]), [7, 6, 5])
+Test.assertSimilar(reverse([9, 9, 2, 3, 4]), [4, 3, 2, 9, 9])
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+//
+
+
+
+// tests
+
+
 
 
 
