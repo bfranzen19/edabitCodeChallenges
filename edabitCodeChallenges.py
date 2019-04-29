@@ -161,17 +161,33 @@ Test.assert_equals(findSmallestNum([34, -345, -1, 100]), -345)
 Test.assert_equals(findSmallestNum([-76, 1.345, 1, 0]), -76)
 
 ### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
+### Write a function to reverse a list.
+
+def reverse(lst):
+	return lst[::-1]
+
+### tests
+Test.assert_equals(reverse([1, 2, 3, 4]), [4, 3, 2, 1])
+Test.assert_equals(reverse([5, 6, 7]), [7, 6, 5])
+Test.assert_equals(reverse([9, 9, 2, 3, 4]), [4, 3, 2, 9, 9])
+
+### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
+###  Create a function that takes an integer and returns True if it's divisible by 100, otherwise return False.
+
+def divisible(num):
+	return num % 100 == 0
+
+### tests
+Test.assert_equals(divisible(1), False)
+Test.assert_equals(divisible(100), True)
+Test.assert_equals(divisible(1000), True)
+
+### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
 ###
 
 
 
 ### tests
-
-
-
-
-
-
 
 
 
