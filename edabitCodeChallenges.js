@@ -2219,11 +2219,54 @@ Test.assertSimilar(reverse([5, 6, 7]), [7, 6, 5])
 Test.assertSimilar(reverse([9, 9, 2, 3, 4]), [4, 3, 2, 9, 9])
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+/*
+Hamming distance is the number of characters that differ between two strings.
+
+To illustrate:
+	String1: "abcbba"
+	String2: "abcbda"
+
+	Hamming Distance: 1 - "b" vs. "d" is the only difference.
+
+Create a function that computes the hamming distance between two strings.
+*/
+
+function hammingDistance(str1, str2) {
+  	let arr1 = [...str1]
+	let arr2 = [...str2]
+	let count = 0
+
+	for(let i=0 ; i<arr1.length ; i++) {
+		if(arr1[i] != arr2[i]) count++;
+	}
+  	return count;
+}
+
+// tests
+Test.assertEquals(hammingDistance("abcde", "bcdef"), 5)
+Test.assertEquals(hammingDistance("abcde", "abcde"), 0)
+Test.assertEquals(hammingDistance("strong", "strung"), 1)
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+//  Write a function that returns true if there exists at least one number that is larger than or equal to n.
+
+function existsHigher(arr, n) {
+	return arr.some(i => i >= n)
+}
+
+// tests
+Test.assertEquals(existsHigher([5, 3, 15, 22, 4], 10), true)
+Test.assertEquals(existsHigher([1, 2, 3, 4, 5], 8), false)
+Test.assertEquals(existsHigher([4, 3, 3, 3, 2, 2, 2], 4), true)
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 //
 
 
 
 // tests
+
+
 
 
 
