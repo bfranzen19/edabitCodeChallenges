@@ -249,19 +249,54 @@ Test.assert_equals(is_plural("flowers"), True)
 Test.assert_equals(is_plural("checks"), True)
 
 ### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
+### There is a single operator in Python capable of providing the remainder of a division operation. Two numbers are passed as parameters. The first provider divided by the second parameter will have a remainder, possiby zero. Return that value.
+
+def remainder(x, y):
+	return x % y
+
+### tests
+Test.assert_equals(remainder(7, 2), 1)
+Test.assert_equals(remainder(3, 4), 3)
+Test.assert_equals(remainder(5, 5), 0)
+
+### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
+### Create a function that takes a list and returns the difference between the smallest and biggest numbers.
+
+def difference_max_min(lst):
+	return max(lst) - min(lst)
+
+### tests
+Test.assert_equals(difference_max_min([10,4,1,2,8,91]), 90)
+Test.assert_equals(difference_max_min([-70,43,34,54,22]), 124)
+
+### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
+###  Create a function that takes a list of elements and return the first and last elements as a new list.
+
+def first_last(lst):
+	return [lst[0], lst[len(lst)-1]]
+
+### tests
+Test.assert_equals(first_last([5, 10, 15, 20, 25]), [5, 25])
+Test.assert_equals(first_last(["edabit", 13, None, False, True]), ["edabit", True])
+Test.assert_equals(first_last([None, 4, "6", "hello", None]), [None, None])
+
+### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
+### Create a function that returns True if a string contains any spaces.
+
+def has_spaces(txt):
+	return ' ' in txt
+
+### tests
+Test.assert_equals(has_spaces("Foo"), False)
+Test.assert_equals(has_spaces("Foo bar"), True)
+Test.assert_equals(has_spaces("Foo "), True)
+
+### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
 ###
 
 
 
 ### tests
-
-
-
-
-
-
-
-
 
 
 
