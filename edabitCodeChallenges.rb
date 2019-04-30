@@ -506,13 +506,48 @@ Test.assert_equals(has_spaces("Foo bar"), true)
 Test.assert_equals(has_spaces("Foo "), true)
 
 ### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
+### Write a function to reverse an array.
+
+def reverse(arr)
+	return arr.reverse
+end
+
+### tests
+Test.assert_equals(reverse([1, 2, 3, 4]), [4, 3, 2, 1])
+Test.assert_equals(reverse([5, 6, 7]), [7, 6, 5])
+Test.assert_equals(reverse([9, 9, 2, 3, 4]), [4, 3, 2, 9, 9])
+
+### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
+### Create a function that adds a string ending to each member in an array.
+
+def add_ending(arr, ending)
+	return arr.each {|x| x << ending}
+end
+
+### tests
+Test.assert_equals(add_ending(['clever', 'meek', 'hurried', 'nice'], 'ly'), ['cleverly', 'meekly', 'hurriedly', 'nicely'])
+Test.assert_equals(add_ending(['new', 'pander', 'scoop'], 'er'), ['newer', 'panderer', 'scooper'])
+Test.assert_equals(add_ending(['bend', 'sharpen', 'mean'], 'ing'), ['bending', 'sharpening', 'meaning'])
+
+### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
+### Create a function replaces all the vowels in a string with a specified character.
+
+def replace_vowels(str, ch)
+	str = str.gsub(/[aeiou]/i, ch)
+  	return str
+end
+
+### tests
+Test.assert_equals(replace_vowels("the aardvark", "#"), "th# ##rdv#rk")
+Test.assert_equals(replace_vowels("minnie mouse", "?"), "m?nn?? m??s?")
+Test.assert_equals(replace_vowels("shakespeare", "*"), "sh*k*sp**r*")
+
+### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
 ###
 
 
 
 ### tests
-
-
 
 
 
