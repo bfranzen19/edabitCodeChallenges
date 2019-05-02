@@ -543,11 +543,31 @@ Test.assert_equals(replace_vowels("minnie mouse", "?"), "m?nn?? m??s?")
 Test.assert_equals(replace_vowels("shakespeare", "*"), "sh*k*sp**r*")
 
 ### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
+### Write a function to check whether an array contains a particular element.
+
+def check(arr, el)
+	return arr.include?(el)
+end
+
+### tests
+Test.assert_equals(check([1, 2, 3, 4, 5], 3), true)
+Test.assert_equals(check([1, 1, 2, 1, 1], 3), false)
+Test.assert_equals(check([1, 1, 2, 1, 5, 4, 7], 7), true)
+
+### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
 ###
 
 
 
 ### tests
+
+
+
+
+
+
+
+
 
 
 
