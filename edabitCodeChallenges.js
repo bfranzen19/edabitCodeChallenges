@@ -2272,6 +2272,25 @@ Test.assertEquals(check([1, 1, 2, 1, 1], 3), false)
 Test.assertEquals(check([1, 1, 2, 1, 5, 4, 7], 7), true)
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Write a function that returns true if the product of an array is divisible by the sum of that same array.
+
+function divisible(arr) {
+	let prod = arr.reduce((i, val) => {
+		return i * val;
+	});
+  	let sum = arr.reduce((i, val) => {
+	  	return i + val;
+	});
+
+  	return prod % sum === 0;
+}
+
+// tests
+Test.assertEquals(divisible([3, 2, 4, 1]), false)
+Test.assertEquals(divisible([4, 4, 4, 4]), true)
+Test.assertEquals(divisible([4, 2, 6]), true)
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 //
 
 
