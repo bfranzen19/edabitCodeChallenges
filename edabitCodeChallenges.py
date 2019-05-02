@@ -331,13 +331,22 @@ Test.assert_equals(isEvenOrOdd(0), "even")
 Test.assert_equals(isEvenOrOdd(7), "odd")
 
 ### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
+### Create a function that accepts a list of numbers and return both the minimum and maximum numbers, in that order (as a list).
+
+def minMax(nums):
+	return [min(nums), max(nums)]
+
+### tests
+Test.assert_equals(minMax([14, 35, 6, 1, 34, 54]), [1, 54])
+Test.assert_equals(minMax([1.346, 1.6532, 1.8734, 1.8723]), [1.346, 1.8734])
+Test.assert_equals(minMax([0.432, 0.874, 0.523, 0.984, 0.327, 0.2345]), [0.2345, 0.984])
+
+### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
 ###
 
 
 
 ### tests
-
-
 
 
 
