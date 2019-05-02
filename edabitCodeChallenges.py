@@ -292,11 +292,52 @@ Test.assert_equals(has_spaces("Foo bar"), True)
 Test.assert_equals(has_spaces("Foo "), True)
 
 ### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
+### Create a function that accepts a list and returns the last item in the list. The list can be either homogeneous or heterogeneous.
+
+def getLastItem(lst):
+	return lst[len(lst)-1]
+
+### tests
+Test.assert_equals(getLastItem(['Cat', 'Dog', 'Duck']), 'Duck')
+Test.assert_equals(getLastItem([1, 2, 3]), 3)
+Test.assert_equals(getLastItem([True, False, False, True]), True)
+
+### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
+### Write a function that returns True if two arrays have the same number of unique elements, and false otherwise.
+
+def same(a1, a2):
+	s1 = set(a1)
+	s2 = set(a2)
+
+	return len(s1) == len(s2)
+
+### tests
+Test.assert_equals(same([1, 3, 4, 4, 4], [2, 5, 7]), True)
+Test.assert_equals(same([9, 8, 7, 6], [4, 4, 3, 1]), False)
+Test.assert_equals(same([2], [3, 3, 3, 3, 3]), True)
+
+### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
+### Create a function that takes a number as an argument and returns "even" for even numbers and "odd" for odd numbers.
+
+def isEvenOrOdd(num):
+	if num % 2 == 0:
+		return "even"
+	else:
+		return "odd"
+
+### tests
+Test.assert_equals(isEvenOrOdd(3), "odd")
+Test.assert_equals(isEvenOrOdd(0), "even")
+Test.assert_equals(isEvenOrOdd(7), "odd")
+
+### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
 ###
 
 
 
 ### tests
+
+
 
 
 
