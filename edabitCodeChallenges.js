@@ -2260,14 +2260,23 @@ Test.assertEquals(existsHigher([1, 2, 3, 4, 5], 8), false)
 Test.assertEquals(existsHigher([4, 3, 3, 3, 2, 2, 2], 4), true)
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Write a function to check whether an array contains a particular element.
+
+function check(arr, el) {
+	return arr.includes(el)
+}
+
+// tests
+Test.assertEquals(check([1, 2, 3, 4, 5], 3), true)
+Test.assertEquals(check([1, 1, 2, 1, 1], 3), false)
+Test.assertEquals(check([1, 1, 2, 1, 5, 4, 7], 7), true)
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 //
 
 
 
 // tests
-
-
-
 
 
 
