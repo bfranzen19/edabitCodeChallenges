@@ -342,12 +342,44 @@ Test.assert_equals(minMax([1.346, 1.6532, 1.8734, 1.8723]), [1.346, 1.8734])
 Test.assert_equals(minMax([0.432, 0.874, 0.523, 0.984, 0.327, 0.2345]), [0.2345, 0.984])
 
 ### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
+### Write a function that returns True if a dictionary is empty, and False otherwise.
+
+def is_empty(dictionary):
+	return len(dictionary) == 0
+
+### tests
+Test.assert_equals(is_empty({}), True)
+Test.assert_equals(is_empty({'a': 1}), False)
+Test.assert_equals(is_empty({'z': 2, 'w': 4, 'y': 5}), False)
+
+### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
+### Create a function that takes a number (from 1 - 60) and returns a corresponding string of hyphens.
+
+def num_to_dashes(num):
+	return "-" * num
+
+### tests
+Test.assert_equals(num_to_dashes(1),"-")
+Test.assert_equals(num_to_dashes(2),"--")
+Test.assert_equals(num_to_dashes(3),"---")
+
+### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
+### Create a function that counts the number of syllables a word has. Each syllable is separated with a dash -.
+
+def number_syllables(word):
+	return len(word.split('-'))
+
+### tests
+Test.assert_equals(number_syllables("buf-fet"), 2)
+Test.assert_equals(number_syllables("beau-ti-ful"), 3)
+Test.assert_equals(number_syllables("mon-u-men-tal"), 4)
+
+### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
 ###
 
 
 
 ### tests
-
 
 
 
