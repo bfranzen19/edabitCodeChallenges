@@ -2291,11 +2291,21 @@ Test.assertEquals(divisible([4, 4, 4, 4]), true)
 Test.assertEquals(divisible([4, 2, 6]), true)
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
-//
+/*
+A pair of strings form a strange pair if:
+	1st string's first letter = 2nd string's last letter.
+	1st string's last letter = 2nd string's first letter.
+Create a function that returns true if a pair of strings constitutes a strange pair, and false otherwise.
+*/
 
-
+function isStrangePair(str1, str2) {
+	return str1[0] == str2[str2.length-1] && str1[str1.length-1] == str2[0];
+}
 
 // tests
+Test.assertEquals(isStrangePair("ratio", "orator"), true)
+Test.assertEquals(isStrangePair("sparkling", "groups"), true)
+Test.assertEquals(isStrangePair("mentee", "eminem"), true)
 
 
 
