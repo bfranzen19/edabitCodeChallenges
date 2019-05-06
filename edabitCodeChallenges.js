@@ -2307,12 +2307,38 @@ Test.assertEquals(isStrangePair("ratio", "orator"), true)
 Test.assertEquals(isStrangePair("sparkling", "groups"), true)
 Test.assertEquals(isStrangePair("mentee", "eminem"), true)
 
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Fix this code
+function checkEquals(arr1, arr2) {
+	if (arr1.join(" ") === arr2.join(" ")) {
+  		return true;
+ 	} else {
+  		return false;
+ 	}
+}
+
+
+// tests
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Create a function to extract the name of the subreddit from its URL.
+
+function subReddit(link) {
+	let spLink = link.split('/');
+  	return spLink[spLink.length-2];
+}
+
+// tests
+Test.assertEquals(subReddit("https://www.reddit.com/r/relationships/"), "relationships")
+Test.assertEquals(subReddit("https://www.reddit.com/r/mildlyinteresting/"), "mildlyinteresting")
+Test.assertEquals(subReddit("https://www.reddit.com/r/funny/"), "funny")
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+//
 
 
 
-
-
-
+// tests
 
 
 
