@@ -375,14 +375,22 @@ Test.assert_equals(number_syllables("beau-ti-ful"), 3)
 Test.assert_equals(number_syllables("mon-u-men-tal"), 4)
 
 ### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
+### Write a function that returns true if k^k == n for input (n,k).
+
+def k_to_k(n, k):
+	return k ** k == n
+
+### tests
+Test.assert_equals(k_to_k(4, 2), True)
+Test.assert_equals(k_to_k(387420489, 9), True)
+Test.assert_equals(k_to_k(302875106592253, 13), True)
+
+### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
 ###
 
 
 
 ### tests
-
-
-
 
 
 
