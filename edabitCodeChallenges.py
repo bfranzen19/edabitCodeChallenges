@@ -386,14 +386,23 @@ Test.assert_equals(k_to_k(387420489, 9), True)
 Test.assert_equals(k_to_k(302875106592253, 13), True)
 
 ### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
+### Write a function that returns True if all characters in a string are identical and False otherwise.
+
+def is_identical(s):
+	comp = set((s))
+	return len(comp) == 1
+
+### tests
+Test.assert_equals(is_identical("kkkkk"), True)
+Test.assert_equals(is_identical("ckkkk"), False)
+Test.assert_equals(is_identical("kkkkck"), False)
+
+### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
 ###
 
 
 
 ### tests
-
-
-
 
 
 
