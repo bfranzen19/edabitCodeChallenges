@@ -398,14 +398,22 @@ Test.assert_equals(is_identical("ckkkk"), False)
 Test.assert_equals(is_identical("kkkkck"), False)
 
 ### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
+### Create a function that takes a name and returns a greeting.
+
+def hello_name(name):
+	return str('Hello ' + name + "!")
+
+### tests
+Test.assert_equals(hello_name("Gerald"), "Hello Gerald!")
+Test.assert_equals(hello_name("Fatima"), "Hello Fatima!")
+Test.assert_equals(hello_name("Ed"), "Hello Ed!")
+
+### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
 ###
 
 
 
 ### tests
-
-
-
 
 
 
