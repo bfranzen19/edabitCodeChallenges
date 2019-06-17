@@ -555,14 +555,23 @@ Test.assert_equals(check([1, 1, 2, 1, 1], 3), false)
 Test.assert_equals(check([1, 1, 2, 1, 5, 4, 7], 7), true)
 
 ### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
+### Write a function that returns true if k^k == n for input (n, k).
+
+def k_to_k(n, k)
+	return n == k ** k
+end
+
+### tests
+Test.assert_equals(k_to_k(4, 2), true)
+Test.assert_equals(k_to_k(387420489, 9), true)
+Test.assert_equals(k_to_k(302875106592253, 13), true)
+
+### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
 ###
 
 
 
 ### tests
-
-
-
 
 
 
