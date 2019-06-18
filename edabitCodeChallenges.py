@@ -409,11 +409,15 @@ Test.assert_equals(hello_name("Fatima"), "Hello Fatima!")
 Test.assert_equals(hello_name("Ed"), "Hello Ed!")
 
 ### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
-###
+### Write a function that validates whether two strings are identical. Make this validator case insensitive.
 
-
+def match(s1, s2):
+	return s1.lower() == s2.lower()
 
 ### tests
+Test.assert_equals(match("hello", "hELLo"), True)
+Test.assert_equals(match("hey", "hey"), True)
+Test.assert_equals(match("venom", "VENOM"), True)
 
 
 
