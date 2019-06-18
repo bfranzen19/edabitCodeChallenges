@@ -2346,6 +2346,27 @@ Test.assertEquals(nextEdge(8, 3), 10)
 Test.assertEquals(nextEdge(7, 9), 15)
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Create a function that takes a name and returns a greeting. Don't use a normal function but use an "arrow function".
+
+const helloName = name => 'Hello ' + name + '!'
+const helloName = name => `Hello ${name}!` // better solution
+
+// tests
+Test.assertEquals(helloName("Gerald"), "Hello Gerald!")
+Test.assertEquals(helloName("Fatima"), "Hello Fatima!")
+Test.assertEquals(helloName("Ed"), "Hello Ed!")
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Create a function that gets an object arguments with height, width and length of a box and returns the volume of the box.
+
+const volumeOfBox = sizes => sizes.width * sizes.length * sizes.height
+
+// tests
+Test.assertEquals(volumeOfBox({width: 11,length: 1, height: 2}), 22)
+Test.assertEquals(volumeOfBox({width: 1, length: 5,  height: 3}), 15)
+Test.assertEquals(volumeOfBox({width: 2, length: 1,  height: 1}), 2)
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 //
 
 
