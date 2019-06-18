@@ -567,14 +567,55 @@ Test.assert_equals(k_to_k(387420489, 9), true)
 Test.assert_equals(k_to_k(302875106592253, 13), true)
 
 ### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
+### Create a function that takes in three arguments (prob, prize, pay) and returns true if prob * prize > pay; otherwise return false.
+
+To illustrate, profitable_gamble(0.2, 50, 9) should yield true, since the net profit is 1 (0.2 * 50 - 9), and 1 > 0.
+
+def profitable_gamble(prob, prize, pay)
+	return prob * prize > pay
+end
+
+### tests
+Test.assert_equals(profitable_gamble(0.2, 50, 9), true)
+Test.assert_equals(profitable_gamble(0.9, 1, 2), false)
+Test.assert_equals(profitable_gamble(0.9, 3, 2), true)
+
+### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
+### A set is a collection of unique items. A set can be formed from an array from removing all duplicate items.
+
+def set(arr)
+	return arr.uniq()
+end
+
+### tests
+Test.assert_equals(set([1, 3, 3, 5, 5]), [1, 3, 5])
+Test.assert_equals(set([4, 4, 4, 4]), [4])
+Test.assert_equals(set([5, 7, 8, 9, 10, 15]), [5, 7, 8, 9, 10, 15])
+
+### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
+### Write two functions:
+	# to_int() : A function to convert a string to an integer.
+	# to_str() : A function to convert an integer to a string.
+
+def to_int(str)
+	return str.to_i
+end
+
+def to_str(int)
+	return int.to_s
+end
+
+### tests
+Test.assert_equals(to_int("37"), 37)
+Test.assert_equals(to_int("113"), 113)
+Test.assert_equals(to_int("5"), 5)
+
+### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
 ###
 
 
 
 ### tests
-
-
-
 
 
 
