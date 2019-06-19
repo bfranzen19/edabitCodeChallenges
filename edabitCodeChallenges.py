@@ -419,9 +419,29 @@ Test.assert_equals(match("hello", "hELLo"), True)
 Test.assert_equals(match("hey", "hey"), True)
 Test.assert_equals(match("venom", "VENOM"), True)
 
+### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
+'''
+Create a function that determines whether or not it's possible to split a pie fairly given these three parameters:
+
+	Total number of slices.
+	Number of recipients.
+	How many slices each person gets.
+'''
+
+def equal_slices(total, people, each):
+	return people * each <= total
+
+### tests
+Test.assert_equals(equal_slices(8, 3, 2), True)
+Test.assert_equals(equal_slices(8, 3, 3), False)
+Test.assert_equals(equal_slices(24, 12, 2), True)
+
+### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
+###
 
 
 
+### tests
 
 
 
