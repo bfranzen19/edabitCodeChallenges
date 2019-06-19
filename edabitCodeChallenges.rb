@@ -611,13 +611,23 @@ Test.assert_equals(to_int("113"), 113)
 Test.assert_equals(to_int("5"), 5)
 
 ### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
+### Given a word, create a function that checks whether it is a palindrome.
+
+def is_palindrome(str)
+	return str == str.reverse
+end
+
+### tests
+Test.assert_equals(is_palindrome('mom'), true)
+Test.assert_equals(is_palindrome('scary'), false)
+Test.assert_equals(is_palindrome('reviver'), true)
+
+### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
 ###
 
 
 
 ### tests
-
-
 
 
 
