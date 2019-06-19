@@ -2367,14 +2367,23 @@ Test.assertEquals(volumeOfBox({width: 1, length: 5,  height: 3}), 15)
 Test.assertEquals(volumeOfBox({width: 2, length: 1,  height: 1}), 2)
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Write a function that validates whether two strings are identical. Make this validator case insensitive.
+
+function match(s1, s2) {
+	return s1.toLowerCase() === s2.toLowerCase()
+}
+
+// tests
+Test.assertEquals(match("hello", "hELLo"), true)
+Test.assertEquals(match("hey", "hey"), true)
+Test.assertEquals(match("venom", "VENOM"), true)
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 //
 
 
 
 // tests
-
-
-
 
 
 
