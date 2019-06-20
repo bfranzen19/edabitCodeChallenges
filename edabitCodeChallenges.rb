@@ -623,14 +623,23 @@ Test.assert_equals(is_palindrome('scary'), false)
 Test.assert_equals(is_palindrome('reviver'), true)
 
 ### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
+### Create a function that returns the ASCII value of the passed in character.
+
+def ctoa(char)
+	return char.ord
+end
+
+### tests
+Test.assert_equals(ctoa(' '), 32)
+Test.assert_equals(ctoa('A'), 65)
+Test.assert_equals(ctoa(']'), 93)
+
+### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
 ###
 
 
 
 ### tests
-
-
-
 
 
 
