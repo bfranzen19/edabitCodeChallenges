@@ -437,12 +437,15 @@ Test.assert_equals(equal_slices(8, 3, 3), False)
 Test.assert_equals(equal_slices(24, 12, 2), True)
 
 ### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
-###
+### Create a function that takes a number as an argument and returns the amount of digits it has.
 
-
+def find_digit_amount(num):
+	return len(str(num))
 
 ### tests
-
+Test.assert_equals(find_digit_amount(1), 1, 'Should work with one digit')
+Test.assert_equals(find_digit_amount(67), 2, 'Should work with a two-digit number')
+Test.assert_equals(find_digit_amount(123), 3, 'Should work with a three-digit number')
 
 
 
