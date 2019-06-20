@@ -447,6 +447,27 @@ Test.assert_equals(find_digit_amount(1), 1, 'Should work with one digit')
 Test.assert_equals(find_digit_amount(67), 2, 'Should work with a two-digit number')
 Test.assert_equals(find_digit_amount(123), 3, 'Should work with a three-digit number')
 
+### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
+### Given a string, create a function to reverse the case. All lower-cased letters should be upper-cased, and vice versa.
+
+def reverse_case(txt):
+	return txt.swapcase()
+
+### tests
+Test.assert_equals(reverse_case('Happy Birthday'), 'hAPPY bIRTHDAY')
+Test.assert_equals(reverse_case('MANY THANKS'), 'many thanks')
+Test.assert_equals(reverse_case('sPoNtAnEoUs'), 'SpOnTaNeOuS')
+
+### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
+###
+
+
+
+### tests
+
+
+
+
 
 
 
