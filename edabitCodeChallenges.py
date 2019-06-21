@@ -459,11 +459,35 @@ Test.assert_equals(reverse_case('MANY THANKS'), 'many thanks')
 Test.assert_equals(reverse_case('sPoNtAnEoUs'), 'SpOnTaNeOuS')
 
 ### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
+'''
+Create a function that takes a list of numbers and returns a new list, sorted in ascending order (smallest to biggest).
+	Sort numbers list in ascending order.
+	If function's argument is an empty list, return an empty list.
+	Return a new list of sorted numbers.
+'''
+def sortNumsAscending(lst):
+	if len(lst) == 0:
+		return []
+	else:
+		return sorted(lst)
+
+## better solution:
+# def sortNumsAscending(lst):
+# 	return sorted(lst)
+
+### tests
+Test.assert_equals(sortNumsAscending([1, 2, 10, 50, 5]), [1, 2, 5, 10, 50])
+Test.assert_equals(sortNumsAscending([80, 29, 4, -95, -24, 85]), [-95, -24, 4, 29, 80, 85])
+Test.assert_equals(sortNumsAscending([]), [])
+
+### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
 ###
 
 
 
 ### tests
+
+
 
 
 
