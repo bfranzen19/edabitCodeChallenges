@@ -2391,11 +2391,26 @@ Test.assertEquals(stackBoxes(2), 4)
 Test.assertEquals(stackBoxes(0), 0)
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Write a function that returns true if k^k == n for input (n, k).
+
+function kToK(n, k) {
+	return Math.pow(k,k) === n;
+}
+
+// tests
+Test.assertEquals(kToK(4, 2), true)
+Test.assertEquals(kToK(387420489, 9), true)
+Test.assertEquals(kToK(302875106592253, 13), true)
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 //
 
 
 
 // tests
+
+
+
 
 
 
