@@ -635,14 +635,23 @@ Test.assert_equals(ctoa('A'), 65)
 Test.assert_equals(ctoa(']'), 93)
 
 ### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
+### Create a function that finds the maximum range of a triangles third edge.
+
+def next_edge(side1, side2)
+	return (side1 + side2) - 1
+end
+
+### tests
+Test.assert_equals(next_edge(5, 4), 8)
+Test.assert_equals(next_edge(8, 3), 10)
+Test.assert_equals(next_edge(7, 9), 15)
+
+### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
 ###
 
 
 
 ### tests
-
-
-
 
 
 
