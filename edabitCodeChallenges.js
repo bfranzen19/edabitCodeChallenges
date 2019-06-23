@@ -2334,11 +2334,39 @@ Test.assertEquals(subReddit("https://www.reddit.com/r/mildlyinteresting/"), "mil
 Test.assertEquals(subReddit("https://www.reddit.com/r/funny/"), "funny")
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Create a function that goes through the array, incrementing (+1) for each odd number and decrementing (-1) for each even number.
+
+function transform(arr) {
+	const results = arr.map(x => {
+		if(x % 2 !== 0) {
+			return x + 1;
+	  	} else {
+			return x - 1;
+		}
+	})
+	return results;
+}
+
+/*
+// better solution:
+function transform(arr) {
+    return arr.map(num => num % 2 === 0 ? num - 1 : num + 1)
+}
+*/
+
+// tests
+Test.assertSimilar(transform([1, 2, 3, 4, 5]), [2, 1, 4, 3, 6])
+Test.assertSimilar(transform([3, 3, 4, 3]), [4, 4, 3, 4])
+Test.assertSimilar(transform([2, 2, 0, 8, 10]), [1, 1, -1, 7, 9])
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 //
 
 
 
 // tests
+
+
 
 
 
