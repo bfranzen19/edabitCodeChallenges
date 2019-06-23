@@ -398,14 +398,94 @@ Test.assert_equals(is_identical("ckkkk"), False)
 Test.assert_equals(is_identical("kkkkck"), False)
 
 ### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
+### Create a function that takes a name and returns a greeting.
+
+def hello_name(name):
+	return str('Hello ' + name + "!")
+
+### tests
+Test.assert_equals(hello_name("Gerald"), "Hello Gerald!")
+Test.assert_equals(hello_name("Fatima"), "Hello Fatima!")
+Test.assert_equals(hello_name("Ed"), "Hello Ed!")
+
+### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
+### Write a function that validates whether two strings are identical. Make this validator case insensitive.
+
+def match(s1, s2):
+	return s1.lower() == s2.lower()
+
+### tests
+Test.assert_equals(match("hello", "hELLo"), True)
+Test.assert_equals(match("hey", "hey"), True)
+Test.assert_equals(match("venom", "VENOM"), True)
+
+### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
+'''
+Create a function that determines whether or not it's possible to split a pie fairly given these three parameters:
+
+	Total number of slices.
+	Number of recipients.
+	How many slices each person gets.
+'''
+
+def equal_slices(total, people, each):
+	return people * each <= total
+
+### tests
+Test.assert_equals(equal_slices(8, 3, 2), True)
+Test.assert_equals(equal_slices(8, 3, 3), False)
+Test.assert_equals(equal_slices(24, 12, 2), True)
+
+### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
+### Create a function that takes a number as an argument and returns the amount of digits it has.
+
+def find_digit_amount(num):
+	return len(str(num))
+
+### tests
+Test.assert_equals(find_digit_amount(1), 1, 'Should work with one digit')
+Test.assert_equals(find_digit_amount(67), 2, 'Should work with a two-digit number')
+Test.assert_equals(find_digit_amount(123), 3, 'Should work with a three-digit number')
+
+### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
+### Given a string, create a function to reverse the case. All lower-cased letters should be upper-cased, and vice versa.
+
+def reverse_case(txt):
+	return txt.swapcase()
+
+### tests
+Test.assert_equals(reverse_case('Happy Birthday'), 'hAPPY bIRTHDAY')
+Test.assert_equals(reverse_case('MANY THANKS'), 'many thanks')
+Test.assert_equals(reverse_case('sPoNtAnEoUs'), 'SpOnTaNeOuS')
+
+### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
+'''
+Create a function that takes a list of numbers and returns a new list, sorted in ascending order (smallest to biggest).
+	Sort numbers list in ascending order.
+	If function's argument is an empty list, return an empty list.
+	Return a new list of sorted numbers.
+'''
+def sortNumsAscending(lst):
+	if len(lst) == 0:
+		return []
+	else:
+		return sorted(lst)
+
+## better solution:
+# def sortNumsAscending(lst):
+# 	return sorted(lst)
+
+### tests
+Test.assert_equals(sortNumsAscending([1, 2, 10, 50, 5]), [1, 2, 5, 10, 50])
+Test.assert_equals(sortNumsAscending([80, 29, 4, -95, -24, 85]), [-95, -24, 4, 29, 80, 85])
+Test.assert_equals(sortNumsAscending([]), [])
+
+### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
 ###
 
 
 
 ### tests
-
-
-
 
 
 

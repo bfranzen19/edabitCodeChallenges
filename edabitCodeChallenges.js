@@ -2334,6 +2334,75 @@ Test.assertEquals(subReddit("https://www.reddit.com/r/mildlyinteresting/"), "mil
 Test.assertEquals(subReddit("https://www.reddit.com/r/funny/"), "funny")
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Create a function that finds the maximum range of a triangles third edge.
+
+function nextEdge(side1, side2) {
+	return (side1 + side2) - 1;
+}
+
+// tests
+Test.assertEquals(nextEdge(5, 4), 8)
+Test.assertEquals(nextEdge(8, 3), 10)
+Test.assertEquals(nextEdge(7, 9), 15)
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Create a function that takes a name and returns a greeting. Don't use a normal function but use an "arrow function".
+
+const helloName = name => 'Hello ' + name + '!'
+const helloName = name => `Hello ${name}!` // better solution
+
+// tests
+Test.assertEquals(helloName("Gerald"), "Hello Gerald!")
+Test.assertEquals(helloName("Fatima"), "Hello Fatima!")
+Test.assertEquals(helloName("Ed"), "Hello Ed!")
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Create a function that gets an object arguments with height, width and length of a box and returns the volume of the box.
+
+const volumeOfBox = sizes => sizes.width * sizes.length * sizes.height
+
+// tests
+Test.assertEquals(volumeOfBox({width: 11,length: 1, height: 2}), 22)
+Test.assertEquals(volumeOfBox({width: 1, length: 5,  height: 3}), 15)
+Test.assertEquals(volumeOfBox({width: 2, length: 1,  height: 1}), 2)
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Write a function that validates whether two strings are identical. Make this validator case insensitive.
+
+function match(s1, s2) {
+	return s1.toLowerCase() === s2.toLowerCase()
+}
+
+// tests
+Test.assertEquals(match("hello", "hELLo"), true)
+Test.assertEquals(match("hey", "hey"), true)
+Test.assertEquals(match("venom", "VENOM"), true)
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Here's an image of four models. Some of the cubes are hidden behind other cubes. Model one consists of one cube. Model two consists of four cubes, and so on... Write a function that takes a number n and returns the number of stacked boxes.
+
+function stackBoxes(n) {
+	return Math.pow(n,2);
+}
+
+// tests
+Test.assertEquals(stackBoxes(1), 1)
+Test.assertEquals(stackBoxes(2), 4)
+Test.assertEquals(stackBoxes(0), 0)
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Write a function that returns true if k^k == n for input (n, k).
+
+function kToK(n, k) {
+	return Math.pow(k,k) === n;
+}
+
+// tests
+Test.assertEquals(kToK(4, 2), true)
+Test.assertEquals(kToK(387420489, 9), true)
+Test.assertEquals(kToK(302875106592253, 13), true)
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 // Create a function that goes through the array, incrementing (+1) for each odd number and decrementing (-1) for each even number.
 
 function transform(arr) {
