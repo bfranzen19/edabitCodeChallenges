@@ -647,11 +647,28 @@ Test.assert_equals(next_edge(8, 3), 10)
 Test.assert_equals(next_edge(7, 9), 15)
 
 ### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
+### Write a function that returns true if a word can be found in between the start and end word in a dictionary.
+
+def is_between(first, last, word)
+	return word.between?(first, last)
+end
+
+### tests
+Test.assert_equals(is_between("apple", "banana", "azure"), true)
+Test.assert_equals(is_between("bookcase", "zebra", "squid"), true)
+Test.assert_equals(is_between("shrapnel", "tapenade", "tally"), true)
+
+### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
 ###
 
 
 
 ### tests
+
+
+
+
+
 
 
 
