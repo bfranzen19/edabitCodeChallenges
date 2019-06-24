@@ -481,11 +481,36 @@ Test.assert_equals(sortNumsAscending([80, 29, 4, -95, -24, 85]), [-95, -24, 4, 2
 Test.assert_equals(sortNumsAscending([]), [])
 
 ### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
+### Create a function that returns the number of hashes and pluses in a string.
+
+def hash_plus_count(txt):
+	hsh = txt.count('#', 0)
+	pls = txt.count('+', 0)
+
+	return [hsh, pls]
+
+'''
+better solution:
+def hash_plus_count(txt):
+	return [txt.count('#'), txt.count('+')]
+'''
+
+### tests
+Test.assert_equals(hash_plus_count("####"), [4, 0])
+Test.assert_equals(hash_plus_count("#"), [1, 0])
+Test.assert_equals(hash_plus_count("+++++++"), [0, 7])
+
+### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
 ###
 
 
 
 ### tests
+
+
+
+
+
 
 
 
