@@ -501,11 +501,24 @@ Test.assert_equals(hash_plus_count("#"), [1, 0])
 Test.assert_equals(hash_plus_count("+++++++"), [0, 7])
 
 ### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
+### Create a function that returns True if an input string contains only uppercase or only lowercase letters.
+
+def same_case(txt):
+	return txt.isupper() or txt.islower()
+
+### tests
+Test.assert_equals(same_case("HELLO"), True)
+Test.assert_equals(same_case("HEllo"), False)
+Test.assert_equals(same_case("mArmALadE"), False)
+
+### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
 ###
 
 
 
 ### tests
+
+
 
 
 
