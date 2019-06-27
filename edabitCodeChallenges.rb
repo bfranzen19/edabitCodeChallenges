@@ -659,11 +659,25 @@ Test.assert_equals(is_between("bookcase", "zebra", "squid"), true)
 Test.assert_equals(is_between("shrapnel", "tapenade", "tally"), true)
 
 ### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
+### Create a function that returns all combinations of size n from an array. Sort the array in ascending lexicographical order.
+
+def combo(arr, n)
+	return arr.combination(n).to_a
+end
+
+### tests
+Test.assert_equals(combo([1, 2, 3, 4], 2), [[1, 2], [1, 3], [1, 4], [2, 3], [2, 4], [3, 4]])
+Test.assert_equals(combo([1, 2, 3, 4], 3), [[1, 2, 3], [1, 2, 4], [1, 3, 4], [2, 3, 4]])
+Test.assert_equals(combo([1, 2, 3, 4], 1), [[1], [2], [3], [4]])
+
+### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
 ###
 
 
 
 ### tests
+
+
 
 
 
