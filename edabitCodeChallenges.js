@@ -2429,11 +2429,24 @@ Test.assertSimilar(transform([3, 3, 4, 3]), [4, 4, 3, 4])
 Test.assertSimilar(transform([2, 2, 0, 8, 10]), [1, 1, -1, 7, 9])
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Write a function that returns true if an object is empty, and false otherwise.
+
+function isEmpty(obj) {
+	return Object.keys(obj).length <= 0
+}
+
+// tests
+Test.assertEquals(isEmpty({}), true)
+Test.assertEquals(isEmpty({a: 1}), false)
+Test.assertEquals(isEmpty({z: 2, w: 4, y: 5}), false)
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 //
 
 
 
 // tests
+
 
 
 
