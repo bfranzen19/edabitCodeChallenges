@@ -2441,11 +2441,24 @@ Test.assertEquals(isEmpty({a: 1}), false)
 Test.assertEquals(isEmpty({z: 2, w: 4, y: 5}), false)
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Write a function that returns true if all integers in an array are factors of a number, and false otherwise.
+
+function checkFactors(factors, num) {
+  	return factors.every(x => num % x === 0)
+}
+
+// tests
+Test.assertEquals(checkFactors([2, 3, 4], 12), true)
+Test.assertEquals(checkFactors([1, 2, 3, 8], 12), false, '8 is not a factor of 12')
+Test.assertEquals(checkFactors([1, 2, 50], 100), true)
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 //
 
 
 
 // tests
+
 
 
 
