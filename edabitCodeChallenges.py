@@ -540,11 +540,27 @@ Test.assert_equals(missing_angle(135, 11), "acute")
 Test.assert_equals(missing_angle(45, 45), "right")
 
 ### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
+### Given a number and a dictionary with min and max properties, return True if the number lies within the given range (inclusive).
+
+def is_in_range(n, r):
+	return n >= r['min'] and n <= r['max']
+
+### tests
+Test.assert_equals(is_in_range(4, { "min": 0, "max": 5 }), True)
+Test.assert_equals(is_in_range(4, { "min": 4, "max": 5 }), True)
+Test.assert_equals(is_in_range(4, { "min": 0, "max": 4 }), True)
+
+### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
 ###
 
 
 
 ### tests
+
+
+
+
+
 
 
 
