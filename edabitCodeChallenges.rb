@@ -684,11 +684,24 @@ Test.assert_equals(even_odd_partition([1, 0, 1, 0, 1, 0]), [[0, 0, 0], [1, 1, 1]
 Test.assert_equals(even_odd_partition([8, 8, 4, 2]), [[8, 8, 4, 2], []])
 
 ### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
+### Create a function to concatenate two integer arrays.
+
+def concat(arr1, arr2)
+	return arr1 + arr2
+end
+
+### tests
+Test.assert_equals(concat([1, 3, 5], [2, 6, 8]), [1, 3, 5, 2, 6, 8])
+Test.assert_equals(concat([7, 8], [10, 9, 1, 1, 2]), [7, 8, 10, 9, 1, 1, 2])
+Test.assert_equals(concat([4, 5, 1], [3, 3, 3, 3, 3]), [4, 5, 1, 3, 3, 3, 3, 3])
+
+### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
 ###
 
 
 
 ### tests
+
 
 
 
