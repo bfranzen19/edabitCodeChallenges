@@ -2453,11 +2453,24 @@ Test.assertEquals(checkFactors([1, 2, 3, 8], 12), false, '8 is not a factor of 1
 Test.assertEquals(checkFactors([1, 2, 50], 100), true)
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Create a function that takes a string as its argument and returns the string in reversed order.
+
+def reverse(str)
+	return str.reverse()
+end
+
+// tests
+Test.assert_equals(reverse("Think different."), ".tnereffid knihT")
+Test.assert_equals(reverse("It doesn't make sense to hire smart people and tell them what to do; we hire smart people so they can tell us what to do."), ".od ot tahw su llet nac yeht os elpoep trams erih ew ;od ot tahw meht llet dna elpoep trams erih ot esnes ekam t'nseod tI")
+Test.assert_equals(reverse("Innovation is the ability to see change as an opportunity - not a threat"), "taerht a ton - ytinutroppo na sa egnahc ees ot ytiliba eht si noitavonnI")
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 //
 
 
 
 // tests
+
 
 
 
