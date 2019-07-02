@@ -696,13 +696,23 @@ Test.assert_equals(concat([7, 8], [10, 9, 1, 1, 2]), [7, 8, 10, 9, 1, 1, 2])
 Test.assert_equals(concat([4, 5, 1], [3, 3, 3, 3, 3]), [4, 5, 1, 3, 3, 3, 3, 3])
 
 ### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
+### Given a string, create a function to reverse the case. All lower-cased letters should be upper-cased, and vice versa.
+
+def reverse_case(str)
+	return str.swapcase
+end
+
+### tests
+Test.assert_equals(reverse_case('Happy Birthday'), 'hAPPY bIRTHDAY')
+Test.assert_equals(reverse_case('MANY THANKS'), 'many thanks')
+Test.assert_equals(reverse_case('sPoNtAnEoUs'), 'SpOnTaNeOuS')
+
+### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
 ###
 
 
 
 ### tests
-
-
 
 
 
