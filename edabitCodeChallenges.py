@@ -551,13 +551,47 @@ Test.assert_equals(is_in_range(4, { "min": 4, "max": 5 }), True)
 Test.assert_equals(is_in_range(4, { "min": 0, "max": 4 }), True)
 
 ### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
+'''
+Andy, Ben and Charlotte are playing a board game. The three of them decided to come up with a new scoring system. A player's first initial ("A", "B" or "C") denotes that player scoring a single point. Given a string of capital letters, return a list of the players' scores.
+
+For instance, if ABBACCCCAC is written when the game is over, then Andy scored 3 points, Ben scored 2 points, and Charlotte scored 5 points, since there are 3 instances of letter A, 2 instances of letter B, and 5 instances of letter C. So the list [3, 2, 5] should be returned.
+'''
+
+def calculate_scores(txt):
+	return [txt.count("A"), txt.count("B"), txt.count("C")]
+
+### tests
+Test.assert_equals(calculate_scores("AAB"), [2, 1, 0])
+Test.assert_equals(calculate_scores("ABC"), [1, 1, 1])
+Test.assert_equals(calculate_scores("ABCBACC"), [2, 2, 3])
+
+### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
+### Create a function that adds a string ending to each member in a list.
+
+def add_ending(lst, ending):
+	newList = []
+
+	for item in lst:
+		newList.append(item + ending)
+
+	return newList
+
+''' a better solution:
+def add_ending(lst, ending):
+	return [ word + ending for word in lst]
+'''
+
+### tests
+Test.assert_equals(add_ending(['clever', 'meek', 'hurried', 'nice'], 'ly'), ['cleverly', 'meekly', 'hurriedly', 'nicely'])
+Test.assert_equals(add_ending(['new', 'pander', 'scoop'], 'er'), ['newer', 'panderer', 'scooper'])
+Test.assert_equals(add_ending(['bend', 'sharpen', 'mean'], 'ing'), ['bending', 'sharpening', 'meaning'])
+
+### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
 ###
 
 
 
 ### tests
-
-
 
 
 
