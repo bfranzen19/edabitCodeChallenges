@@ -2465,12 +2465,16 @@ Test.assert_equals(reverse("It doesn't make sense to hire smart people and tell 
 Test.assert_equals(reverse("Innovation is the ability to see change as an opportunity - not a threat"), "taerht a ton - ytinutroppo na sa egnahc ees ot ytiliba eht si noitavonnI")
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
-//
+// Write a function that takes an integer and returns a string with the given number of "a"s in Edabit.
 
-
+function howManyTimes(num) {
+	return `Ed${"a".repeat(num)}bit`
+}
 
 // tests
-
+Test.assertEquals(howManyTimes(5), "Edaaaaabit")
+Test.assertEquals(howManyTimes(15), "Edaaaaaaaaaaaaaaabit")
+Test.assertEquals(howManyTimes(10), "Edaaaaaaaaaabit")
 
 
 
