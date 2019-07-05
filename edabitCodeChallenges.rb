@@ -708,11 +708,28 @@ Test.assert_equals(reverse_case('MANY THANKS'), 'many thanks')
 Test.assert_equals(reverse_case('sPoNtAnEoUs'), 'SpOnTaNeOuS')
 
 ### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
+### Given a number and an object with min and max properties, return true if the number lies within the given range (inclusive).
+
+def is_in_range(num, range)
+	if range[:min] <= num and num <= range[:max]
+	  return true
+	else
+	  return false
+	end
+end
+
+### tests
+Test.assert_equals(is_in_range(4, { min: 0, max: 5 }), true)
+Test.assert_equals(is_in_range(4, { min: 4, max: 5 }), true)
+Test.assert_equals(is_in_range(4, { min: 0, max: 4 }), true)
+
+### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
 ###
 
 
 
 ### tests
+
 
 
 
