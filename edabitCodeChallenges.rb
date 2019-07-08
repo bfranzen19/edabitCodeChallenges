@@ -724,11 +724,24 @@ Test.assert_equals(is_in_range(4, { min: 4, max: 5 }), true)
 Test.assert_equals(is_in_range(4, { min: 0, max: 4 }), true)
 
 ### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
+### A number added with its additive inverse equals zero. Create a function that returns an array of additive inverses.
+
+def additive_inverse(arr)
+	return arr.map{ |x| x * -1 }
+end
+
+### tests
+Test.assert_equals(additive_inverse([5, -7, 8, 3]), [-5, 7, -8, -3])
+Test.assert_equals(additive_inverse([1, 1, 1, 1, 1]), [-1, -1, -1, -1, -1])
+Test.assert_equals(additive_inverse([-5, -25, 35]), [5, 25, -35])
+
+### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
 ###
 
 
 
 ### tests
+
 
 
 
