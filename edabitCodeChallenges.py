@@ -587,11 +587,24 @@ Test.assert_equals(add_ending(['new', 'pander', 'scoop'], 'er'), ['newer', 'pand
 Test.assert_equals(add_ending(['bend', 'sharpen', 'mean'], 'ing'), ['bending', 'sharpening', 'meaning'])
 
 ### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
+### Write a function that takes an integer and returns a string with the given number of "a"s in Edabit.
+
+def how_many_times(num):
+	return 'Ed'+ ('a' * num) + 'bit'
+
+### tests
+Test.assert_equals(how_many_times(5), "Edaaaaabit")
+Test.assert_equals(how_many_times(15), "Edaaaaaaaaaaaaaaabit")
+Test.assert_equals(how_many_times(10), "Edaaaaaaaaaabit")
+
+### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
 ###
 
 
 
 ### tests
+
+
 
 
 
