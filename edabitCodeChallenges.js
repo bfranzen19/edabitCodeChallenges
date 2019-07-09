@@ -2505,11 +2505,27 @@ Test.assertEquals(search([2, 4, 6, 8, 10], 8), 3)
 Test.assertEquals(search([1, 3, 5, 7, 9], 11), -1)
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Create a function that finds the index of a given item.
+
+function search(arr, item) {
+	if(!arr.indexOf(item)) {
+		return -1;
+	}
+  	return arr.indexOf(item);
+}
+
+// tests
+Test.assertEquals(search([1, 5, 3], 5), 1)
+Test.assertEquals(search([9, 8, 3], 3), 2)
+Test.assertEquals(search([1, 2, 3], 4), -1)
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 //
 
 
 
 // tests
+
 
 
 
