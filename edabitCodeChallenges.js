@@ -2493,6 +2493,18 @@ Test.assertEquals(cityFacts({name: 'Melbourne', population: '4,936,349', contine
 Test.assertEquals(cityFacts({name: 'Kampala', population: '1,507,080', continent: 'Africa'}), 'Kampala has a population of 1,507,080 and is situated in Africa')
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Create a function that finds the index of a given item if the array is sorted.
+
+function search(arr, item) {
+	return arr.indexOf(item)
+}
+
+// tests
+Test.assertEquals(search([1, 2, 3, 4], 3), 2)
+Test.assertEquals(search([2, 4, 6, 8, 10], 8), 3)
+Test.assertEquals(search([1, 3, 5, 7, 9], 11), -1)
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 //
 
 
