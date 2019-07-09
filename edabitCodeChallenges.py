@@ -598,12 +598,41 @@ Test.assert_equals(how_many_times(15), "Edaaaaaaaaaaaaaaabit")
 Test.assert_equals(how_many_times(10), "Edaaaaaaaaaabit")
 
 ### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
+'''
+Create a function that takes a dictionary as an argument and returns a string with facts about the city. The city facts will need to be extracted from the dictionaries three properties:
+	name
+	population
+	continent
+The string should have the following format: X has a population of Y and is situated in Z (where X is the city name, Y is the population and Z is the continent the city is situated in).
+'''
+
+def city_facts(city):
+	name = city['name']
+	population = city['population']
+	continent = city['continent']
+	str = '{} has a population of {} and is situated in {}'.format(name,population,continent)
+
+	return str
+
+'''
+a better solution
+
+def city_facts(city):
+	return city['name'] + " has a population of " + city['population'] + " and is situated in " + city['continent']
+
+'''
+
+### tests
+Test.assert_equals(city_facts({'name': 'Manila', 'population': '1,780,148', 'continent': 'Asia'}), 'Manila has a population of 1,780,148 and is situated in Asia')
+Test.assert_equals(city_facts({'name': 'Melbourne', 'population': '4,936,349', 'continent': 'Australia'}), 'Melbourne has a population of 4,936,349 and is situated in Australia')
+Test.assert_equals(city_facts({'name': 'Kampala', 'population': '1,507,080', 'continent': 'Africa'}), 'Kampala has a population of 1,507,080 and is situated in Africa')
+
+### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
 ###
 
 
 
 ### tests
-
 
 
 
