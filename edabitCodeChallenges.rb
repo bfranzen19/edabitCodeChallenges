@@ -736,6 +736,24 @@ Test.assert_equals(additive_inverse([1, 1, 1, 1, 1]), [-1, -1, -1, -1, -1])
 Test.assert_equals(additive_inverse([-5, -25, 35]), [5, 25, -35])
 
 ### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
+=begin
+	Create a function that takes an object as an argument and returns a string with facts about the city. The city facts will need to be extracted from the object's three properties:
+		name
+		population
+		continent
+	The string should have the following format: X has a population of Y and is situated in Z (where X is the city name, Y is the population and Z is the continent the city is situated in).
+=end
+
+def city_facts(city)
+  	return "#{city[:name]} has a population of #{city[:population]} and is situated in #{city[:continent]}"
+end
+
+### tests
+Test.assert_equals(city_facts({'name': 'Manila', 'population': '1,780,148', 'continent': 'Asia'}), 'Manila has a population of 1,780,148 and is situated in Asia')
+Test.assert_equals(city_facts({'name': 'Melbourne', 'population': '4,936,349', 'continent': 'Australia'}), 'Melbourne has a population of 4,936,349 and is situated in Australia')
+Test.assert_equals(city_facts({'name': 'Kampala', 'population': '1,507,080', 'continent': 'Africa'}), 'Kampala has a population of 1,507,080 and is situated in Africa')
+
+### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
 ###
 
 
