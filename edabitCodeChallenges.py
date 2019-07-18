@@ -628,13 +628,22 @@ Test.assert_equals(city_facts({'name': 'Melbourne', 'population': '4,936,349', '
 Test.assert_equals(city_facts({'name': 'Kampala', 'population': '1,507,080', 'continent': 'Africa'}), 'Kampala has a population of 1,507,080 and is situated in Africa')
 
 ### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
+### Given a list of integers, return the difference between the largest and smallest integers in the list.
+
+def difference(nums):
+	return max(nums) - min(nums)
+
+### tests
+Test.assert_equals(difference([-9, -8, 6, -9, 15, 6]), 24)
+Test.assert_equals(difference([-5, 6, 18, 4, 16, -2]), 23)
+Test.assert_equals(difference([-2, 20, -9, -9, -2, -7]), 29)
+
+### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
 ###
 
 
 
 ### tests
-
-
 
 
 
