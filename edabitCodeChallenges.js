@@ -2520,14 +2520,33 @@ Test.assertEquals(search([9, 8, 3], 3), 2)
 Test.assertEquals(search([1, 2, 3], 4), -1)
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Write a function that takes two numbers and returns if they should be added, subtracted, multiplied or divided to get 24. If none of the operations can give 24, return null.
+
+function operation(num1, num2) {
+	if(num1 + num2 === 24) {
+		return 'added';
+	} else if(Math.abs(num1) - Math.abs(num2) === 24) {
+	  	return 'subtracted';
+	} else if(num1 * num2 === 24) {
+	  	return 'multiplied';
+	} else if(Math.abs(num1) / Math.abs(num2) === 24)
+  		return 'divided';
+  	else {
+	  	return null;
+	}
+}
+
+// tests
+Test.assertEquals(operation(12, 12), "added")
+Test.assertEquals(operation(100, 76), "subtracted")
+Test.assertEquals(operation(6, 4), "multiplied")
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 //
 
 
 
 // tests
-
-
-
 
 
 
