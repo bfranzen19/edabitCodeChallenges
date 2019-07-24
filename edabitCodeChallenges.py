@@ -639,12 +639,22 @@ Test.assert_equals(difference([-5, 6, 18, 4, 16, -2]), 23)
 Test.assert_equals(difference([-2, 20, -9, -9, -2, -7]), 29)
 
 ### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
+### Write a function that takes a number n and returns the number of stacked boxes.
+
+def stack_boxes(n):
+	return n * n
+
+### tests
+Test.assert_equals(stack_boxes(1), 1)
+Test.assert_equals(stack_boxes(2), 4)
+Test.assert_equals(stack_boxes(0), 0)
+
+### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
 ###
 
 
 
 ### tests
-
 
 
 
