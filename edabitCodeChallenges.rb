@@ -766,6 +766,18 @@ Test.assert_equals(difference([-5, 6, 18, 4, 16, -2]), 23)
 Test.assert_equals(difference([-2, 20, -9, -9, -2, -7]), 29)
 
 ### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
+### Write a function that returns true if a number is a palindrome.
+
+def is_palindrome(n)
+	return n.to_s == n.to_s.reverse
+end
+
+### tests
+Test.assert_equals(is_palindrome(838), true)
+Test.assert_equals(is_palindrome(77), true)
+Test.assert_equals(is_palindrome(95159), true)
+
+### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
 ###
 
 
