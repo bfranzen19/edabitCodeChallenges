@@ -2542,13 +2542,23 @@ Test.assertEquals(operation(100, 76), "subtracted")
 Test.assertEquals(operation(6, 4), "multiplied")
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Given an array of integers, return the difference between the largest and smallest integers in the array.
+
+function difference(nums) {
+	return Math.max(...nums) - Math.min(...nums)
+}
+
+// tests
+Test.assertEquals(difference([-9, -8, 6, -9, 15, 6]), 24)
+Test.assertEquals(difference([-5, 6, 18, 4, 16, -2]), 23)
+Test.assertEquals(difference([-2, 20, -9, -9, -2, -7]), 29)
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 //
 
 
 
 // tests
-
-
 
 
 
