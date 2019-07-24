@@ -2579,6 +2579,18 @@ Test.assertSimilar(filterDigitLength([2, 7, 8, 9, 1012], 1), [2, 7, 8, 9])
 Test.assertSimilar(filterDigitLength([32, 88, 74, 91, 300, 4050], 1), [], 'Should return empty array if no numbers of specified length exist.')
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Create a function that takes in an initial word and filters out an array to contain words that start with the same letters as the initial word.
+
+function dictionary(initial, words) {
+	return words.filter(x => x.startsWith(initial));
+}
+
+// tests
+Test.assertSimilar(dictionary('bu', ['button', 'breakfast', 'border']), ['button'])
+Test.assertSimilar(dictionary('beau', ['pastry', 'delicious', 'name', 'boring']), [])
+Test.assertSimilar(dictionary('there', ['there', 'here', 'everywhere']), ['there'])
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 //
 
 
