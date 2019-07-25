@@ -2564,6 +2564,27 @@ Test.assertSimilar(convertCartesian([1, 5, 3, 3, 4], [5, 8, 9, 1, 0]), [[1, 5], 
 Test.assertSimilar(convertCartesian([9, 8, 3], [1, 1, 1]), [[9, 1], [8, 1], [3, 1]])
 Test.assertSimilar(convertCartesian([2, 5, 1], [7, 8, 9]), [[2, 7], [5, 8], [1, 9]])
 
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Create a function which filters out strings from an array and returns a new array containing only integers.
+
+function filterList(l) {
+	return l.filter(x => typeof x === 'number');
+}
+
+// tests
+Test.assertSimilar(filterList([1, 2, 3, "a", "b", 4]), [1, 2, 3, 4])
+Test.assertSimilar(filterList(["A", 1, '&amp', 0, -9, 'Edabit']), [1, 0, -9])
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+//
+
+
+
+// tests
+
+
+
+
 
 
 
