@@ -2542,12 +2542,27 @@ Test.assertEquals(operation(100, 76), "subtracted")
 Test.assertEquals(operation(6, 4), "multiplied")
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
-//
+// Create a function that converts two arrays of x- and y- coordinates into an array of (x,y) coordinates.
 
+function convertCartesian(x, y) {
+  	let xy = [];
+	for(let i=0 ; i<x.length ; i++) {
+		xy.push([x[i], y[i]]);
+	}
+  	return xy;
+}
 
+/*
+a better solution:
+function convertCartesian(x,y) {
+	return x.map((el, i) => [el, y[i]])
+}
+ */
 
 // tests
-
+Test.assertSimilar(convertCartesian([1, 5, 3, 3, 4], [5, 8, 9, 1, 0]), [[1, 5], [5, 8], [3, 9], [3, 1], [4, 0]])
+Test.assertSimilar(convertCartesian([9, 8, 3], [1, 1, 1]), [[9, 1], [8, 1], [3, 1]])
+Test.assertSimilar(convertCartesian([2, 5, 1], [7, 8, 9]), [[2, 7], [5, 8], [1, 9]])
 
 
 
