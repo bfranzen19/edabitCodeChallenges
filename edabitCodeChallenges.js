@@ -2576,6 +2576,56 @@ Test.assertSimilar(filterList([1, 2, 3, "a", "b", 4]), [1, 2, 3, 4])
 Test.assertSimilar(filterList(["A", 1, '&amp', 0, -9, 'Edabit']), [1, 0, -9])
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+=======
+// Given an array of integers, return the difference between the largest and smallest integers in the array.
+
+function difference(nums) {
+	return Math.max(...nums) - Math.min(...nums)
+}
+
+// tests
+Test.assertEquals(difference([-9, -8, 6, -9, 15, 6]), 24)
+Test.assertEquals(difference([-5, 6, 18, 4, 16, -2]), 23)
+Test.assertEquals(difference([-2, 20, -9, -9, -2, -7]), 29)
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Create a function that removes the first and last characters from a string.
+
+function removeFirstLast(str) {
+  	if(str.length > 2) return str.slice(1, str.length-1);
+	else return str;
+}
+
+// tests
+Test.assertEquals(removeFirstLast("benefit"), "enefi")
+Test.assertEquals(removeFirstLast("to"), "to")
+Test.assertEquals(removeFirstLast(""), "")
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Create a function that filters out an array to include numbers who only have a certain number of digits.
+
+function filterDigitLength(arr, num) {
+  	return arr.filter(x => x.toString().length === num);
+}
+
+// tests
+Test.assertSimilar(filterDigitLength([88, 232, 4, 9721, 555], 3), [232, 555])
+Test.assertSimilar(filterDigitLength([2, 7, 8, 9, 1012], 1), [2, 7, 8, 9])
+Test.assertSimilar(filterDigitLength([32, 88, 74, 91, 300, 4050], 1), [], 'Should return empty array if no numbers of specified length exist.')
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Create a function that takes in an initial word and filters out an array to contain words that start with the same letters as the initial word.
+
+function dictionary(initial, words) {
+	return words.filter(x => x.startsWith(initial));
+}
+
+// tests
+Test.assertSimilar(dictionary('bu', ['button', 'breakfast', 'border']), ['button'])
+Test.assertSimilar(dictionary('beau', ['pastry', 'delicious', 'name', 'boring']), [])
+Test.assertSimilar(dictionary('there', ['there', 'here', 'everywhere']), ['there'])
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 //
 
 
