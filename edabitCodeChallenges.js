@@ -2626,16 +2626,39 @@ Test.assertSimilar(dictionary('beau', ['pastry', 'delicious', 'name', 'boring'])
 Test.assertSimilar(dictionary('there', ['there', 'here', 'everywhere']), ['there'])
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Create a function that takes an array and returns the first element.
+
+function getFirstValue(arr) {
+	return arr[0];
+}
+
+// tests
+Test.assertEquals(getFirstValue([1, 2, 3]), 1)
+Test.assertEquals(getFirstValue([80, 5, 100]), 80)
+Test.assertEquals(getFirstValue([-500, 0, 50]), -500)
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Write a function that recursively finds the sum of the first n natural numbers.
+
+function sum(n) {
+	if(n == 0) {
+		return n;
+	} else {
+		return n + sum(n-1);
+	}
+}
+
+// tests
+Test.assertEquals(sum(1), 1)
+Test.assertEquals(sum(5), 15)
+Test.assertEquals(sum(7), 28)
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 //
 
 
 
 // tests
-
-
-
-
-
 
 
 
