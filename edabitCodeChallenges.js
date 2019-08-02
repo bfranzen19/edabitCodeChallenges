@@ -2693,11 +2693,28 @@ Test.assertSimilar(minusOne(x), [1, 2, 3, 4])
 Test.assertSimilar(minusOne(x), [1, 2, 3, 4])
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// The mean of a group of numbers is calculated by summing all numbers, and dividing this sum by the total count of numbers in the group. Given a sorted array of numbers, return the mean (rounded to one decimal place).
+
+function mean(nums) {
+	let sum = nums.reduce((a,cv) => a + cv);
+	let mean = sum / nums.length;
+	return Number(mean.toFixed(1));
+}
+
+// tests
+Test.assertEquals(mean([1, 1, 2, 2, 3, 5, 5, 5, 7]), 3.4)
+Test.assertEquals(mean([1, 2, 2, 3, 7, 9, 10]), 4.9)
+Test.assertEquals(mean([1, 2, 3, 4, 5, 6, 6, 10, 10]), 5.2)
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 //
 
 
 
 // tests
+
+
+
 
 
 
