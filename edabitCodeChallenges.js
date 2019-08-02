@@ -2707,6 +2707,19 @@ Test.assertEquals(mean([1, 2, 2, 3, 7, 9, 10]), 4.9)
 Test.assertEquals(mean([1, 2, 3, 4, 5, 6, 6, 10, 10]), 5.2)
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Write a function that returns true if a number is a palindrome.
+
+function isPalindrome(n) {
+  	let arr = n.toString().split('');
+	return arr.join('') === arr.reverse().join('');
+}
+
+// tests
+Test.assertEquals(isPalindrome(838), true)
+Test.assertEquals(isPalindrome(77), true)
+Test.assertEquals(isPalindrome(95159), true)
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 //
 
 
