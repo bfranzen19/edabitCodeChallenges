@@ -2739,14 +2739,39 @@ Test.assertEquals(abcmath(69, 15, 9), false)
 Test.assertEquals(abcmath(9, 2, 52), false)
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Create a function that takes in two arrays: the array of user-typed words, and the array of correctly-typed words and outputs an array containing 1s (correctly-typed words) and -1s (incorrectly-typed words).
+
+function correctStream(user, correct) {
+  	let results = [];
+  	for(let i=0 ; i<user.length ; i++) {
+		if(user[i] === correct[i]) {
+			results.push(1);
+		} else {
+		  	results.push(-1);
+		}
+	}
+  	return results;
+}
+
+/*
+a better solution:
+
+function correctStream(user, correct) {
+	return user.map((user, i) => user === correct[i] ? 1 : -1);
+}
+*/
+
+// tests
+Test.assertSimilar(correctStream(["it", "is", "find"], ["it", "is", "fine"]), [1, 1, -1])
+Test.assertSimilar(correctStream(["april", "showrs", "bring", "may", "flowers"], ["april", "showers", "bring", "may", "flowers"]), [1, -1, 1, 1, 1])
+Test.assertSimilar(correctStream(["weird", "indicr", "moment"], ["weird", "indict", "moment"]), [1, -1, 1])
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 //
 
 
 
 // tests
-
-
-
 
 
 
