@@ -2804,14 +2804,24 @@ Test.assertEquals(nthSmallest([1, 3, 5, 7], 3), 5)
 Test.assertEquals(nthSmallest([1, 3, 5, 7], 5), null)
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Given two strings, create a function that returns the total number of unique characters from the combined string.
+
+function countUnique(s1, s2) {
+	let set = new Set(s1.concat(s2));
+  	return set.size;
+}
+
+// tests
+Test.assertEquals(countUnique("apple", "play"), 5)
+Test.assertEquals(countUnique("sore", "zebra"), 7)
+Test.assertEquals(countUnique("pip", "geeks"), 6)
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 //
 
 
 
 // tests
-
-
-
 
 
 
