@@ -2792,11 +2792,25 @@ Test.assertSimilar(getExtension(["ruby.rb", "cplusplus.cpp", "python.py", "javas
 Test.assertSimilar(getExtension(["code.html", "code.css"]), ["html", "css"])
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Given an unsorted array, create a function that returns the nth smallest element (the smallest element is the first smallest, the second smallest element is the second smallest, etc).
+
+function nthSmallest(arr, n) {
+	return (n > arr.length) ? null : arr.sort()[n-1];
+}
+
+// tests
+Test.assertEquals(nthSmallest([1, 3, 5, 7], 1), 1)
+Test.assertEquals(nthSmallest([1, 3, 5, 7], 3), 5)
+Test.assertEquals(nthSmallest([1, 3, 5, 7], 5), null)
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 //
 
 
 
 // tests
+
+
 
 
 
