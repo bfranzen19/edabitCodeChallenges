@@ -2780,13 +2780,23 @@ Test.assertEquals(isIdentical("ckkkk"), false)
 Test.assertEquals(isIdentical("kkkkck"), false)
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Write a function that maps files to their extension names.
+
+function getExtension(arr) {
+  	return arr.map(x => x.split('.')[1])
+}
+
+// tests
+Test.assertSimilar(getExtension(["project1.jpg", "project1.pdf", "project1.mp3"]), ["jpg", "pdf", "mp3"])
+Test.assertSimilar(getExtension(["ruby.rb", "cplusplus.cpp", "python.py", "javascript.js"]), ["rb", "cpp", "py", "js"])
+Test.assertSimilar(getExtension(["code.html", "code.css"]), ["html", "css"])
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 //
 
 
 
 // tests
-
-
 
 
 
