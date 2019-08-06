@@ -2767,11 +2767,27 @@ Test.assertSimilar(correctStream(["april", "showrs", "bring", "may", "flowers"],
 Test.assertSimilar(correctStream(["weird", "indicr", "moment"], ["weird", "indict", "moment"]), [1, -1, 1])
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Write a function that returns true if all characters in a string are identical and false otherwise.
+
+function isIdentical(s) {
+	let s1 = new Set([...s]);
+  	return s1.size === 1;
+}
+
+// tests
+Test.assertEquals(isIdentical("kkkkk"), true)
+Test.assertEquals(isIdentical("ckkkk"), false)
+Test.assertEquals(isIdentical("kkkkck"), false)
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 //
 
 
 
 // tests
+
+
+
 
 
 
