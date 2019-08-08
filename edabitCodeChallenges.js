@@ -2817,11 +2817,48 @@ Test.assertEquals(countUnique("sore", "zebra"), 7)
 Test.assertEquals(countUnique("pip", "geeks"), 6)
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Write a function that returns the lexicographically first and lexicographically last rearrangements of a string. Output the results in the following manner: firstAndLast(string) ➞ [first, last]
+
+function firstAndLast(s) {
+  	let splt = s.split('');
+
+	let first = splt.sort().join('');
+	let last = splt.reverse().sort((a,b) => {
+	  if(a>b) return -1;
+	  else if(a<b) return 1;
+	  else return 0;
+	}).join('');
+
+
+  	return [first, last];
+}
+
+/*
+a better solution:
+
+function firstAndLast(s) {
+  	first = s.split('').sort().join('');
+	last = s.split('').sort().reverse().join('');
+
+  	return [first, last];
+}
+
+*/
+
+// tests
+Test.assertSimilar(firstAndLast("marmite"), ["aeimmrt", "trmmiea"])
+Test.assertSimilar(firstAndLast("bench"), ["bcehn", "nhecb"])
+Test.assertSimilar(firstAndLast("scoop"), ["coops", "spooc"])
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 //
 
 
 
 // tests
+
+
+
 
 
 
