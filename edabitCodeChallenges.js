@@ -2866,14 +2866,23 @@ Test.assertEquals(programmers(43,  33,  43),  10)
 Test.assertEquals(programmers(88,  14,  23),  74)
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// A word has been split into a left part and a right part. Re-form the word by adding both halves together, changing the first character to an uppercase letter.
+
+function getWord(left, right) {
+	return left[0].toUpperCase()+ left.slice(1) + right;
+}
+
+// tests
+Test.assertEquals(getWord("maga", "zine"), "Magazine")
+Test.assertEquals(getWord("reli", "able"), "Reliable")
+Test.assertEquals(getWord("impl", "icit"), "Implicit")
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 //
 
 
 
 // tests
-
-
-
 
 
 
