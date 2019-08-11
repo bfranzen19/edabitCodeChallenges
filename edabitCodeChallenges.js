@@ -2851,14 +2851,26 @@ Test.assertSimilar(firstAndLast("bench"), ["bcehn", "nhecb"])
 Test.assertSimilar(firstAndLast("scoop"), ["coops", "spooc"])
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// You hired three programmers and you (hopefully) pay them. Create a function that takes three numbers (the hourly wage of each programmer) and returns the difference between the highest-paid programmer and the lowest-paid.
+
+function programmers(one, two, three) {
+	let arr = [one, two, three];
+  	arr.sort((a,b) => a-b);
+
+  	return arr[arr.length-1] - arr[0];
+}
+
+// tests
+Test.assertEquals(programmers(1,   5,   9),   8)
+Test.assertEquals(programmers(43,  33,  43),  10)
+Test.assertEquals(programmers(88,  14,  23),  74)
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 //
 
 
 
 // tests
-
-
-
 
 
 
