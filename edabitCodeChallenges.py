@@ -661,12 +661,22 @@ Test.assert_equals(get_first_value([80, 5, 100]), 80)
 Test.assert_equals(get_first_value([-500, 0, 50]), -500)
 
 ### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
+### Create a function that takes a list and a string as arguments and return the index of the string.
+
+def find_index(lst, txt):
+	return lst.index(txt)
+
+### tests
+Test.assert_equals(find_index(['ght', 'edabit', 'testcase', 'hello'], 'testcase'), 2)
+Test.assert_equals(find_index(['HfjhB', 'Ok', 'smile', '12345'], '12345'), 3)
+Test.assert_equals(find_index(['a', 'b', 'c', 'd', 'e', 'f'], 'f'), 5)
+
+### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
 ###
 
 
 
 ### tests
-
 
 
 
