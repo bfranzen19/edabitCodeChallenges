@@ -2911,11 +2911,27 @@ Test.assertEquals(leftDigit("V3r1ta$"), 3)
 Test.assertEquals(leftDigit("U/\/DertHe1nflu3nC3"), 1)
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Create a function that takes a number as its only argument and returns true if it's less than or equal to zero, otherwise return false.
+
+function lessThanOrEqualToZero(num) {
+	return num <= 0;
+}
+
+// tests
+Test.assertEquals(lessThanOrEqualToZero(5), false)
+Test.assertEquals(lessThanOrEqualToZero(0), true)
+Test.assertEquals(lessThanOrEqualToZero(-5), true)
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 //
 
 
 
 // tests
+
+
+
+
 
 
 
