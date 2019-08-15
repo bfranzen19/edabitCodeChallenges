@@ -2945,6 +2945,19 @@ Test.assertSimilar(mirror([0,2,4,6]), [0,2,4,6,4,2,0])
 Test.assertSimilar(mirror([1,2,2,3,3,4]), [1,2,2,3,3,4,3,3,2,2,1])
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Write a function that removes any non-letters from a string, returning a well-known film title.
+
+function lettersOnly(str) {
+  	let regex = /[a-zA-Z]/g;
+	return str.match(regex).join('');
+}
+
+// tests
+Test.assertEquals(lettersOnly(',1|2)")A^1<[_)?^"]l[a`3+%!d@8-0_0d.*}i@&n?='), 'Aladdin')
+Test.assertEquals(lettersOnly('^U)6$22>8p).'), 'Up')
+Test.assertEquals(lettersOnly('I5n!449+c@e*}@@1]p{2@`,~t:i0o%n<3%8'), 'Inception')
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 //
 
 
