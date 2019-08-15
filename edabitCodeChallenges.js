@@ -2923,6 +2923,28 @@ Test.assertEquals(lessThanOrEqualToZero(0), true)
 Test.assertEquals(lessThanOrEqualToZero(-5), true)
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Given an array, transform that array into a mirror.
+
+function mirror(arr) {
+	let mirrorArr = [];
+	mirrorArr.push(...arr, ...arr.slice(0, arr.length-1).reverse());
+  	return mirrorArr;
+}
+
+/*
+a better solution:
+
+function mirror(arr) {
+	return [... arr, ... arr.splice(0, arr.length - 1).reverse()]
+}
+*/
+
+// tests
+Test.assertSimilar(mirror([1,2,3,4,5]), [1,2,3,4,5,4,3,2,1])
+Test.assertSimilar(mirror([0,2,4,6]), [0,2,4,6,4,2,0])
+Test.assertSimilar(mirror([1,2,2,3,3,4]), [1,2,2,3,3,4,3,3,2,2,1])
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 //
 
 
