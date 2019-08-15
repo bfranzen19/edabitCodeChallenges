@@ -2958,12 +2958,26 @@ Test.assertEquals(lettersOnly('^U)6$22>8p).'), 'Up')
 Test.assertEquals(lettersOnly('I5n!449+c@e*}@@1]p{2@`,~t:i0o%n<3%8'), 'Inception')
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Write a function that retrieves the last n elements from an array.
+
+function last(a, n) {
+	if(n > a.length) return 'invalid';
+  	else if(n === 0) return [];
+	else if(n === 1) return [a[a.length-1]];
+  	else return a.slice(n - a.length);
+}
+
+// tests
+Test.assertSimilar(last([1, 2, 3, 4, 5], 0), [])
+Test.assertSimilar(last([1, 2, 3, 4, 5], 1), [5])
+Test.assertSimilar(last([4, 3, 9, 9, 7, 6], 3), [9, 7, 6])
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 //
 
 
 
 // tests
-
 
 
 
