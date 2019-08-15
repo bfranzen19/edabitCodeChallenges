@@ -2899,14 +2899,23 @@ Test.assertEquals(greetPeople(["Kyrill", "Mom", "Dad", "Zuzu"]), "Hello Kyrill, 
 Test.assertEquals(greetPeople([]), "")
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Write a function that takes a string as an argument and returns the left most digit in the string.
+
+function leftDigit(num) {
+	return num.match(/[\d]/)[0];
+}
+
+// tests
+Test.assertEquals(leftDigit("TrAdE2W1n95!"), 2)
+Test.assertEquals(leftDigit("V3r1ta$"), 3)
+Test.assertEquals(leftDigit("U/\/DertHe1nflu3nC3"), 1)
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 //
 
 
 
 // tests
-
-
-
 
 
 
