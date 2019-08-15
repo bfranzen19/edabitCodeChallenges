@@ -778,14 +778,23 @@ Test.assert_equals(is_palindrome(77), true)
 Test.assert_equals(is_palindrome(95159), true)
 
 ### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
+### A word has been split into a left part and a right part. Re-form the word by adding both halves together, changing the first character to an uppercase letter.
+
+def get_word(left, right)
+	return left.capitalize + right
+end
+
+### tests
+Test.assert_equals(get_word("maga", "zine"), "Magazine")
+Test.assert_equals(get_word("reli", "able"), "Reliable")
+Test.assert_equals(get_word("impl", "icit"), "Implicit")
+
+### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
 ###
 
 
 
 ### tests
-
-
-
 
 
 
