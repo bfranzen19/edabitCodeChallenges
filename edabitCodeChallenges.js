@@ -2973,12 +2973,172 @@ Test.assertSimilar(last([1, 2, 3, 4, 5], 1), [5])
 Test.assertSimilar(last([4, 3, 9, 9, 7, 6], 3), [9, 7, 6])
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// name matching
+function nameMatch(known_aliases, name_match) {
+  let ka = known_aliases.join(', ').split(',');
+  let nm = name_match;
+  let kaSP = [];
+  let nmSP = name_match.split(' ');
+
+  let hits = [];
+
+
+  for(let i=0 ; i<ka.length ; i++) {
+    kaSP = ka[i].split(' ');
+    // console.log(kaSP.length, kaSP, nmSP.length, nmSP)
+
+    if(kaSP.length === nmSP.length) {
+      if(kaSP[i].includes(nmSP[i])) hits.push(kaSP[i]);
+    }
+
+    else if(kaSP.length === 3 && nmSP.length < 3) {
+      if(kaSP[0] == '') {
+        kaSP.splice(0,1);
+      }
+
+      kaSP.splice(1,1);
+      console.log(kaSP)
+      if(kaSP[i].includes(nmSP[i])) hits.push(kaSP[i]);
+    }
+
+    else if(kaSP.length < 3 && nmSP.length === 3) {
+      nmSP.splice(1,1);
+      console.log(nmSP)
+      if(kaSP[i].includes(nmSP[i])) hits.push(kaSP[i]);
+    }
+  }
+
+
+
+
+
+
+
+
+
+  // for(let i=0 ; i<ka.length ; i++) {
+  //   // if the known_alias has the same length as name_match
+  //   if(ka[i].length, nm.length) {
+  //     if(ka[i].includes(nm)) hits.push(ka[i]);
+
+  //   }
+
+  //   // if there is a middle name in the known_alias, compare first and last of known_alias and name_match
+  //   kaSP = ka[i].split(' ');
+
+  //   if(kaSP[0] == '') {
+  //     kaSP.splice(0,1);
+  //   }
+
+  //   if(kaSP.length > nmSP.length) {
+  //     kaSP.splice(1,1);
+
+  //     if(kaSP[i].includes(nmSP[i])) hits.push(kaSP[i])
+  //   }
+
+  //   if(kaSP.length < nmSP.length) {
+  //     nmSP.splice(1,1);
+
+  //     if(kaSP[i].includes(nmSP[i])) hits.push(kaSP[i])
+  //   }
+
+
+  // } // z for loop
+
+  console.log('hits -->> ', hits);
+  return hits.length > 0;
+
+} // z name_match()
+
+module.exports = nameMatch;
+
+
+
+// tests --> jest
+const nameMatch = require('./nameMatch');
+
+// exact match test data
+let test1 = ['Alphonse Gabriel Capone','Al Capone'];
+// let test1 = ['Alphonse Gabriel Capone'];
+
+// middle name missing on alias test data
+let test2 = ['Alphonse Capone'];
+
+// middle name missing on search name test data
+let test3 = ['Alphonse Gabriel Capone'];
+let test4 = ['Alphonse Gabriel Capone','Alphonse Francis Capone'];
+let test5 = ['Alphonse Gabriel Capone','Alphonse F Capone'];
+
+
+describe('nameMatch', () => {
+  // test 1    ['Alphonse Gabriel Capone','Al Capone'];
+  it('exact match', () => {
+    expect(nameMatch(test1, 'Alphonse Gabriel Capone')).toBe(true);
+  });
+  it('exact match', () => {
+    expect(nameMatch(test1, 'Al Capone')).toBe(true);
+  });
+  it('exact match', () => {
+    expect(nameMatch(test1, 'Alphonse Francis Capone')).toBe(false);
+  });
+
+  // test 2     ['Alphonse Capone'];
+  it('middle name missing (on alias)', () => {
+    expect(nameMatch(test2, 'Alphonse Gabriel Capone')).toBe(true);
+  });
+  it('middle name missing (on alias)', () => {
+    expect(nameMatch(test2, 'Alphonse Francis Capone')).toBe(true);
+  });
+  it('middle name missing (on alias)', () => {
+    expect(nameMatch(test2, 'Alexander Capone')).toBe(false);
+  });
+
+  // test 3     ['Alphonse Gabriel Capone'];
+  it('middle name missing (on search name)', () => {
+    expect(nameMatch(test3, 'Alphonse Capone')).toBe(true);
+  });
+  it('middle name missing (on search name)', () => {
+    expect(nameMatch(test3, 'Alphonse Francis Capone')).toBe(false);
+  });
+  it('middle name missing (on search name)', () => {
+    expect(nameMatch(test3, 'Alexander Capone')).toBe(false);
+  });
+
+  // test 4     ['Alphonse Gabriel Capone','Alphonse Francis Capone'];
+  it('middle name missing (on search name)', () => {
+    expect(nameMatch(test4, 'Alphonse Gabriel Capone')).toBe(true);
+  });
+  it('middle name missing (on search name)', () => {
+    expect(nameMatch(test4, 'Alphonse Francis Capone')).toBe(true);
+  });
+  it('middle name missing (on search name)', () => {
+    expect(nameMatch(test4, 'Alphonse Edward Capone')).toBe(false);
+  });
+
+  // test 5     ['Alphonse Gabriel Capone','Alphonse F Capone'];
+  it('middle name missing (on search name)', () => {
+    expect(nameMatch(test5, 'Alphonse G Capone')).toBe(true);
+  });
+  it('middle name missing (on search name)', () => {
+    expect(nameMatch(test5, 'Alphonse Francis Capone')).toBe(true);
+  });
+  it('middle name missing (on search name)', () => {
+    expect(nameMatch(test5, 'Alphonse E Capone')).toBe(false);
+  });
+  it('middle name missing (on search name)', () => {
+    expect(nameMatch(test5, 'Alphonse Edward Capone')).toBe(false);
+  });
+  it('middle name missing (on search name)', () => {
+    expect(nameMatch(test5, 'Alphonse Gregory Capone')).toBe(false);
+  });
+});
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 //
 
 
 
 // tests
-
 
 
 
