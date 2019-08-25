@@ -3173,11 +3173,30 @@ function both(n1, n2) {
 ].forEach(x => Test.assertEquals(both(x[0], x[1]), x[2]))
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Given a sorted array of numbers, remove any numbers that are divisible by 13. Return the amended array.
+
+function unlucky13(nums) {
+	return nums.filter(x => x % 13 !== 0);
+}
+
+// tests
+Test.assertSimilar(unlucky13([91, 286, 416, 884, 1229]), [1229])
+Test.assertSimilar(unlucky13([245, 518, 741, 824, 1092]), [245, 518, 824])
+Test.assertSimilar(unlucky13([394, 447, 572, 832, 1105]), [394, 447])
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 //
 
 
 
 // tests
+
+
+
+
+
+
+
 
 
 
