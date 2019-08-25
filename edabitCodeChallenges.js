@@ -3146,14 +3146,38 @@ Test.assertEquals(intOrString("HELLO"), "str")
 Test.assertEquals(intOrString("edabit"), "str")
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+/*
+Write a function that checks if two numbers are either:
+	Smaller than 0
+	Greater than 0
+	Exactly 0
+*/
+
+function both(n1, n2) {
+	if(n1 > 0 && n2 > 0 || n1 < 0 && n2 < 0 || n1 === 0 && n2 === 0) return true;
+  	else return false;
+}
+
+// tests
+[
+	[6, 2, true],
+	[-6, -9, true],
+	[6, -2, false],
+	[0, 0, true],
+	[100, 1, true],
+	[-0, 0, true],
+	[-80, -5000, true],
+	[6.28, -999, false],
+	[-1, 2, false],
+	[0, 2, false]
+].forEach(x => Test.assertEquals(both(x[0], x[1]), x[2]))
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 //
 
 
 
 // tests
-
-
-
 
 
 
