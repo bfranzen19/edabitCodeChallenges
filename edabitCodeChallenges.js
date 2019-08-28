@@ -3224,6 +3224,33 @@ Test.assertSimilar(hashPlusCount("#"), [1, 0])
 Test.assertSimilar(hashPlusCount("+++++++"), [0, 7])
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// the first letter of each of their names, sorted in alphabetical order. Create a function that takes in an array of names and returns the name of the secret society.
+
+function societyName(friends) {
+  	let letters = [];
+	friends.sort((a,b) => a > b );
+
+  	for(let i=0 ; i<friends.length ; i++) {
+		letters.push(friends[i][0]);
+	}
+
+	return letters.join('');
+}
+
+/*
+a better solution:
+
+function societyName(friends) {
+  	return friends.map(x => x[0]).sort().join("");
+}
+*/
+
+// tests
+Test.assertEquals(societyName(['Adam', 'Sarah', 'Malcolm']), 'AMS')
+Test.assertEquals(societyName(['Phoebe', 'Chandler', 'Rachel', 'Ross', 'Monica', 'Joey']), 'CJMPRR')
+Test.assertEquals(societyName(['Harry', 'Newt', 'Luna', 'Cho']), 'CHLN')
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 //
 
 
