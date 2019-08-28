@@ -3185,7 +3185,7 @@ Test.assertSimilar(unlucky13([245, 518, 741, 824, 1092]), [245, 518, 824])
 Test.assertSimilar(unlucky13([394, 447, 572, 832, 1105]), [394, 447])
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
-// Create a function that takes a number (step) as an argument and returns the amount of matchsticks in that step. 
+// Create a function that takes a number (step) as an argument and returns the amount of matchsticks in that step.
 
 function matchHouses(step) {
 	if(step === 0) {
@@ -3199,6 +3199,37 @@ function matchHouses(step) {
 Test.assertEquals(matchHouses(1), 6)
 Test.assertEquals(matchHouses(0), 0)
 Test.assertEquals(matchHouses(17), 86)
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Create a function that returns the number of hashes and pluses in a string.
+
+function hashPlusCount(str) {
+  	str = str.split('');
+  	let hash = 0;
+  	let plus = 0;
+
+	if(str.length > 0) {
+		str.forEach(x => {
+			if(x == "#") hash = hash + 1;
+			if(x == "+") plus = plus + 1;
+		})
+	  	return [hash,plus];
+	}
+  	else return [0,0];
+}
+
+// tests
+Test.assertSimilar(hashPlusCount("####"), [4, 0])
+Test.assertSimilar(hashPlusCount("#"), [1, 0])
+Test.assertSimilar(hashPlusCount("+++++++"), [0, 7])
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+//
+
+
+
+// tests
+
 
 
 
