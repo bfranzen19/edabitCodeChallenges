@@ -3185,12 +3185,20 @@ Test.assertSimilar(unlucky13([245, 518, 741, 824, 1092]), [245, 518, 824])
 Test.assertSimilar(unlucky13([394, 447, 572, 832, 1105]), [394, 447])
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
-//
+// Create a function that takes a number (step) as an argument and returns the amount of matchsticks in that step. 
 
-
+function matchHouses(step) {
+	if(step === 0) {
+		return 0;
+	}else{
+		return (step*6)-(step -1);
+	}
+}
 
 // tests
-
+Test.assertEquals(matchHouses(1), 6)
+Test.assertEquals(matchHouses(0), 0)
+Test.assertEquals(matchHouses(17), 86)
 
 
 
