@@ -3251,11 +3251,262 @@ Test.assertEquals(societyName(['Phoebe', 'Chandler', 'Rachel', 'Ross', 'Monica',
 Test.assertEquals(societyName(['Harry', 'Newt', 'Luna', 'Cho']), 'CHLN')
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// interview exercise: https://codepen.io/bfranzen19-the-flexboxer/pen/bGbozPa?editors=1111
+// html
+// <div id="quote-module">
+// 	<!-- company name -->
+// 	<div class="nameDiv">
+//     <h1 class="name"></h1>
+// 	</div>
+//
+// 	<!-- row 1, last price, change, change percent -->
+// 	<div class="flexcontainer">
+// 		<div class="row bottomRow">
+// 			<div id="LastPrice" class="column"></div>
+// 			<div id="ChangeAndPercent" class="column left"></div>
+// 		</div>
+//
+// 		<!-- row 2, range (low - high) -->
+// 		<div class="row bottomRow">
+// 			<div class="column leftCol"> Range </div>
+// 			<div id="Range" class="column left rightCol"></div>
+// 		</div>
+//
+// 		<!-- row 3, open -->
+// 		<div class="row bottomRow">
+// 			<div class="column leftCol"> Open </div>
+// 			<div id="Open" class="column left rightCol"></div>
+// 		</div>
+//
+// 		<!-- row 4, volume -->
+// 		<div class="row bottomRow">
+// 			<div class="column leftCol"> Volume </div>
+// 			<div id="Volume" class="column left rightCol"></div>
+// 		</div>
+//
+// 		<!-- row 5, market cap	-->
+// 		<div class="row bottomRow">
+// 			<div class="column leftCol"> Market Cap </div>
+// 			<div id="MarketCap" class="column left rightCol"></div>
+// 		</div>
+//
+// 		<!-- row 6, timestamp -->
+// 		<div class="row bottomRow">
+// 			<div id="Timestamp" class="column left"></div>
+// 		</div>
+//
+// 		<!-- form (text input and button) -->
+// 		<div class="formDiv">
+// 			<form class="row">
+// 				<input type="text" id="stockSymbol" class="column">
+// 				<input id="btn" type="button" class="column" value="Get New Quote">
+// 			</form>
+// 		</div>
+//
+// 	</div>
+// </div>
+
+// <!-- KEEP THIS AS A REFERENCE GUIDE -->
+//
+// <br/><br/><br/><br/>
+// <div>
+// 	<section id="prototype"></section>
+// </div>
+
+
+// css
+// #quote-module {
+//   background: white;
+//   min-height:200px;
+//   margin: 24px auto;
+// 	padding: 15px 1em 0 1em;
+// 	font-family: Arial, Helvetica, sans-serif;
+// 	border: 1px solid black;
+// 	width: 24%;
+// }
+//
+// .flexcontainer {
+// 	display: flex;
+// 	flex-direction: column;
+// }
+//
+// .row {
+//   display: flex;
+//   flex-direction: row;
+//   flex-wrap: wrap;
+//   width: 100%;
+// 	margin-bottom: 15px;
+// 	padding-bottom: 10px;
+// }
+//
+// .bottomRow {
+// 	border-bottom: 1px solid lightgray;
+// }
+//
+// .column {
+//   display: flex;
+//   flex-direction: column;
+//   flex-basis: 100%;
+//   flex: 1;
+// }
+//
+// .left {
+// 	align-items: flex-end;
+// }
+//
+// .name {
+// 	width: 10px;
+// 	padding-top: 5px;
+// 	margin-bottom: 1.5em;
+// 	font-size: 16px;
+// 	font-weight: normal;
+// 	text-transform: uppercase;
+// 	font-family: serif;
+// }
+//
+// .nameDiv {
+// 	border-top: 2px solid black;
+// 	margin: 0 0 1em;
+// }
+//
+// input[type="text"] {
+//     width: 70%;
+// }
+//
+// #btn {
+// 	width: 40%;
+// 	background-color: lightgray;
+// 	margin-left: 5px;
+// 	padding-top: 1%;
+// 	padding-left: 17%;
+// 	border-radius: 2px;
+// 	font-size: 12px;
+// 	background-image: linear-gradient(#f4f5f5, #dfdddd);
+// }
+//
+// #btn:hover {
+// 	background-image: linear-gradient(#d9dddd, #c6c3c3);
+// }
+//
+// #LastPrice {
+// 	font-size: 19px;
+// 	font-family: serif;
+// }
+//
+// #ChangeAndPercent {
+// 	font-size: 18px;
+// 	color: green;
+// 	font-family: serif;
+// }
+//
+// #Timestamp {
+// 	font-size: 11px;
+// 	color: gray:
+// }
+//
+// .leftCol {
+// 	font-size: 15px;
+//
+// }
+//
+// .rightCol {
+// 	font-size: 13px;
+// 	font-weight: bold;
+// }
+
+
+
+// js
+$(function() {
+	var symbol = "";
+	var data = "";
+
+	// click handler for the button
+	$('#btn').click(function() {
+		if(!dataList[symbol]) {
+			// alerts the user if input is incorrect
+			alert(`stock symbol not found. try one of the following: "MSFT", "BRKA", "AAPL", "INFO", "F", "PLT", "BIG", "TWX", "AME", "JWN", "CVS", "MS", "MET", "IVD", "RND"`);
+
+			symbol = "MSFT";
+			$('h1').html(datalist[symbol].Name);
+			$('#ChangeAndPercent').html(`${datalist[symbol].Change.toFixed(2)} (${datalist[symbol].ChangePercent.toFixed(2)}%)`);
+			$('#Range').html(`${datalist[symbol].Low} - ${datalist[symbol].High}`);
+			$('#LastPrice').html(datalist[symbol].LastPrice.toFixed(2));
+			$('#Open').html(datalist[symbol].Open.toFixed(2));
+			$('#MarketCap').html(milOrBil(datalist[symbol].MarketCap));
+			$('#Volume').html(milOrBil(datalist[symbol].Volume));
+
+			let time = datalist[symbol].Timestamp.split(' ')[3];
+			$('#Timestamp').html(`As of ${timeParse(time)}`);
+
+
+		} else if(dataList[symbol] !== null) {
+			// set symbol to the input value, uppercase
+			symbol = $('#stockSymbol').val().toUpperCase();
+			data = dataList[symbol];
+
+			// set all the values to the html elements
+			$('h1').html(data.Name);
+			$('#ChangeAndPercent').html(`${data.Change.toFixed(2)} (${data.ChangePercent.toFixed(2)}%)`);
+			$('#Range').html(`${data.Low} - ${data.High}`);
+			$('#LastPrice').html(data.LastPrice.toFixed(2));
+			$('#Open').html(data.Open.toFixed(2));
+
+			// call the milOrBil() function to append the correct letter to the end of the number
+			$('#MarketCap').html(milOrBil(data.MarketCap));
+			$('#Volume').html(milOrBil(data.Volume));
+
+			// split the date/time and set the time variable. call timeParse() function to convert from 24 hour to 12 hour format.
+			let time = data.Timestamp.split(' ')[3];
+			$('#Timestamp').html(`As of ${timeParse(time)}`);
+
+			// clear the text input box
+			$('#stockSymbol').val("");
+		}
+
+	})
+
+});
+
+
+
+// this function appends the appropriate value (M for millions, B for billions, K for thousands) at the end of a value.
+function milOrBil(val) {
+		// billions
+    return Math.abs(Number(val)) >= 1.0e+9
+    ? (Math.abs(Number(val)) / 1.0e+9).toFixed(1) + "B"
+    // millions
+    : Math.abs(Number(val)) >= 1.0e+6
+    ? (Math.abs(Number(val)) / 1.0e+6).toFixed(1) + "M"
+    // thousands
+    : Math.abs(Number(val)) >= 1.0e+3
+    ? (Math.abs(Number(val)) / 1.0e+3).toFixed(1) + "K"
+    : (Math.abs(Number(val))).toFixed(1);
+}
+
+
+// this function takes the time from the timestamp and translates it from 24 hour format to 12 hour format.
+function timeParse(time) {
+	let splt = time.split(':');
+
+	if(splt[0] === "00") {
+		return `12:${splt[1]}:${splt[2]} AM`
+	} else if(splt[0] > 0 && splt[0] < 12) {
+		return `${splt[0]}:${splt[1]}:${splt[2]} AM`
+	} else {
+		let hr = splt[0] - 12;
+		return `${hr}:${splt[1]}:${splt[2]} PM`
+	}
+}
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 //
 
 
 
 // tests
+
+
 
 
 
