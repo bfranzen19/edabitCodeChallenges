@@ -3500,13 +3500,33 @@ function timeParse(time) {
 }
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Write a function that takes a positive integer and return its factorial.
+
+function factorial(z) {
+	if (z < 0) return;
+  	if (z === 0) return 1;
+  	return z * factorial(z - 1);
+}
+
+/*
+better solution:
+
+function factorial(z) {
+	return z ? (z * factorial(z - 1)) : 1
+}
+*/
+
+// tests
+Test.assertEquals(factorial(4), 24)
+Test.assertEquals(factorial(0), 1)
+Test.assertEquals(factorial(9), 362880)
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 //
 
 
 
 // tests
-
-
 
 
 
