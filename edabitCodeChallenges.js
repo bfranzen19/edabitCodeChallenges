@@ -3522,6 +3522,18 @@ Test.assertEquals(factorial(0), 1)
 Test.assertEquals(factorial(9), 362880)
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Create a function that takes a string and returns true or false, depending on whether the characters are in order or not.
+
+function isInOrder(str) {
+	return str === str.split('').sort().join('');
+}
+
+// tests
+Test.assertEquals(isInOrder('abc'), true)
+Test.assertEquals(isInOrder('edabit'), false)
+Test.assertEquals(isInOrder('xyz'), true)
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 //
 
 
