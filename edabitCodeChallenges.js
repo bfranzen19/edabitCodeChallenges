@@ -3546,11 +3546,34 @@ Test.assertEquals(middleEarth(['Orc', 'Sam', 'Gandalf', 'Frodo']), false)
 Test.assertEquals(middleEarth(['Sam', 'Frodo', 'Saruman']), true)
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+/*
+Create two functions: isPrefix(word, prefix-) and isSuffix(word, -suffix).
+	isPrefix should return true if it begins with the prefix argument.
+	isSuffix should return true if it ends with the suffix argument.
+	Otherwise return false.
+*/
+
+function isPrefix(word, prefix) {
+	return word.startsWith(prefix.slice(0, prefix.length-1));
+}
+
+function isSuffix(word, suffix) {
+	return word.endsWith(suffix.slice(1));
+}
+
+// tests
+Test.assertEquals(isPrefix('automation', 'auto-'), true)
+Test.assertEquals(isPrefix('superfluous', 'super-'), true)
+Test.assertEquals(isSuffix('movement', '-scope'), false)
+Test.assertEquals(isSuffix('vocation', '-logy'), false)
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 //
 
 
 
 // tests
+
 
 
 
