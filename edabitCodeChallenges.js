@@ -3581,11 +3581,30 @@ Test.assertEquals(firstVowel("string"), 3)
 Test.assertEquals(firstVowel("STRAWBERRY"), 3)
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+/*
+Your function will be passed two functions, f and g, that don't take any parameters. Your function has to call them, and return a string which indicates which function returned the larger number.
+	If f returns the larger number, return the string f.
+	If g returns the larger number, return the string g.
+	If the functions return the same number, return the string neither.
+*/
+
+function whichIsLarger(f, g) {
+  	return f() > g() ? 'f' :
+	f() === g() ? 'neither' : 'g'
+}
+
+// tests
+Test.assertEquals(whichIsLarger(()=>5, ()=>10),'g')
+Test.assertEquals(whichIsLarger(()=>10, ()=>5),'f')
+Test.assertEquals(whichIsLarger(()=>25, ()=>25),'neither')
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 //
 
 
 
 // tests
+
 
 
 
