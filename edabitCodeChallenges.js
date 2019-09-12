@@ -3568,13 +3568,24 @@ Test.assertEquals(isSuffix('movement', '-scope'), false)
 Test.assertEquals(isSuffix('vocation', '-logy'), false)
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Create a function that returns the index of the first vowel in a string.
+
+function firstVowel(str) {
+  	let vowels = /[aeiou]/i;
+	return str.toLowerCase().search(vowels);
+}
+
+// tests
+Test.assertEquals(firstVowel("apple"), 0)
+Test.assertEquals(firstVowel("string"), 3)
+Test.assertEquals(firstVowel("STRAWBERRY"), 3)
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 //
 
 
 
 // tests
-
-
 
 
 
