@@ -3621,12 +3621,26 @@ Test.assertEquals(isOmnipresent([[1, 1], [1, 3], [5, 1], [6, 1]], 6), false)
 Test.assertEquals(isOmnipresent([[5], [5], [5], [6, 5]], 5), true)
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+/* You work for a manufacturer, and have been asked to calculate the total profit made on the sales of a product. You are given an object containing the cost price per unit (in dollars), sell price per unit (in dollars), and the starting inventory. Return the total profit made, rounded to the nearest dollar. Assume all of the inventory has been sold.
+
+Profit = Total Sales - Total Cost
+*/
+
+function profit(info) {
+  	return Math.round((info.sellPrice * info.inventory) - (info.costPrice * info.inventory))
+}
+
+// tests
+Test.assertEquals(profit({costPrice: 32.67, sellPrice: 45.00, inventory: 1200}), 14796)
+Test.assertEquals(profit({costPrice: 0.1, sellPrice: 0.18, inventory: 259800}), 20784)
+Test.assertEquals(profit({costPrice: 185.00, sellPrice: 299.99, inventory: 300}), 34497)
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 //
 
 
 
 // tests
-
 
 
 
