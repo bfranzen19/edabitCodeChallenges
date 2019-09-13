@@ -3599,11 +3599,34 @@ Test.assertEquals(whichIsLarger(()=>10, ()=>5),'f')
 Test.assertEquals(whichIsLarger(()=>25, ()=>25),'neither')
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// A value is omnipresent if it exists in every subarray inside the main array. Create a function that determines whether an input value is omnipresent for a given array.
+
+function isOmnipresent(arr, val) {
+	for(let i=0 ; i<arr.length ; i++) {
+	  return arr[i].includes(val);
+	}
+}
+
+/*
+better solution:
+
+function isOmnipresent(arr, val) {
+	return arr.every(x => x.includes(val));
+}
+*/
+
+// tests
+Test.assertEquals(isOmnipresent([[1, 1], [1, 3], [5, 1], [6, 1]], 1), true)
+Test.assertEquals(isOmnipresent([[1, 1], [1, 3], [5, 1], [6, 1]], 6), false)
+Test.assertEquals(isOmnipresent([[5], [5], [5], [6, 5]], 5), true)
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 //
 
 
 
 // tests
+
 
 
 
