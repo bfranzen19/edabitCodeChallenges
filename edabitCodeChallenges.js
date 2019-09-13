@@ -3636,11 +3636,27 @@ Test.assertEquals(profit({costPrice: 0.1, sellPrice: 0.18, inventory: 259800}), 
 Test.assertEquals(profit({costPrice: 185.00, sellPrice: 299.99, inventory: 300}), 34497)
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Write a function that calculates the factorial of a number recursively.
+
+function factorial(n) {
+	if(n < 2) {
+		return 1;
+	}
+  	return n * factorial(n-1);
+}
+
+// tests
+Test.assertEquals(factorial(5), 120)
+Test.assertEquals(factorial(3), 6)
+Test.assertEquals(factorial(1), 1)
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 //
 
 
 
 // tests
+
 
 
 
