@@ -3680,6 +3680,18 @@ Test.assertEquals(howManySeconds(10), 36000)
 Test.assertEquals(howManySeconds(24), 86400)
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Write a function that takes a string name and a number num (either 0 or 1) and return "Hello" + name if num is 1, otherwise return "Bye" + name.
+
+function sayHelloBye(name, num) {
+	return num === 1 ? `Hello ${name.charAt(0).toUpperCase() + name.slice(1)}` : `Bye ${name.charAt(0).toUpperCase() + name.slice(1)}`
+}v
+
+// tests
+Test.assertEquals(sayHelloBye("jose", 1), "Hello Jose")
+Test.assertEquals(sayHelloBye("barry", 1), "Hello Barry")
+Test.assertEquals(sayHelloBye("jon", 0), "Bye Jon")
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 //
 
 
