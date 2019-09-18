@@ -3668,6 +3668,18 @@ Test.assertEquals(canNest([3, 1], [4, 0]), true)
 Test.assertEquals(canNest([9, 9, 8], [8, 9, 10]), false)
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Write a function that converts hours into seconds.
+
+function howManySeconds(hours) {
+	return hours * 3600;
+}
+
+// tests
+Test.assertEquals(howManySeconds(2), 7200)
+Test.assertEquals(howManySeconds(10), 36000)
+Test.assertEquals(howManySeconds(24), 86400)
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 //
 
 
