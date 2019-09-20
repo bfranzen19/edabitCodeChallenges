@@ -3692,6 +3692,20 @@ Test.assertEquals(sayHelloBye("barry", 1), "Hello Barry")
 Test.assertEquals(sayHelloBye("jon", 0), "Bye Jon")
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Create a function that returns a base 2 (binary) represetation of a base 10 (decimal) number. To convert is simple: ((2) means base 2 and (10) means base 10) 010101001(2) = 1 + 8 + 32 + 128.
+
+// Going from right to left, the value of the most right bit is 1, now from that every bit to the left will be x2 the value, value of an 8 bit binary numbers are (256, 128, 64, 32, 16, 8, 4, 2, 1).
+
+function binary(decimal) {
+	return decimal.toString(2);
+}
+
+// tests
+Test.assertEquals(binary(100), "1100100")
+Test.assertEquals(binary(1), "1")
+Test.assertEquals(binary(0), "0")
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 //
 
 
