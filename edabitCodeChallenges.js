@@ -3746,12 +3746,24 @@ Test.assertSimilar(convertToDecimal(["45%", "32%", "97%", "33%"]), [0.45, 0.32, 
 Test.assertSimilar(convertToDecimal(["1%", "2%", "3%"]), [0.01, 0.02, 0.03])
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Create a function that takes in an array of numbers and returns the sum of its cubes.
+
+function sumOfCubes(nums) {
+  	let cubed = nums.map(x => Math.pow(x, 3));
+  	return nums.length < 1 ? 0 : cubed.reduce((a,b) => a + b);
+}
+
+// tests
+Test.assertEquals(sumOfCubes([1, 5, 9]), 855)
+Test.assertEquals(sumOfCubes([3, 4, 5]), 216)
+Test.assertEquals(sumOfCubes([1, 1, 1]), 3)
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 //
 
 
 
 // tests
-
 
 
 
