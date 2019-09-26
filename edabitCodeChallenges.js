@@ -3759,11 +3759,25 @@ Test.assertEquals(sumOfCubes([3, 4, 5]), 216)
 Test.assertEquals(sumOfCubes([1, 1, 1]), 3)
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Given a word, write a function that returns the first index and the last index of a character. If the character does not exist in the word, return undefined.
+
+function charIndex(word, char) {
+	if(word.indexOf(char) > -1) return [word.indexOf(char), word.lastIndexOf(char)];
+  	else return undefined;
+}
+
+// tests
+Test.assertSimilar(charIndex('hello', 'l'), [2, 3])
+Test.assertSimilar(charIndex('circumlocution', 'r'), [2, 2])
+Test.assertSimilar(charIndex('circumlocution', 'i'), [1, 11])
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 //
 
 
 
 // tests
+
 
 
 
