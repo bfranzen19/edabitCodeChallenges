@@ -3772,12 +3772,45 @@ Test.assertSimilar(charIndex('circumlocution', 'r'), [2, 2])
 Test.assertSimilar(charIndex('circumlocution', 'i'), [1, 11])
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Create a function takes all even-indexed characters and odd-indexed characters from a string and concatenates them together.
+
+/*
+better solution:
+
+function indexShuffle(str) {
+	const even = [...str].filter((char, i) => i % 2 === 0);
+	const odd = [...str].filter((char, i) => i % 2);
+
+	return [...even, ...odd].join('');
+}
+
+*/
+
+function indexShuffle(str) {
+	let arr = str.split('');
+  	let evens = [];
+  	let odds = [];
+
+  	for(let i=0 ; i<arr.length ; i++) {
+		if(i % 2 === 0) evens.push(arr[i]);
+	  	else odds.push(arr[i])
+	}
+
+	let results = evens.concat(odds);
+  	return results.join('');
+}
+
+// tests
+Test.assertEquals(indexShuffle("abcdef"), "acebdf")
+Test.assertEquals(indexShuffle("abababab"), "aaaabbbb")
+Test.assertEquals(indexShuffle("it was a beautiful day"), "i a  euiu atwsabatfldy")
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 //
 
 
 
 // tests
-
 
 
 
