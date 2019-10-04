@@ -3848,13 +3848,35 @@ Test.assertSimilar(chatroomStatus(["becky325"]), "becky325 online")
 Test.assertSimilar(chatroomStatus(["becky325", "malcolm888"]), "becky325 and malcolm888 online")
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Write two functions:
+// 		toArray(), which converts a number to an array of its digits.
+// 		toNumber(), which converts an array of digits back to its number.
+
+function toArray(num) {
+	let arr = num.toString().split('');
+  	let result = arr.map(x => Number(x));
+  	return result;
+}
+
+function toNumber(arr) {
+  	let result = arr.join('');
+	return Number(result);
+}
+
+// tests
+Test.assertSimilar(toArray(235), [2, 3, 5])
+Test.assertSimilar(toArray(19), [1, 9])
+Test.assertSimilar(toArray(0), [0] )
+Test.assertEquals(toNumber([2, 3, 5]), 235)
+Test.assertEquals(toNumber([1, 9]), 19)
+Test.assertEquals(toNumber([0]), 0)
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 //
 
 
 
 // tests
-
-
 
 
 
