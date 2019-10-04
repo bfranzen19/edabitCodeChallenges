@@ -3872,11 +3872,28 @@ Test.assertEquals(toNumber([1, 9]), 19)
 Test.assertEquals(toNumber([0]), 0)
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Write a function that transforms all letters from [a,m] to 0 and letters from [n,z] to 1 in a string.
+
+function convertBinary(str) {
+	let am = /[a-m]/gi;
+  	let nz = /[n-z]/gi;
+
+  	return str.replace(am,0).replace(nz,1);
+}
+
+// tests
+Test.assertEquals(convertBinary("house"), "01110")
+Test.assertEquals(convertBinary("excLAIM"), "0100000")
+Test.assertEquals(convertBinary("moon"), "0111")
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 //
 
 
 
 // tests
+
+
 
 
 
