@@ -3887,14 +3887,23 @@ Test.assertEquals(convertBinary("excLAIM"), "0100000")
 Test.assertEquals(convertBinary("moon"), "0111")
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Create a function which takes in a word and spells it out, by consecutively adding letters until the full word is completed.
+
+function spelling(str) {
+	return str.split('').map((c, i) => str.slice(0, i+1) );
+}
+
+// tests
+Test.assertSimilar(spelling("bee"), ['b', 'be', 'bee'])
+Test.assertSimilar(spelling("cake"), ['c', 'ca', 'cak', 'cake'])
+Test.assertSimilar(spelling("happy"), ['h', 'ha', 'hap', 'happ', 'happy'])
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 //
 
 
 
 // tests
-
-
-
 
 
 
