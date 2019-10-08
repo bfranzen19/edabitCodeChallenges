@@ -3911,6 +3911,18 @@ Test.assertEquals(joinPath("portion1/", "portion2"), "portion1/portion2")
 Test.assertEquals(joinPath("portion1", "/portion2"), "portion1/portion2")
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Write a function that takes an integer minutes and converts it to seconds.
+
+function convert(minutes) {
+	return minutes * 60;
+}
+
+// tests
+Test.assertEquals(convert(6), 360)
+Test.assertEquals(convert(4), 240)
+Test.assertEquals(convert(8), 480)
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 //
 
 
