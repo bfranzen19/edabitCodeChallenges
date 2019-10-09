@@ -3923,12 +3923,23 @@ Test.assertEquals(convert(4), 240)
 Test.assertEquals(convert(8), 480)
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Create a function that takes two integers and checks if they are equal.
+
+function isEqual(num1, num2) {
+	return num1 === num2;
+}
+
+// tests
+Test.assertEquals(isEqual(2, 2), true)
+Test.assertEquals(isEqual("1", 5), false)
+Test.assertEquals(isEqual(88, 88), true)
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 //
 
 
 
 // tests
-
 
 
 
