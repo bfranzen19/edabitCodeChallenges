@@ -3935,11 +3935,24 @@ Test.assertEquals(isEqual("1", 5), false)
 Test.assertEquals(isEqual(88, 88), true)
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Write a function that takes an integer minutes and converts it to seconds.
+
+function convert(minutes) {
+	return minutes * 60;
+}
+
+// tests
+Test.assertEquals(convert(6), 360)
+Test.assertEquals(convert(4), 240)
+Test.assertEquals(convert(8), 480)
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 //
 
 
 
 // tests
+
 
 
 
