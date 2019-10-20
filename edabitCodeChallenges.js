@@ -3947,6 +3947,18 @@ Test.assertEquals(convert(4), 240)
 Test.assertEquals(convert(8), 480)
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Write a function that takes two integers hours minutes and converts them to seconds.
+
+function convert(hours, minutes) {
+	return (hours*60 + minutes) * 60;
+}
+
+// tests
+Test.assertEquals(convert(1, 0), 3600)
+Test.assertEquals(convert(1, 3), 3780)
+Test.assertEquals(convert(0, 30), 1800)
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 //
 
 
