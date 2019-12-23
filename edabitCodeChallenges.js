@@ -3959,6 +3959,18 @@ Test.assertEquals(convert(1, 3), 3780)
 Test.assertEquals(convert(0, 30), 1800)
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Given two integers, a and b, return true if a can be divided evenly by b. Return false otherwise.
+
+function dividesEvenly(a, b) {
+	return a % b === 0;
+}
+
+// tests
+Test.assertEquals(dividesEvenly(98, 7), true)
+Test.assertEquals(dividesEvenly(87, 49), false)
+Test.assertEquals(dividesEvenly(34, 14), false)
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 //
 
 
