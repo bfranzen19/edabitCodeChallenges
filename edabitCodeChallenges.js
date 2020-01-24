@@ -3971,11 +3971,47 @@ Test.assertEquals(dividesEvenly(87, 49), false)
 Test.assertEquals(dividesEvenly(34, 14), false)
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Create a function that takes width and height and finds the perimeter of a rectangle.
+
+function findPerimeter(height, width) {
+	return height*2 + width*2
+}
+
+// tests
+Test.assertEquals(findPerimeter(6, 7), 26)
+Test.assertEquals(findPerimeter(20, 10), 60)
+Test.assertEquals(findPerimeter(2, 9), 22)
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Write a function that takes the last number of a consecutive list of numbers and returns the total of all numbers up to and including it.
+
+function addUpTo(n) {
+  	let arr = [];
+
+	for(let i=1 ; i<n+1 ; i++) {
+		arr.push(i);
+	}
+
+  	return (n > 0 ? arr.reduce((a,cv) => a+cv) : 0);
+}
+
+// tests
+Test.assertEquals(addUpTo(3), 6, "Example #1");
+Test.assertEquals(addUpTo(10), 55, "Example #2");
+Test.assertEquals(addUpTo(0), 0);
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 //
 
 
 
 // tests
+
+
+
+
+
+
 
 
 
