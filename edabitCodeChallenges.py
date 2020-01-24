@@ -672,11 +672,33 @@ Test.assert_equals(find_index(['HfjhB', 'Ok', 'smile', '12345'], '12345'), 3)
 Test.assert_equals(find_index(['a', 'b', 'c', 'd', 'e', 'f'], 'f'), 5)
 
 ### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
+### Write a function that takes an integer minutes and converts it to seconds.
+
+def convert(minutes):
+	return minutes * 60
+
+### tests
+Test.assert_equals(convert(6), 360)
+Test.assert_equals(convert(4), 240)
+Test.assert_equals(convert(8), 480)
+
+### -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- ###
 ###
 
 
 
 ### tests
+
+
+
+
+
+
+
+
+
+
+
 
 
 
