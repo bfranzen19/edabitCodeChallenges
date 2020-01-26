@@ -4001,14 +4001,27 @@ Test.assertEquals(addUpTo(10), 55, "Example #2");
 Test.assertEquals(addUpTo(0), 0);
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+/*
+Create a function that takes a string as an argument. The string is a random name.
+	If the last character of the name is an "n", return true.
+	If the last character of the name is not an "n", return false.
+*/
+
+function isLastCharacterN(word) {
+  	return word.endsWith('n');
+}
+
+// tests
+Test.assertEquals(isLastCharacterN("Aiden"), true)
+Test.assertEquals(isLastCharacterN("Roxy"), false)
+Test.assertEquals(isLastCharacterN("Bert"), false)
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 //
 
 
 
 // tests
-
-
-
 
 
 
