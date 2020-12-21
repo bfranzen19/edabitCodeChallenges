@@ -4053,13 +4053,34 @@ Test.assertEquals(and(true, false), false)
 Test.assertEquals(and(false, true), false)
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Create a function which returns the number of true values there are in an array.
+
+function countTrue(arr) {
+  	let count = 0;
+  	for(let i=0 ; i<arr.length ; i++) {
+		if(arr[i]) { count++; }
+	}
+	return count;
+}
+
+// better soultions
+const countTrue = r => r.filter(Boolean).length
+
+function countTrue(arr) {
+	 return arr.filter(x => x == true).length;
+}
+
+// tests
+Test.assertEquals(countTrue([true, false, false, true, false]), 2)
+Test.assertEquals(countTrue([false, false, false, false]), 0)
+Test.assertEquals(countTrue([]), 0)
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 //
 
 
 
 // tests
-
-
 
 
 
