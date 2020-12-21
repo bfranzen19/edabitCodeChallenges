@@ -4040,10 +4040,24 @@ Test.assertEquals(returnNegative(4), -4)
 Test.assertEquals(returnNegative(15), -15)
 Test.assertEquals(returnNegative(-4), -4)
 
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// JavaScript has a logical operator &&. The && operator takes two boolean values, and returns true if both values are true.
+function and(a, b) {
+	return (a && b ? true : false);
+}
+
+
+// tests
+Test.assertEquals(and(true, true), true)
+Test.assertEquals(and(true, false), false)
+Test.assertEquals(and(false, true), false)
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+//
 
 
 
-
+// tests
 
 
 
