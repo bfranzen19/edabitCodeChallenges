@@ -4017,14 +4017,23 @@ Test.assertEquals(isLastCharacterN("Roxy"), false)
 Test.assertEquals(isLastCharacterN("Bert"), false)
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Create a function that takes the age and return the age in days.
+
+function calcAge(age) {
+	return age*365;
+}
+
+// tests
+Test.assertEquals(calcAge(10), 3650)
+Test.assertSimilar(calcAge(0), 0)
+Test.assertSimilar(calcAge(73), 26645)
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 //
 
 
 
 // tests
-
-
-
 
 
 
