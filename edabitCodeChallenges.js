@@ -4029,12 +4029,16 @@ Test.assertSimilar(calcAge(0), 0)
 Test.assertSimilar(calcAge(73), 26645)
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
-//
+// Create a function that takes a number as an argument and returns negative of that number. Return negative numbers without any change.
 
-
+function returnNegative(n){
+  return (n > 0 ? n * -1 : n);
+}
 
 // tests
-
+Test.assertEquals(returnNegative(4), -4)
+Test.assertEquals(returnNegative(15), -15)
+Test.assertEquals(returnNegative(-4), -4)
 
 
 
