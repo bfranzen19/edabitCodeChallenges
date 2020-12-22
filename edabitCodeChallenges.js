@@ -4088,14 +4088,28 @@ Test.assertEquals(circuitPower(230, 10), 2300)
 Test.assertEquals(circuitPower(480, 20), 9600)
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// regex for an empty string
+
+const REGEXP = /^\s*$/;
+
+// tests
+const str = "";
+
+const validate = (REGEXP) => {
+	 return function testReg(str) {
+		 return REGEXP.test(str);
+	 }
+}
+
+const testExp = validate(REGEXP)
+Test.assertSimilar(testExp(str), true)
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 //
 
 
 
 // tests
-
-
-
 
 
 
