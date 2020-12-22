@@ -4105,11 +4105,41 @@ const testExp = validate(REGEXP)
 Test.assertSimilar(testExp(str), true)
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
-//
+// Given two numbers, return true if the sum of both numbers is less than 100. Otherwise return false.
 
-
+function lessThan100(a, b) {
+	return (a + b < 100 ? true : false);
+}
 
 // tests
+Test.assertEquals(lessThan100(5, 57), true)
+Test.assertEquals(lessThan100(77, 30), false)
+Test.assertEquals(lessThan100(0, 59), true)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
