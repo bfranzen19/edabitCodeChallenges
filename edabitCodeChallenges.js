@@ -4148,6 +4148,12 @@ function redundant(str) {
 		return str;
 	}
 }
+// better solutions
+const redundant = str => () => str;
+
+function redundant(str) {
+	return () => str;
+}
 
 // tests
 const f1 = redundant("apple")
