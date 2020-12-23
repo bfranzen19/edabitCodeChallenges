@@ -4141,14 +4141,29 @@ Test.assertEquals(isFirstSuperior(['a', 'b', 'c'], ['a', 'd', 'c']), false)
 Test.assertEquals(isFirstSuperior([true, 10, 'zebra'], [true, 10, 'zebra']), false)
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// Write a function redundant that takes in a string str and returns a function that returns str.
+
+function redundant(str) {
+	return function() {
+		return str;
+	}
+}
+
+// tests
+const f1 = redundant("apple")
+const f2 = redundant("pear")
+const f3 = redundant("")
+
+Test.assertEquals(f1(), "apple")
+Test.assertEquals(f2(), "pear")
+Test.assertEquals(f3(), "")
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 //
 
 
 
 // tests
-
-
-
 
 
 
