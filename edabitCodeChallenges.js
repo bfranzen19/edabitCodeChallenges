@@ -4252,14 +4252,28 @@ Test.assertEquals(p3.compareAge(p1), "Samuel is the same age as me.")
 Test.assertEquals(p3.compareAge(p2), "Joel is older than me.")
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+/*
+The police send you the electronic statement again for you to sign. This time you are able to sign it and, to speed up bureaucracy, you try to sign for your spouse as well. Unfortunately, the document is still protected against new entries...
+*/
+
+function signYourName(obj) {
+	Object.seal(obj);
+
+	// DON'T CHANGE OR REMOVE THE LINES BELOW //
+  	obj.yourSignature = "Whatever";
+  	obj.spouseSignature = "Nice Try"
+  	return obj;
+}
+
+// tests
+Test.assertSimilar(signYourName({yourSignature: ""}), {yourSignature: "Whatever"})
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 //
 
 
 
 // tests
-
-
-
 
 
 
