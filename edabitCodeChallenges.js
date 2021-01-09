@@ -1,5 +1,18 @@
 // profile link: https://edabit.com/user/zP84vhK6yKs3q7xtk
 
+/*                 template              */
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+//
+
+
+
+// tests
+
+
+
+
+
+
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 // Create a function that takes two strings as arguments and return either true or false depending on whether the number of their charcters is equal or not.
 
@@ -4269,45 +4282,15 @@ function signYourName(obj) {
 Test.assertSimilar(signYourName({yourSignature: ""}), {yourSignature: "Whatever"})
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
-//
+// Create a function that will take a HEX number and returns the binary equivalent (as a string).
 
-
+function toBinary(num) {
+	return (num >>> 0).toString(2);
+}
 
 // tests
+Test.assertEquals(toBinary(0xFF), "11111111")
+Test.assertEquals(toBinary(0xAA), "10101010")
+Test.assertEquals(toBinary(0xFA), "11111010")
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*                 template              */
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
-//
-
-
-
-// tests
