@@ -2,13 +2,25 @@
 
 /*                 template              */
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+// In this challenge you will be given a relation between two numbers, written as a string. Write a function that determines if the relation is true or false.
+
+function isTrue(relation) {
+	return eval(relation.replace('=', '==='))
+}
+
+// tests
+Test.assertEquals(isTrue("8<7"), false)
+Test.assertEquals(isTrue("15>4"), true)
+Test.assertEquals(isTrue("6>6"), false)
+
+
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 //
 
 
 
 // tests
-
-
 
 
 
